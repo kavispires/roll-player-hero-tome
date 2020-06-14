@@ -1,0 +1,1034 @@
+{
+  "mk-bs-1": {
+    "id": "mk-bs-1",
+    "name": "Longsword",
+    "kind": "Weapon",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 1
+  },
+  "mk-bs-10": {
+    "id": "mk-bs-10",
+    "name": "Honorable",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 10
+  },
+  "mk-bs-11": {
+    "id": "mk-bs-11",
+    "name": "Nimble",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 11
+  },
+  "mk-bs-12": {
+    "id": "mk-bs-12",
+    "name": "Proud",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 12
+  },
+  "mk-bs-13": {
+    "id": "mk-bs-13",
+    "name": "Weak",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 13
+  },
+  "mk-bs-14": {
+    "id": "mk-bs-14",
+    "name": "Clumsy",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 14
+  },
+  "mk-bs-15": {
+    "id": "mk-bs-15",
+    "name": "Foolish",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 15
+  },
+  "mk-bs-16": {
+    "id": "mk-bs-16",
+    "name": "Reckless",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 16
+  },
+  "mk-bs-17": {
+    "id": "mk-bs-17",
+    "name": "Focused",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 17
+  },
+  "mk-bs-18": {
+    "id": "mk-bs-18",
+    "name": "Compassionate",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 18
+  },
+  "mk-bs-19": {
+    "id": "mk-bs-19",
+    "name": "Obsessed",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 19
+  },
+  "mk-bs-2": {
+    "id": "mk-bs-2",
+    "name": "Blessed Mace",
+    "kind": "Weapon",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 2
+  },
+  "mk-bs-20": {
+    "id": "mk-bs-20",
+    "name": "Cunning",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 20
+  },
+  "mk-bs-21": {
+    "id": "mk-bs-21",
+    "name": "Greedy",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 21
+  },
+  "mk-bs-22": {
+    "id": "mk-bs-22",
+    "name": "Honest",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 22
+  },
+  "mk-bs-23": {
+    "id": "mk-bs-23",
+    "name": "Loyal",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 23
+  },
+  "mk-bs-24": {
+    "id": "mk-bs-24",
+    "name": "Obnoxious",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 24
+  },
+  "mk-bs-25": {
+    "id": "mk-bs-25",
+    "name": "Concentrate",
+    "kind": "Skill",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 25
+  },
+  "mk-bs-26": {
+    "id": "mk-bs-26",
+    "name": "Search",
+    "kind": "Skill",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 26
+  },
+  "mk-bs-27": {
+    "id": "mk-bs-27",
+    "name": "Negotiate",
+    "kind": "Skill",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 27
+  },
+  "mk-bs-28": {
+    "id": "mk-bs-28",
+    "name": "Pickpocket",
+    "kind": "Skill",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 28
+  },
+  "mk-bs-29": {
+    "id": "mk-bs-29",
+    "name": "Acrobatics",
+    "kind": "Skill",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 29
+  },
+  "mk-bs-3": {
+    "id": "mk-bs-3",
+    "name": "Jeweled Dagger",
+    "kind": "Weapon",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 3
+  },
+  "mk-bs-30": {
+    "id": "mk-bs-30",
+    "name": "Open Lock",
+    "kind": "Skill",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 30
+  },
+  "mk-bs-31": {
+    "id": "mk-bs-31",
+    "name": "Climb",
+    "kind": "Skill",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 31
+  },
+  "mk-bs-32": {
+    "id": "mk-bs-32",
+    "name": "Intimidate",
+    "kind": "Skill",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 32
+  },
+  "mk-bs-33": {
+    "id": "mk-bs-33",
+    "name": "Move Silently",
+    "kind": "Skill",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 33
+  },
+  "mk-bs-34": {
+    "id": "mk-bs-34",
+    "name": "Knowledge",
+    "kind": "Skill",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 34
+  },
+  "mk-bs-35": {
+    "id": "mk-bs-35",
+    "name": "Cure Wounds",
+    "kind": "Skill",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 35
+  },
+  "mk-bs-36": {
+    "id": "mk-bs-36",
+    "name": "Sleight of Hand",
+    "kind": "Skill",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 36
+  },
+  "mk-bs-37": {
+    "id": "mk-bs-37",
+    "name": "Chain Gorget",
+    "kind": "Armor",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 37
+  },
+  "mk-bs-38": {
+    "id": "mk-bs-38",
+    "name": "Chain Vambraces",
+    "kind": "Armor",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 38
+  },
+  "mk-bs-39": {
+    "id": "mk-bs-39",
+    "name": "Chain Helm",
+    "kind": "Armor",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 39
+  },
+  "mk-bs-4": {
+    "id": "mk-bs-4",
+    "name": "Longbow",
+    "kind": "Weapon",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 4
+  },
+  "mk-bs-40": {
+    "id": "mk-bs-40",
+    "name": "Chain Turnic",
+    "kind": "Armor",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 40
+  },
+  "mk-bs-41": {
+    "id": "mk-bs-41",
+    "name": "Chain Leggins",
+    "kind": "Armor",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 41
+  },
+  "mk-bs-42": {
+    "id": "mk-bs-42",
+    "name": "Mystic Cowl",
+    "kind": "Armor",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 42
+  },
+  "mk-bs-43": {
+    "id": "mk-bs-43",
+    "name": "Mystic Robes",
+    "kind": "Armor",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 43
+  },
+  "mk-bs-44": {
+    "id": "mk-bs-44",
+    "name": "Mystic Cloak",
+    "kind": "Armor",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 44
+  },
+  "mk-bs-45": {
+    "id": "mk-bs-45",
+    "name": "Leather Greaves",
+    "kind": "Armor",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 45
+  },
+  "mk-bs-46": {
+    "id": "mk-bs-46",
+    "name": "Leather Boots",
+    "kind": "Armor",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 46
+  },
+  "mk-bs-47": {
+    "id": "mk-bs-47",
+    "name": "Leather Gloves",
+    "kind": "Armor",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 47
+  },
+  "mk-bs-48": {
+    "id": "mk-bs-48",
+    "name": "Leather Pauldron",
+    "kind": "Armor",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 48
+  },
+  "mk-bs-49": {
+    "id": "mk-bs-49",
+    "name": "Diplomacy",
+    "kind": "Skill",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 49
+  },
+  "mk-bs-5": {
+    "id": "mk-bs-5",
+    "name": "Tower Shield",
+    "kind": "Weapon",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 5
+  },
+  "mk-bs-50": {
+    "id": "mk-bs-50",
+    "name": "Dedicated",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 50
+  },
+  "mk-bs-51": {
+    "id": "mk-bs-51",
+    "name": "Courageous",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 51
+  },
+  "mk-bs-52": {
+    "id": "mk-bs-52",
+    "name": "Envious",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 52
+  },
+  "mk-bs-53": {
+    "id": "mk-bs-53",
+    "name": "Famous",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 53
+  },
+  "mk-bs-6": {
+    "id": "mk-bs-6",
+    "name": "Ancient Spear",
+    "kind": "Weapon",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 6
+  },
+  "mk-bs-7": {
+    "id": "mk-bs-7",
+    "name": "Quarterstaff",
+    "kind": "Weapon",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 7
+  },
+  "mk-bs-8": {
+    "id": "mk-bs-8",
+    "name": "Heavy Crossbow",
+    "kind": "Weapon",
+    "set": "Base",
+    "deck": 1,
+    "card-number": 8
+  },
+  "mk-bs-9": {
+    "id": "mk-bs-9",
+    "name": "Steadfast",
+    "kind": "Trait",
+    "set": "Base",
+    "deck": 2,
+    "card-number": 9
+  },
+  "mk-ff-1": {
+    "id": "mk-ff-1",
+    "name": "Chain Fauld",
+    "kind": "Armor",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 1
+  },
+  "mk-ff-10": {
+    "id": "mk-ff-10",
+    "name": "Entrap",
+    "kind": "Skill",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 10
+  },
+  "mk-ff-11": {
+    "id": "mk-ff-11",
+    "name": "Devious",
+    "kind": "Trait",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 11
+  },
+  "mk-ff-12": {
+    "id": "mk-ff-12",
+    "name": "Friendly",
+    "kind": "Trait",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 12
+  },
+  "mk-ff-13": {
+    "id": "mk-ff-13",
+    "name": "Resolute",
+    "kind": "Trait",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 13
+  },
+  "mk-ff-14": {
+    "id": "mk-ff-14",
+    "name": "Ancient Tome",
+    "kind": "Weapon",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 14
+  },
+  "mk-ff-15": {
+    "id": "mk-ff-15",
+    "name": "Glaive",
+    "kind": "Weapon",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 15
+  },
+  "mk-ff-16": {
+    "id": "mk-ff-16",
+    "name": "Harpoon",
+    "kind": "Weapon",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 16
+  },
+  "mk-ff-17": {
+    "id": "mk-ff-17",
+    "name": "Scabbard",
+    "kind": "Weapon",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 17
+  },
+  "mk-ff-18": {
+    "id": "mk-ff-18",
+    "name": "Short Sword",
+    "kind": "Weapon",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 18
+  },
+  "mk-ff-19": {
+    "id": "mk-ff-19",
+    "name": "War Lance",
+    "kind": "Weapon",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 19
+  },
+  "mk-ff-2": {
+    "id": "mk-ff-2",
+    "name": "Leather Cuirass",
+    "kind": "Armor",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 2
+  },
+  "mk-ff-20": {
+    "id": "mk-ff-20",
+    "name": "Runic Amulet",
+    "kind": "Armor",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 20
+  },
+  "mk-ff-21": {
+    "id": "mk-ff-21",
+    "name": "Runic Necklace",
+    "kind": "Armor",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 21
+  },
+  "mk-ff-22": {
+    "id": "mk-ff-22",
+    "name": "Runic Pendant",
+    "kind": "Armor",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 22
+  },
+  "mk-ff-23": {
+    "id": "mk-ff-23",
+    "name": "Brimstone",
+    "kind": "Scroll",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 23
+  },
+  "mk-ff-24": {
+    "id": "mk-ff-24",
+    "name": "Domesticate",
+    "kind": "Scroll",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 24
+  },
+  "mk-ff-25": {
+    "id": "mk-ff-25",
+    "name": "Exile",
+    "kind": "Scroll",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 25
+  },
+  "mk-ff-26": {
+    "id": "mk-ff-26",
+    "name": "Examine",
+    "kind": "Skill",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 26
+  },
+  "mk-ff-27": {
+    "id": "mk-ff-27",
+    "name": "Manipulate",
+    "kind": "Skill",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 27
+  },
+  "mk-ff-28": {
+    "id": "mk-ff-28",
+    "name": "Sense Evil",
+    "kind": "Skill",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 28
+  },
+  "mk-ff-29": {
+    "id": "mk-ff-29",
+    "name": "Speculate",
+    "kind": "Skill",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 29
+  },
+  "mk-ff-3": {
+    "id": "mk-ff-3",
+    "name": "Mystic Gambeson",
+    "kind": "Armor",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 3
+  },
+  "mk-ff-30": {
+    "id": "mk-ff-30",
+    "name": "Subvert",
+    "kind": "Skill",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 30
+  },
+  "mk-ff-31": {
+    "id": "mk-ff-31",
+    "name": "Summon",
+    "kind": "Skill",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 31
+  },
+  "mk-ff-32": {
+    "id": "mk-ff-32",
+    "name": "Cruel",
+    "kind": "Trait",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 32
+  },
+  "mk-ff-33": {
+    "id": "mk-ff-33",
+    "name": "Exalted",
+    "kind": "Trait",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 33
+  },
+  "mk-ff-34": {
+    "id": "mk-ff-34",
+    "name": "Relentless",
+    "kind": "Trait",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 34
+  },
+  "mk-ff-35": {
+    "id": "mk-ff-35",
+    "name": "Ruthless",
+    "kind": "Trait",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 35
+  },
+  "mk-ff-36": {
+    "id": "mk-ff-36",
+    "name": "Stalwart",
+    "kind": "Trait",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 36
+  },
+  "mk-ff-37": {
+    "id": "mk-ff-37",
+    "name": "Backpack",
+    "kind": "Weapon",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 37
+  },
+  "mk-ff-38": {
+    "id": "mk-ff-38",
+    "name": "Spiked Shield",
+    "kind": "Weapon",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "card-number": 38
+  },
+  "mk-ff-4": {
+    "id": "mk-ff-4",
+    "name": "Runic Bracelet",
+    "kind": "Armor",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 4
+  },
+  "mk-ff-5": {
+    "id": "mk-ff-5",
+    "name": "Runic Crown",
+    "kind": "Armor",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 5
+  },
+  "mk-ff-6": {
+    "id": "mk-ff-6",
+    "name": "Runic Signet",
+    "kind": "Armor",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 6
+  },
+  "mk-ff-7": {
+    "id": "mk-ff-7",
+    "name": "Clarity",
+    "kind": "Scroll",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 7
+  },
+  "mk-ff-8": {
+    "id": "mk-ff-8",
+    "name": "Restore",
+    "kind": "Scroll",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 8
+  },
+  "mk-ff-9": {
+    "id": "mk-ff-9",
+    "name": "Charm",
+    "kind": "Skill",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "card-number": 9
+  },
+  "mk-mm-1": {
+    "id": "mk-mm-1",
+    "name": "Sling",
+    "kind": "Weapon",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 1
+  },
+  "mk-mm-10": {
+    "id": "mk-mm-10",
+    "name": "Humble",
+    "kind": "Trait",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 10
+  },
+  "mk-mm-11": {
+    "id": "mk-mm-11",
+    "name": "Fearless",
+    "kind": "Trait",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 11
+  },
+  "mk-mm-12": {
+    "id": "mk-mm-12",
+    "name": "Haggle",
+    "kind": "Skill",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 12
+  },
+  "mk-mm-13": {
+    "id": "mk-mm-13",
+    "name": "Disarm Trap",
+    "kind": "Skill",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 13
+  },
+  "mk-mm-14": {
+    "id": "mk-mm-14",
+    "name": "Disguise",
+    "kind": "Skill",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 14
+  },
+  "mk-mm-15": {
+    "id": "mk-mm-15",
+    "name": "Tumble",
+    "kind": "Skill",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 15
+  },
+  "mk-mm-16": {
+    "id": "mk-mm-16",
+    "name": "Protection",
+    "kind": "Scroll",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 16
+  },
+  "mk-mm-17": {
+    "id": "mk-mm-17",
+    "name": "Realign",
+    "kind": "Scroll",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 17
+  },
+  "mk-mm-18": {
+    "id": "mk-mm-18",
+    "name": "Energy Field",
+    "kind": "Scroll",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 18
+  },
+  "mk-mm-19": {
+    "id": "mk-mm-19",
+    "name": "Dispel",
+    "kind": "Scroll",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 19
+  },
+  "mk-mm-2": {
+    "id": "mk-mm-2",
+    "name": "Spellbook",
+    "kind": "Weapon",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 2
+  },
+  "mk-mm-20": {
+    "id": "mk-mm-20",
+    "name": "Levitate",
+    "kind": "Scroll",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 20
+  },
+  "mk-mm-21": {
+    "id": "mk-mm-21",
+    "name": "Mesmerize",
+    "kind": "Scroll",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 21
+  },
+  "mk-mm-22": {
+    "id": "mk-mm-22",
+    "name": "Mirage",
+    "kind": "Scroll",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 22
+  },
+  "mk-mm-23": {
+    "id": "mk-mm-23",
+    "name": "Tremor",
+    "kind": "Scroll",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 23
+  },
+  "mk-mm-24": {
+    "id": "mk-mm-24",
+    "name": "Revive",
+    "kind": "Scroll",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 24
+  },
+  "mk-mm-25": {
+    "id": "mk-mm-25",
+    "name": "Gather Power",
+    "kind": "Scroll",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 25
+  },
+  "mk-mm-26": {
+    "id": "mk-mm-26",
+    "name": "Stoneskin",
+    "kind": "Scroll",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 26
+  },
+  "mk-mm-27": {
+    "id": "mk-mm-27",
+    "name": "Enchant",
+    "kind": "Scroll",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 27
+  },
+  "mk-mm-28": {
+    "id": "mk-mm-28",
+    "name": "Valiant",
+    "kind": "Trait",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 28
+  },
+  "mk-mm-29": {
+    "id": "mk-mm-29",
+    "name": "Selfish",
+    "kind": "Trait",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 29
+  },
+  "mk-mm-3": {
+    "id": "mk-mm-3",
+    "name": "Backpack",
+    "kind": "Weapon",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 3
+  },
+  "mk-mm-30": {
+    "id": "mk-mm-30",
+    "name": "Confident",
+    "kind": "Trait",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 30
+  },
+  "mk-mm-31": {
+    "id": "mk-mm-31",
+    "name": "Ambitious",
+    "kind": "Trait",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 31
+  },
+  "mk-mm-32": {
+    "id": "mk-mm-32",
+    "name": "Steel Net",
+    "kind": "Weapon",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 32
+  },
+  "mk-mm-33": {
+    "id": "mk-mm-33",
+    "name": "Thieves' Tools",
+    "kind": "Weapon",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 33
+  },
+  "mk-mm-34": {
+    "id": "mk-mm-34",
+    "name": "Unholy Flail",
+    "kind": "Weapon",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 34
+  },
+  "mk-mm-35": {
+    "id": "mk-mm-35",
+    "name": "Banish",
+    "kind": "Scroll",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 35
+  },
+  "mk-mm-4": {
+    "id": "mk-mm-4",
+    "name": "Spiked Club",
+    "kind": "Weapon",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 4
+  },
+  "mk-mm-5": {
+    "id": "mk-mm-5",
+    "name": "Halberd",
+    "kind": "Weapon",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 5
+  },
+  "mk-mm-6": {
+    "id": "mk-mm-6",
+    "name": "War Hammer",
+    "kind": "Weapon",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "card-number": 6
+  },
+  "mk-mm-7": {
+    "id": "mk-mm-7",
+    "name": "Wand",
+    "kind": "Weapon",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 7
+  },
+  "mk-mm-8": {
+    "id": "mk-mm-8",
+    "name": "Trustworthy",
+    "kind": "Trait",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 8
+  },
+  "mk-mm-9": {
+    "id": "mk-mm-9",
+    "name": "Malicious",
+    "kind": "Trait",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "card-number": 9
+  },
+  "mk-pm-0": {
+    "id": "mk-pm-0",
+    "name": "Cursed Ring",
+    "kind": "Armor",
+    "set": "Promo",
+    "deck": 2,
+    "card-number": 0
+  },
+  "mk-pm-1": {
+    "id": "mk-pm-1",
+    "name": "Ancestral Blade",
+    "kind": "Weapon",
+    "set": "Promo",
+    "deck": 1,
+    "card-number": 1
+  },
+  "mk-pm-2": {
+    "id": "mk-pm-2",
+    "name": "Transmute",
+    "kind": "Scroll",
+    "set": "Promo",
+    "deck": 2,
+    "card-number": 2
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "fm-ff-1": {
+    "id": "fm-ff-1",
+    "name": "Blood Badger",
+    "ability": "Tough",
+    "set": "Fiends & Familiars",
+    "board-number": 1
+  },
+  "fm-ff-2": {
+    "id": "fm-ff-2",
+    "name": "Flame Imp",
+    "ability": "Ruinous",
+    "set": "Fiends & Familiars",
+    "board-number": 2
+  },
+  "fm-ff-3": {
+    "id": "fm-ff-3",
+    "name": "Horned Viper",
+    "ability": "Manipulative",
+    "set": "Fiends & Familiars",
+    "board-number": 3
+  },
+  "fm-ff-4": {
+    "id": "fm-ff-4",
+    "name": "Ice Bear",
+    "ability": "Hearty",
+    "set": "Fiends & Familiars",
+    "board-number": 4
+  },
+  "fm-ff-5": {
+    "id": "fm-ff-5",
+    "name": "Long-Tailed Weasel",
+    "ability": "Sneaky",
+    "set": "Fiends & Familiars",
+    "board-number": 5
+  },
+  "fm-ff-6": {
+    "id": "fm-ff-6",
+    "name": "Nalos Leopard",
+    "ability": "Fierce",
+    "set": "Fiends & Familiars",
+    "board-number": 6
+  },
+  "fm-ff-7": {
+    "id": "fm-ff-7",
+    "name": "Screech Owl",
+    "ability": "Keen",
+    "set": "Fiends & Familiars",
+    "board-number": 7
+  },
+  "fm-ff-8": {
+    "id": "fm-ff-8",
+    "name": "Shadow Drake",
+    "ability": "Inventive",
+    "set": "Fiends & Familiars",
+    "board-number": 8
+  },
+  "fm-ff-9": {
+    "id": "fm-ff-9",
+    "name": "Silver Warthog",
+    "ability": "Brash",
+    "set": "Fiends & Familiars",
+    "board-number": 9
+  }
+}

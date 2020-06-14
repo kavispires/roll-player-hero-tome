@@ -1,0 +1,418 @@
+{
+  "mi-mm-7": {
+    "id": "mi-mm-7",
+    "name": "Bandit",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "trophythreshold": 11,
+    "card-number": 7
+  },
+  "mi-mm-20": {
+    "id": "mi-mm-20",
+    "name": "Basilisk",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "trophythreshold": 11,
+    "card-number": 20
+  },
+  "mi-ff-1": {
+    "id": "mi-ff-1",
+    "name": "Bat Swarm",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "trophythreshold": 12,
+    "card-number": 1
+  },
+  "mi-mm-12": {
+    "id": "mi-mm-12",
+    "name": "Bugbear",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "trophythreshold": 11,
+    "card-number": 12
+  },
+  "mi-ff-2": {
+    "id": "mi-ff-2",
+    "name": "Cockatrice",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "trophythreshold": 11,
+    "card-number": 2
+  },
+  "mi-ff-3": {
+    "id": "mi-ff-3",
+    "name": "Crocodile",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "trophythreshold": 15,
+    "card-number": 3
+  },
+  "mi-mm-10": {
+    "id": "mi-mm-10",
+    "name": "Cultist",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "trophythreshold": 10,
+    "card-number": 10
+  },
+  "mi-mm-9": {
+    "id": "mi-mm-9",
+    "name": "Dire Wolf",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "trophythreshold": 9,
+    "card-number": 9
+  },
+  "mi-mm-25": {
+    "id": "mi-mm-25",
+    "name": "Displacer",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "trophythreshold": 11,
+    "card-number": 25
+  },
+  "mi-ff-12": {
+    "id": "mi-ff-12",
+    "name": "Doppelganger",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "trophythreshold": 19,
+    "card-number": 12
+  },
+  "mi-ff-13": {
+    "id": "mi-ff-13",
+    "name": "Draug",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "trophythreshold": 19,
+    "card-number": 13
+  },
+  "mi-mm-5": {
+    "id": "mi-mm-5",
+    "name": "Elemental",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "trophythreshold": 12,
+    "card-number": 5
+  },
+  "mi-pm-3": {
+    "id": "mi-pm-3",
+    "name": "Flayer",
+    "set": "Promo",
+    "deck": 1,
+    "trophythreshold": 9,
+    "card-number": 3
+  },
+  "mi-ff-14": {
+    "id": "mi-ff-14",
+    "name": "Fungoid",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "trophythreshold": 15,
+    "card-number": 14
+  },
+  "mi-mm-14": {
+    "id": "mi-mm-14",
+    "name": "Gargoyle",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "trophythreshold": 10,
+    "card-number": 14
+  },
+  "mi-ff-4": {
+    "id": "mi-ff-4",
+    "name": "Giant Beetle",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "trophythreshold": 15,
+    "card-number": 4
+  },
+  "mi-ff-5": {
+    "id": "mi-ff-5",
+    "name": "Giant Crab",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "trophythreshold": 10,
+    "card-number": 5
+  },
+  "mi-mm-26": {
+    "id": "mi-mm-26",
+    "name": "Giant Rat",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "trophythreshold": 10,
+    "card-number": 26
+  },
+  "mi-mm-24": {
+    "id": "mi-mm-24",
+    "name": "Giant Scorpion",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "trophythreshold": 10,
+    "card-number": 24
+  },
+  "mi-mm-19": {
+    "id": "mi-mm-19",
+    "name": "Giant Serpent",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "trophythreshold": 11,
+    "card-number": 19
+  },
+  "mi-mm-3": {
+    "id": "mi-mm-3",
+    "name": "Giant Spider",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "trophythreshold": 8,
+    "card-number": 3
+  },
+  "mi-mm-6": {
+    "id": "mi-mm-6",
+    "name": "Gnoll",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "trophythreshold": 10,
+    "card-number": 6
+  },
+  "mi-mm-2": {
+    "id": "mi-mm-2",
+    "name": "Goblin",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "trophythreshold": 9,
+    "card-number": 2
+  },
+  "mi-ff-6": {
+    "id": "mi-ff-6",
+    "name": "Golem",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "trophythreshold": 15,
+    "card-number": 6
+  },
+  "mi-ff-15": {
+    "id": "mi-ff-15",
+    "name": "Gremlins",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "trophythreshold": 19,
+    "card-number": 15
+  },
+  "mi-mm-15": {
+    "id": "mi-mm-15",
+    "name": "Harpy",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "trophythreshold": 9,
+    "card-number": 15
+  },
+  "mi-ff-7": {
+    "id": "mi-ff-7",
+    "name": "Hellhound",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "trophythreshold": 9,
+    "card-number": 7
+  },
+  "mi-mm-17": {
+    "id": "mi-mm-17",
+    "name": "Hobgoblin",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "trophythreshold": 10,
+    "card-number": 17
+  },
+  "mi-ff-8": {
+    "id": "mi-ff-8",
+    "name": "Ice Wyrm",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "trophythreshold": 5,
+    "card-number": 8
+  },
+  "mi-pm-5": {
+    "id": "mi-pm-5",
+    "name": "Insectoid",
+    "set": "Promo",
+    "deck": 1,
+    "trophythreshold": 11,
+    "card-number": 5
+  },
+  "mi-mm-1": {
+    "id": "mi-mm-1",
+    "name": "Kobold",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "trophythreshold": 7,
+    "card-number": 1
+  },
+  "mi-ff-9": {
+    "id": "mi-ff-9",
+    "name": "Mimic",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "trophythreshold": 11,
+    "card-number": 9
+  },
+  "mi-ff-10": {
+    "id": "mi-ff-10",
+    "name": "Mummy",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "trophythreshold": 11,
+    "card-number": 10
+  },
+  "mi-ff-16": {
+    "id": "mi-ff-16",
+    "name": "Naga",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "trophythreshold": 16,
+    "card-number": 16
+  },
+  "mi-pm-6": {
+    "id": "mi-pm-6",
+    "name": "Nightmare",
+    "set": "Promo",
+    "deck": 2,
+    "trophythreshold": 8,
+    "card-number": 6
+  },
+  "mi-mm-8": {
+    "id": "mi-mm-8",
+    "name": "Ogre",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "trophythreshold": 9,
+    "card-number": 8
+  },
+  "mi-mm-21": {
+    "id": "mi-mm-21",
+    "name": "Ooze",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "trophythreshold": 9,
+    "card-number": 21
+  },
+  "mi-mm-22": {
+    "id": "mi-mm-22",
+    "name": "Owlbear",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "trophythreshold": 8,
+    "card-number": 22
+  },
+  "mi-mm-4": {
+    "id": "mi-mm-4",
+    "name": "Phantom",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "trophythreshold": 9,
+    "card-number": 4
+  },
+  "mi-pm-4": {
+    "id": "mi-pm-4",
+    "name": "Ratman",
+    "set": "Promo",
+    "deck": 2,
+    "trophythreshold": 10,
+    "card-number": 4
+  },
+  "mi-ff-17": {
+    "id": "mi-ff-17",
+    "name": "Sandworm",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "trophythreshold": 15,
+    "card-number": 17
+  },
+  "mi-mm-11": {
+    "id": "mi-mm-11",
+    "name": "Satyr",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "trophythreshold": 7,
+    "card-number": 11
+  },
+  "mi-mm-18": {
+    "id": "mi-mm-18",
+    "name": "Skeletal Rider",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "trophythreshold": 11,
+    "card-number": 18
+  },
+  "mi-ff-18": {
+    "id": "mi-ff-18",
+    "name": "Treefolk",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "trophythreshold": 20,
+    "card-number": 18
+  },
+  "mi-ff-19": {
+    "id": "mi-ff-19",
+    "name": "Tyrannosaur",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "trophythreshold": 11,
+    "card-number": 19
+  },
+  "mi-ff-11": {
+    "id": "mi-ff-11",
+    "name": "Vile Dryad",
+    "set": "Fiends & Familiars",
+    "deck": 1,
+    "trophythreshold": 14,
+    "card-number": 11
+  },
+  "mi-ff-20": {
+    "id": "mi-ff-20",
+    "name": "Wendigo",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "trophythreshold": 21,
+    "card-number": 20
+  },
+  "mi-ff-21": {
+    "id": "mi-ff-21",
+    "name": "Wereshark",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "trophythreshold": 18,
+    "card-number": 21
+  },
+  "mi-ff-22": {
+    "id": "mi-ff-22",
+    "name": "Werewolf",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "trophythreshold": 15,
+    "card-number": 22
+  },
+  "mi-ff-23": {
+    "id": "mi-ff-23",
+    "name": "Wraith",
+    "set": "Fiends & Familiars",
+    "deck": 2,
+    "trophythreshold": 14,
+    "card-number": 23
+  },
+  "mi-mm-16": {
+    "id": "mi-mm-16",
+    "name": "Wyrmling",
+    "set": "Monsters & Minions",
+    "deck": 2,
+    "trophythreshold": 10,
+    "card-number": 16
+  },
+  "mi-mm-13": {
+    "id": "mi-mm-13",
+    "name": "Zombie",
+    "set": "Monsters & Minions",
+    "deck": 1,
+    "trophythreshold": 10,
+    "card-number": 13
+  }
+}

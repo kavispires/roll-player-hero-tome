@@ -1,0 +1,182 @@
+{
+  "fi-ff-1": {
+    "id": "fi-ff-1",
+    "name": "Fiend of Arbitration",
+    "set": "Fiends & Familiars",
+    "card-number": 1
+  },
+  "fi-ff-2": {
+    "id": "fi-ff-2",
+    "name": "Fiend of Avarice",
+    "set": "Fiends & Familiars",
+    "card-number": 2
+  },
+  "fi-ff-3": {
+    "id": "fi-ff-3",
+    "name": "Fiend of Blight",
+    "set": "Fiends & Familiars",
+    "card-number": 3
+  },
+  "fi-ff-4": {
+    "id": "fi-ff-4",
+    "name": "Fiend of Burden",
+    "set": "Fiends & Familiars",
+    "card-number": 4
+  },
+  "fi-ff-5": {
+    "id": "fi-ff-5",
+    "name": "Fiend of Chaos",
+    "set": "Fiends & Familiars",
+    "card-number": 5
+  },
+  "fi-ff-6": {
+    "id": "fi-ff-6",
+    "name": "Fiend of Coercion",
+    "set": "Fiends & Familiars",
+    "card-number": 6
+  },
+  "fi-ff-7": {
+    "id": "fi-ff-7",
+    "name": "Fiend of Collusion",
+    "set": "Fiends & Familiars",
+    "card-number": 7
+  },
+  "fi-ff-8": {
+    "id": "fi-ff-8",
+    "name": "Fiend of Commitment",
+    "set": "Fiends & Familiars",
+    "card-number": 8
+  },
+  "fi-ff-9": {
+    "id": "fi-ff-9",
+    "name": "Fiend of Confinement",
+    "set": "Fiends & Familiars",
+    "card-number": 9
+  },
+  "fi-ff-10": {
+    "id": "fi-ff-10",
+    "name": "Fiend of Constriction",
+    "set": "Fiends & Familiars",
+    "card-number": 10
+  },
+  "fi-ff-11": {
+    "id": "fi-ff-11",
+    "name": "Fiend of Denial",
+    "set": "Fiends & Familiars",
+    "card-number": 11
+  },
+  "fi-ff-12": {
+    "id": "fi-ff-12",
+    "name": "Fiend of Deprivation",
+    "set": "Fiends & Familiars",
+    "card-number": 12
+  },
+  "fi-ff-13": {
+    "id": "fi-ff-13",
+    "name": "Fiend of Duress",
+    "set": "Fiends & Familiars",
+    "card-number": 13
+  },
+  "fi-ff-14": {
+    "id": "fi-ff-14",
+    "name": "Fiend of Feebleness",
+    "set": "Fiends & Familiars",
+    "card-number": 14
+  },
+  "fi-ff-15": {
+    "id": "fi-ff-15",
+    "name": "Fiend of Furor",
+    "set": "Fiends & Familiars",
+    "card-number": 15
+  },
+  "fi-ff-16": {
+    "id": "fi-ff-16",
+    "name": "Fiend of Ignorance",
+    "set": "Fiends & Familiars",
+    "card-number": 16
+  },
+  "fi-ff-17": {
+    "id": "fi-ff-17",
+    "name": "Fiend of Ineptitude",
+    "set": "Fiends & Familiars",
+    "card-number": 17
+  },
+  "fi-ff-18": {
+    "id": "fi-ff-18",
+    "name": "Fiend of Inflation",
+    "set": "Fiends & Familiars",
+    "card-number": 18
+  },
+  "fi-ff-19": {
+    "id": "fi-ff-19",
+    "name": "Fiend of Judgment",
+    "set": "Fiends & Familiars",
+    "card-number": 19
+  },
+  "fi-ff-20": {
+    "id": "fi-ff-20",
+    "name": "Fiend of Misery",
+    "set": "Fiends & Familiars",
+    "card-number": 20
+  },
+  "fi-ff-21": {
+    "id": "fi-ff-21",
+    "name": "Fiend of Obligation",
+    "set": "Fiends & Familiars",
+    "card-number": 21
+  },
+  "fi-ff-22": {
+    "id": "fi-ff-22",
+    "name": "Fiend of Sacrifice",
+    "set": "Fiends & Familiars",
+    "card-number": 22
+  },
+  "fi-ff-23": {
+    "id": "fi-ff-23",
+    "name": "Fiend of Severance",
+    "set": "Fiends & Familiars",
+    "card-number": 23
+  },
+  "fi-ff-24": {
+    "id": "fi-ff-24",
+    "name": "Fiend of Stupor",
+    "set": "Fiends & Familiars",
+    "card-number": 24
+  },
+  "fi-ff-25": {
+    "id": "fi-ff-25",
+    "name": "Fiend of Temperance",
+    "set": "Fiends & Familiars",
+    "card-number": 25
+  },
+  "fi-ff-26": {
+    "id": "fi-ff-26",
+    "name": "Fiend of Treachery",
+    "set": "Fiends & Familiars",
+    "card-number": 26
+  },
+  "fi-ff-27": {
+    "id": "fi-ff-27",
+    "name": "Fiend of Treason",
+    "set": "Fiends & Familiars",
+    "card-number": 27
+  },
+  "fi-ff-28": {
+    "id": "fi-ff-28",
+    "name": "Fiend of Tuition",
+    "set": "Fiends & Familiars",
+    "card-number": 28
+  },
+  "fi-ff-29": {
+    "id": "fi-ff-29",
+    "name": "Fiend of Vulnerability",
+    "set": "Fiends & Familiars",
+    "card-number": 29
+  },
+  "fi-ff-30": {
+    "id": "fi-ff-30",
+    "name": "Fiend of Weakness",
+    "set": "Fiends & Familiars",
+    "card-number": 30
+  }
+}

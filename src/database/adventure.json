@@ -1,0 +1,866 @@
+{
+  "ad-mm-44": {
+    "id": "ad-mm-44",
+    "name": "Bite",
+    "kind": "attack",
+    "monster": "Vampire",
+    "set": "Monsters & Minions",
+    "card-numberber": 44
+  },
+  "ad-mm-45": {
+    "id": "ad-mm-45",
+    "name": "Mind Assault",
+    "kind": "attack",
+    "monster": "Vampire",
+    "set": "Monsters & Minions",
+    "card-numberber": 45
+  },
+  "ad-mm-43": {
+    "id": "ad-mm-43",
+    "name": "Life Drain",
+    "kind": "attack",
+    "monster": "Vampire",
+    "set": "Monsters & Minions",
+    "card-numberber": 43
+  },
+  "ad-mm-40": {
+    "id": "ad-mm-40",
+    "name": "Ghoul Swarm",
+    "kind": "obstacle",
+    "monster": "Vampire",
+    "set": "Monsters & Minions",
+    "card-numberber": 40
+  },
+  "ad-mm-41": {
+    "id": "ad-mm-41",
+    "name": "Collapse",
+    "kind": "obstacle",
+    "monster": "Vampire",
+    "set": "Monsters & Minions",
+    "card-numberber": 41
+  },
+  "ad-mm-42": {
+    "id": "ad-mm-42",
+    "name": "Blood Pool",
+    "kind": "obstacle",
+    "monster": "Vampire",
+    "set": "Monsters & Minions",
+    "card-numberber": 42
+  },
+  "ad-mm-37": {
+    "id": "ad-mm-37",
+    "name": "Catacombs",
+    "kind": "location",
+    "monster": "Vampire",
+    "set": "Monsters & Minions",
+    "card-numberber": 37
+  },
+  "ad-mm-38": {
+    "id": "ad-mm-38",
+    "name": "Ancestral Castle",
+    "kind": "location",
+    "monster": "Vampire",
+    "set": "Monsters & Minions",
+    "card-numberber": 38
+  },
+  "ad-mm-39": {
+    "id": "ad-mm-39",
+    "name": "Corrupted Shrine",
+    "kind": "location",
+    "monster": "Vampire",
+    "set": "Monsters & Minions",
+    "card-numberber": 39
+  },
+  "ad-mm-46": {
+    "id": "ad-mm-46",
+    "name": "Cathedral",
+    "kind": "location",
+    "monster": "Chimera",
+    "set": "Monsters & Minions",
+    "card-numberber": 46
+  },
+  "ad-mm-47": {
+    "id": "ad-mm-47",
+    "name": "Old Fortress",
+    "kind": "location",
+    "monster": "Chimera",
+    "set": "Monsters & Minions",
+    "card-numberber": 47
+  },
+  "ad-mm-48": {
+    "id": "ad-mm-48",
+    "name": "Shadowy Cave",
+    "kind": "location",
+    "monster": "Chimera",
+    "set": "Monsters & Minions",
+    "card-numberber": 48
+  },
+  "ad-mm-49": {
+    "id": "ad-mm-49",
+    "name": "Befall Curse",
+    "kind": "obstacle",
+    "monster": "Chimera",
+    "set": "Monsters & Minions",
+    "card-numberber": 49
+  },
+  "ad-mm-50": {
+    "id": "ad-mm-50",
+    "name": "Arcane Runes",
+    "kind": "obstacle",
+    "monster": "Chimera",
+    "set": "Monsters & Minions",
+    "card-numberber": 50
+  },
+  "ad-mm-51": {
+    "id": "ad-mm-51",
+    "name": "Energy Barrier",
+    "kind": "obstacle",
+    "monster": "Chimera",
+    "set": "Monsters & Minions",
+    "card-numberber": 51
+  },
+  "ad-mm-52": {
+    "id": "ad-mm-52",
+    "name": "Acid Breath",
+    "kind": "attack",
+    "monster": "Chimera",
+    "set": "Monsters & Minions",
+    "card-numberber": 52
+  },
+  "ad-mm-53": {
+    "id": "ad-mm-53",
+    "name": "Cone of Cold",
+    "kind": "attack",
+    "monster": "Chimera",
+    "set": "Monsters & Minions",
+    "card-numberber": 53
+  },
+  "ad-mm-54": {
+    "id": "ad-mm-54",
+    "name": "Lightning Strike",
+    "kind": "attack",
+    "monster": "Chimera",
+    "set": "Monsters & Minions",
+    "card-numberber": 54
+  },
+  "ad-mm-19": {
+    "id": "ad-mm-19",
+    "name": "Another Dimension",
+    "kind": "location",
+    "monster": "Demon",
+    "set": "Monsters & Minions",
+    "card-numberber": 19
+  },
+  "ad-mm-20": {
+    "id": "ad-mm-20",
+    "name": "Underworld",
+    "kind": "location",
+    "monster": "Demon",
+    "set": "Monsters & Minions",
+    "card-numberber": 20
+  },
+  "ad-mm-21": {
+    "id": "ad-mm-21",
+    "name": "Dark Temple",
+    "kind": "location",
+    "monster": "Demon",
+    "set": "Monsters & Minions",
+    "card-numberber": 21
+  },
+  "ad-mm-22": {
+    "id": "ad-mm-22",
+    "name": "Riddle",
+    "kind": "obstacle",
+    "monster": "Demon",
+    "set": "Monsters & Minions",
+    "card-numberber": 22
+  },
+  "ad-mm-23": {
+    "id": "ad-mm-23",
+    "name": "Skeleton Horde",
+    "kind": "obstacle",
+    "monster": "Demon",
+    "set": "Monsters & Minions",
+    "card-numberber": 23
+  },
+  "ad-mm-24": {
+    "id": "ad-mm-24",
+    "name": "Poisonous Fumes",
+    "kind": "obstacle",
+    "monster": "Demon",
+    "set": "Monsters & Minions",
+    "card-numberber": 24
+  },
+  "ad-mm-25": {
+    "id": "ad-mm-25",
+    "name": "Horned Charge",
+    "kind": "attack",
+    "monster": "Demon",
+    "set": "Monsters & Minions",
+    "card-numberber": 25
+  },
+  "ad-mm-26": {
+    "id": "ad-mm-26",
+    "name": "Flame Sword",
+    "kind": "attack",
+    "monster": "Demon",
+    "set": "Monsters & Minions",
+    "card-numberber": 26
+  },
+  "ad-mm-27": {
+    "id": "ad-mm-27",
+    "name": "Scythe of Souls",
+    "kind": "attack",
+    "monster": "Demon",
+    "set": "Monsters & Minions",
+    "card-numberber": 27
+  },
+  "ad-mm-28": {
+    "id": "ad-mm-28",
+    "name": "Dungeon",
+    "kind": "location",
+    "monster": "Dragon",
+    "set": "Monsters & Minions",
+    "card-numberber": 28
+  },
+  "ad-mm-29": {
+    "id": "ad-mm-29",
+    "name": "Mountainside",
+    "kind": "location",
+    "monster": "Dragon",
+    "set": "Monsters & Minions",
+    "card-numberber": 29
+  },
+  "ad-mm-30": {
+    "id": "ad-mm-30",
+    "name": "Ancient Ruins",
+    "kind": "location",
+    "monster": "Dragon",
+    "set": "Monsters & Minions",
+    "card-numberber": 30
+  },
+  "ad-mm-31": {
+    "id": "ad-mm-31",
+    "name": "Captured",
+    "kind": "obstacle",
+    "monster": "Dragon",
+    "set": "Monsters & Minions",
+    "card-numberber": 31
+  },
+  "ad-mm-32": {
+    "id": "ad-mm-32",
+    "name": "Dart Trap",
+    "kind": "obstacle",
+    "monster": "Dragon",
+    "set": "Monsters & Minions",
+    "card-numberber": 32
+  },
+  "ad-mm-33": {
+    "id": "ad-mm-33",
+    "name": "Spiked Pit Trap",
+    "kind": "obstacle",
+    "monster": "Dragon",
+    "set": "Monsters & Minions",
+    "card-numberber": 33
+  },
+  "ad-mm-34": {
+    "id": "ad-mm-34",
+    "name": "Claw Attack",
+    "kind": "attack",
+    "monster": "Dragon",
+    "set": "Monsters & Minions",
+    "card-numberber": 34
+  },
+  "ad-mm-35": {
+    "id": "ad-mm-35",
+    "name": "Fire Breath",
+    "kind": "attack",
+    "monster": "Dragon",
+    "set": "Monsters & Minions",
+    "card-numberber": 35
+  },
+  "ad-mm-36": {
+    "id": "ad-mm-36",
+    "name": "Tail Strike",
+    "kind": "attack",
+    "monster": "Dragon",
+    "set": "Monsters & Minions",
+    "card-numberber": 36
+  },
+  "ad-mm-10": {
+    "id": "ad-mm-10",
+    "name": "Stone Bridge",
+    "kind": "location",
+    "monster": "Giant Troll",
+    "set": "Monsters & Minions",
+    "card-numberber": 10
+  },
+  "ad-mm-11": {
+    "id": "ad-mm-11",
+    "name": "Abandoned Mine",
+    "kind": "location",
+    "monster": "Giant Troll",
+    "set": "Monsters & Minions",
+    "card-numberber": 11
+  },
+  "ad-mm-12": {
+    "id": "ad-mm-12",
+    "name": "Forgotten Forest",
+    "kind": "location",
+    "monster": "Giant Troll",
+    "set": "Monsters & Minions",
+    "card-numberber": 12
+  },
+  "ad-mm-13": {
+    "id": "ad-mm-13",
+    "name": "Traitor",
+    "kind": "obstacle",
+    "monster": "Giant Troll",
+    "set": "Monsters & Minions",
+    "card-numberber": 13
+  },
+  "ad-mm-14": {
+    "id": "ad-mm-14",
+    "name": "Ambushed",
+    "kind": "obstacle",
+    "monster": "Giant Troll",
+    "set": "Monsters & Minions",
+    "card-numberber": 14
+  },
+  "ad-mm-15": {
+    "id": "ad-mm-15",
+    "name": "Illusion",
+    "kind": "obstacle",
+    "monster": "Giant Troll",
+    "set": "Monsters & Minions",
+    "card-numberber": 15
+  },
+  "ad-mm-16": {
+    "id": "ad-mm-16",
+    "name": "Club Swing",
+    "kind": "attack",
+    "monster": "Giant Troll",
+    "set": "Monsters & Minions",
+    "card-numberber": 16
+  },
+  "ad-mm-17": {
+    "id": "ad-mm-17",
+    "name": "Ground Smash",
+    "kind": "attack",
+    "monster": "Giant Troll",
+    "set": "Monsters & Minions",
+    "card-numberber": 17
+  },
+  "ad-mm-18": {
+    "id": "ad-mm-18",
+    "name": "Throw",
+    "kind": "attack",
+    "monster": "Giant Troll",
+    "set": "Monsters & Minions",
+    "card-numberber": 18
+  },
+  "ad-mm-1": {
+    "id": "ad-mm-1",
+    "name": "Black Sea",
+    "kind": "location",
+    "monster": "Kraken",
+    "set": "Monsters & Minions",
+    "card-numberber": 1
+  },
+  "ad-mm-2": {
+    "id": "ad-mm-2",
+    "name": "Isle of Winter",
+    "kind": "location",
+    "monster": "Kraken",
+    "set": "Monsters & Minions",
+    "card-numberber": 2
+  },
+  "ad-mm-3": {
+    "id": "ad-mm-3",
+    "name": "Hidden Cove",
+    "kind": "location",
+    "monster": "Kraken",
+    "set": "Monsters & Minions",
+    "card-numberber": 3
+  },
+  "ad-mm-4": {
+    "id": "ad-mm-4",
+    "name": "Lost at Sea",
+    "kind": "obstacle",
+    "monster": "Kraken",
+    "set": "Monsters & Minions",
+    "card-numberber": 4
+  },
+  "ad-mm-5": {
+    "id": "ad-mm-5",
+    "name": "Crw Mutiny",
+    "kind": "obstacle",
+    "monster": "Kraken",
+    "set": "Monsters & Minions",
+    "card-numberber": 5
+  },
+  "ad-mm-6": {
+    "id": "ad-mm-6",
+    "name": "Maelstrom",
+    "kind": "obstacle",
+    "monster": "Kraken",
+    "set": "Monsters & Minions",
+    "card-numberber": 6
+  },
+  "ad-mm-7": {
+    "id": "ad-mm-7",
+    "name": "Swallowed",
+    "kind": "attack",
+    "monster": "Kraken",
+    "set": "Monsters & Minions",
+    "card-numberber": 7
+  },
+  "ad-mm-8": {
+    "id": "ad-mm-8",
+    "name": "Tentacle Attack",
+    "kind": "attack",
+    "monster": "Kraken",
+    "set": "Monsters & Minions",
+    "card-numberber": 8
+  },
+  "ad-mm-9": {
+    "id": "ad-mm-9",
+    "name": "Capsize Ship",
+    "kind": "attack",
+    "monster": "Kraken",
+    "set": "Monsters & Minions",
+    "card-numberber": 9
+  },
+  "ad-ff-1": {
+    "id": "ad-ff-1",
+    "name": "Crystal Cavern",
+    "kind": "location",
+    "monster": "Cyclops",
+    "set": "Fiends & Familiars",
+    "card-numberber": 1
+  },
+  "ad-ff-2": {
+    "id": "ad-ff-2",
+    "name": "Labyrinth",
+    "kind": "location",
+    "monster": "Cyclops",
+    "set": "Fiends & Familiars",
+    "card-numberber": 2
+  },
+  "ad-ff-3": {
+    "id": "ad-ff-3",
+    "name": "Long Tooth Island",
+    "kind": "location",
+    "monster": "Cyclops",
+    "set": "Fiends & Familiars",
+    "card-numberber": 3
+  },
+  "ad-ff-4": {
+    "id": "ad-ff-4",
+    "name": "Heavy Fog",
+    "kind": "obstacle",
+    "monster": "Cyclops",
+    "set": "Fiends & Familiars",
+    "card-numberber": 4
+  },
+  "ad-ff-5": {
+    "id": "ad-ff-5",
+    "name": "Infestation",
+    "kind": "obstacle",
+    "monster": "Cyclops",
+    "set": "Fiends & Familiars",
+    "card-numberber": 5
+  },
+  "ad-ff-6": {
+    "id": "ad-ff-6",
+    "name": "Rockslide",
+    "kind": "obstacle",
+    "monster": "Cyclops",
+    "set": "Fiends & Familiars",
+    "card-numberber": 6
+  },
+  "ad-ff-7": {
+    "id": "ad-ff-7",
+    "name": "Blind Rage",
+    "kind": "attack",
+    "monster": "Cyclops",
+    "set": "Fiends & Familiars",
+    "card-numberber": 7
+  },
+  "ad-ff-8": {
+    "id": "ad-ff-8",
+    "name": "Death Stare",
+    "kind": "attack",
+    "monster": "Cyclops",
+    "set": "Fiends & Familiars",
+    "card-numberber": 8
+  },
+  "ad-ff-9": {
+    "id": "ad-ff-9",
+    "name": "Desperate Jab",
+    "kind": "attack",
+    "monster": "Cyclops",
+    "set": "Fiends & Familiars",
+    "card-numberber": 9
+  },
+  "ad-ff-10": {
+    "id": "ad-ff-10",
+    "name": "Badlands",
+    "kind": "location",
+    "monster": "Gorgon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 10
+  },
+  "ad-ff-11": {
+    "id": "ad-ff-11",
+    "name": "Blasted Steppe",
+    "kind": "location",
+    "monster": "Gorgon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 11
+  },
+  "ad-ff-12": {
+    "id": "ad-ff-12",
+    "name": "Volcanic Wastes",
+    "kind": "location",
+    "monster": "Gorgon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 12
+  },
+  "ad-ff-13": {
+    "id": "ad-ff-13",
+    "name": "Confusion",
+    "kind": "obstacle",
+    "monster": "Gorgon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 13
+  },
+  "ad-ff-14": {
+    "id": "ad-ff-14",
+    "name": "Desperation",
+    "kind": "obstacle",
+    "monster": "Gorgon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 14
+  },
+  "ad-ff-15": {
+    "id": "ad-ff-15",
+    "name": "Wicked Oracle",
+    "kind": "obstacle",
+    "monster": "Gorgon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 15
+  },
+  "ad-ff-16": {
+    "id": "ad-ff-16",
+    "name": "Smothering Grip",
+    "kind": "attack",
+    "monster": "Gorgon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 16
+  },
+  "ad-ff-17": {
+    "id": "ad-ff-17",
+    "name": "Paralyzing Glance",
+    "kind": "attack",
+    "monster": "Gorgon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 17
+  },
+  "ad-ff-18": {
+    "id": "ad-ff-18",
+    "name": "Snake Bite",
+    "kind": "attack",
+    "monster": "Gorgon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 18
+  },
+  "ad-ff-19": {
+    "id": "ad-ff-19",
+    "name": "Crossroads",
+    "kind": "location",
+    "monster": "Gryphon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 19
+  },
+  "ad-ff-20": {
+    "id": "ad-ff-20",
+    "name": "Lofty Crag",
+    "kind": "location",
+    "monster": "Gryphon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 20
+  },
+  "ad-ff-21": {
+    "id": "ad-ff-21",
+    "name": "Stone Tower",
+    "kind": "location",
+    "monster": "Gryphon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 21
+  },
+  "ad-ff-22": {
+    "id": "ad-ff-22",
+    "name": "Deception",
+    "kind": "obstacle",
+    "monster": "Gryphon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 22
+  },
+  "ad-ff-23": {
+    "id": "ad-ff-23",
+    "name": "Difficult Terrain",
+    "kind": "obstacle",
+    "monster": "Gryphon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 23
+  },
+  "ad-ff-24": {
+    "id": "ad-ff-24",
+    "name": "Perilous Heights",
+    "kind": "obstacle",
+    "monster": "Gryphon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 24
+  },
+  "ad-ff-25": {
+    "id": "ad-ff-25",
+    "name": "Piercing Screech",
+    "kind": "attack",
+    "monster": "Gryphon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 25
+  },
+  "ad-ff-26": {
+    "id": "ad-ff-26",
+    "name": "Powerful Grip",
+    "kind": "attack",
+    "monster": "Gryphon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 26
+  },
+  "ad-ff-27": {
+    "id": "ad-ff-27",
+    "name": "Razor Claws",
+    "kind": "attack",
+    "monster": "Gryphon",
+    "set": "Fiends & Familiars",
+    "card-numberber": 27
+  },
+  "ad-ff-28": {
+    "id": "ad-ff-28",
+    "name": "Marshlands",
+    "kind": "location",
+    "monster": "Hydra",
+    "set": "Fiends & Familiars",
+    "card-numberber": 28
+  },
+  "ad-ff-29": {
+    "id": "ad-ff-29",
+    "name": "Rocky Shore",
+    "kind": "location",
+    "monster": "Hydra",
+    "set": "Fiends & Familiars",
+    "card-numberber": 29
+  },
+  "ad-ff-30": {
+    "id": "ad-ff-30",
+    "name": "Slime Bog",
+    "kind": "location",
+    "monster": "Hydra",
+    "set": "Fiends & Familiars",
+    "card-numberber": 30
+  },
+  "ad-ff-31": {
+    "id": "ad-ff-31",
+    "name": "Conflagration",
+    "kind": "obstacle",
+    "monster": "Hydra",
+    "set": "Fiends & Familiars",
+    "card-numberber": 31
+  },
+  "ad-ff-32": {
+    "id": "ad-ff-32",
+    "name": "Marauders",
+    "kind": "obstacle",
+    "monster": "Hydra",
+    "set": "Fiends & Familiars",
+    "card-numberber": 32
+  },
+  "ad-ff-33": {
+    "id": "ad-ff-33",
+    "name": "Temptation",
+    "kind": "obstacle",
+    "monster": "Hydra",
+    "set": "Fiends & Familiars",
+    "card-numberber": 33
+  },
+  "ad-ff-34": {
+    "id": "ad-ff-34",
+    "name": "Devastating Blow",
+    "kind": "attack",
+    "monster": "Hydra",
+    "set": "Fiends & Familiars",
+    "card-numberber": 34
+  },
+  "ad-ff-35": {
+    "id": "ad-ff-35",
+    "name": "Shrieking Blast",
+    "kind": "attack",
+    "monster": "Hydra",
+    "set": "Fiends & Familiars",
+    "card-numberber": 35
+  },
+  "ad-ff-36": {
+    "id": "ad-ff-36",
+    "name": "Triple Strike",
+    "kind": "attack",
+    "monster": "Hydra",
+    "set": "Fiends & Familiars",
+    "card-numberber": 36
+  },
+  "ad-ff-37": {
+    "id": "ad-ff-37",
+    "name": "Abyss of Remains",
+    "kind": "location",
+    "monster": "Leviathan",
+    "set": "Fiends & Familiars",
+    "card-numberber": 37
+  },
+  "ad-ff-38": {
+    "id": "ad-ff-38",
+    "name": "Great Depths",
+    "kind": "location",
+    "monster": "Leviathan",
+    "set": "Fiends & Familiars",
+    "card-numberber": 38
+  },
+  "ad-ff-39": {
+    "id": "ad-ff-39",
+    "name": "Reef of Madness",
+    "kind": "location",
+    "monster": "Leviathan",
+    "set": "Fiends & Familiars",
+    "card-numberber": 39
+  },
+  "ad-ff-40": {
+    "id": "ad-ff-40",
+    "name": "Monsoon",
+    "kind": "obstacle",
+    "monster": "Leviathan",
+    "set": "Fiends & Familiars",
+    "card-numberber": 40
+  },
+  "ad-ff-41": {
+    "id": "ad-ff-41",
+    "name": "Scurvy Outbreak",
+    "kind": "obstacle",
+    "monster": "Leviathan",
+    "set": "Fiends & Familiars",
+    "card-numberber": 41
+  },
+  "ad-ff-42": {
+    "id": "ad-ff-42",
+    "name": "Submersion",
+    "kind": "obstacle",
+    "monster": "Leviathan",
+    "set": "Fiends & Familiars",
+    "card-numberber": 42
+  },
+  "ad-ff-43": {
+    "id": "ad-ff-43",
+    "name": "Crushing Blow",
+    "kind": "attack",
+    "monster": "Leviathan",
+    "set": "Fiends & Familiars",
+    "card-numberber": 43
+  },
+  "ad-ff-44": {
+    "id": "ad-ff-44",
+    "name": "Laceration",
+    "kind": "attack",
+    "monster": "Leviathan",
+    "set": "Fiends & Familiars",
+    "card-numberber": 44
+  },
+  "ad-ff-45": {
+    "id": "ad-ff-45",
+    "name": "Scalding Deluge",
+    "kind": "attack",
+    "monster": "Leviathan",
+    "set": "Fiends & Familiars",
+    "card-numberber": 45
+  },
+  "ad-ff-46": {
+    "id": "ad-ff-46",
+    "name": "Dark Hollow",
+    "kind": "location",
+    "monster": "Megapede",
+    "set": "Fiends & Familiars",
+    "card-numberber": 46
+  },
+  "ad-ff-47": {
+    "id": "ad-ff-47",
+    "name": "Ossuary",
+    "kind": "location",
+    "monster": "Megapede",
+    "set": "Fiends & Familiars",
+    "card-numberber": 47
+  },
+  "ad-ff-48": {
+    "id": "ad-ff-48",
+    "name": "Wasteland",
+    "kind": "location",
+    "monster": "Megapede",
+    "set": "Fiends & Familiars",
+    "card-numberber": 48
+  },
+  "ad-ff-49": {
+    "id": "ad-ff-49",
+    "name": "Eternal Darkness",
+    "kind": "obstacle",
+    "monster": "Megapede",
+    "set": "Fiends & Familiars",
+    "card-numberber": 49
+  },
+  "ad-ff-50": {
+    "id": "ad-ff-50",
+    "name": "Quicksand",
+    "kind": "obstacle",
+    "monster": "Megapede",
+    "set": "Fiends & Familiars",
+    "card-numberber": 50
+  },
+  "ad-ff-51": {
+    "id": "ad-ff-51",
+    "name": "Sandstorm",
+    "kind": "obstacle",
+    "monster": "Megapede",
+    "set": "Fiends & Familiars",
+    "card-numberber": 51
+  },
+  "ad-ff-52": {
+    "id": "ad-ff-52",
+    "name": "Cicada Morph",
+    "kind": "attack",
+    "monster": "Megapede",
+    "set": "Fiends & Familiars",
+    "card-numberber": 52
+  },
+  "ad-ff-53": {
+    "id": "ad-ff-53",
+    "name": "Poisonous Foam",
+    "kind": "attack",
+    "monster": "Megapede",
+    "set": "Fiends & Familiars",
+    "card-numberber": 53
+  },
+  "ad-ff-54": {
+    "id": "ad-ff-54",
+    "name": "Venomous Bards",
+    "kind": "attack",
+    "monster": "Megapede",
+    "set": "Fiends & Familiars",
+    "card-numberber": 54
+  }
+}

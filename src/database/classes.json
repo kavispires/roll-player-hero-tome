@@ -1,0 +1,326 @@
+{
+  "cl-mm-a-1": {
+    "id": "cl-mm-a-1",
+    "name": "Assassin",
+    "color": "Black",
+    "power": "Adept",
+    "set": "Monsters & Minions",
+    "card-number": 1,
+    "side": "a"
+  },
+  "cl-ff-a-1": {
+    "id": "cl-ff-a-1",
+    "name": "Fighter",
+    "color": "Red",
+    "power": "Hardened",
+    "set": "Fiends & Familiars",
+    "card-number": 1,
+    "side": "a"
+  },
+  "cl-mm-a-2": {
+    "id": "cl-mm-a-2",
+    "name": "Crusader",
+    "color": "White",
+    "power": "Brave",
+    "set": "Monsters & Minions",
+    "card-number": 2,
+    "side": "a"
+  },
+  "cl-ff-a-2": {
+    "id": "cl-ff-a-2",
+    "name": "Magician",
+    "color": "Blue",
+    "power": "Sly",
+    "set": "Fiends & Familiars",
+    "card-number": 2,
+    "side": "a"
+  },
+  "cl-mm-a-3": {
+    "id": "cl-mm-a-3",
+    "name": "Elementalist",
+    "color": "Green",
+    "power": "Dominant",
+    "set": "Monsters & Minions",
+    "card-number": 3,
+    "side": "a"
+  },
+  "cl-ff-a-3": {
+    "id": "cl-ff-a-3",
+    "name": "Scribe",
+    "color": "White",
+    "power": "Learned",
+    "set": "Fiends & Familiars",
+    "card-number": 3,
+    "side": "a"
+  },
+  "cl-mm-a-4": {
+    "id": "cl-mm-a-4",
+    "name": "Illusionist",
+    "color": "Blue",
+    "power": "Arcane",
+    "set": "Monsters & Minions",
+    "card-number": 4,
+    "side": "a"
+  },
+  "cl-ff-a-4": {
+    "id": "cl-ff-a-4",
+    "name": "Seeker",
+    "color": "Black",
+    "power": "Connected",
+    "set": "Fiends & Familiars",
+    "card-number": 4,
+    "side": "a"
+  },
+  "cl-mm-a-5": {
+    "id": "cl-mm-a-5",
+    "name": "Alchemist",
+    "color": "Pink",
+    "power": "Adaptable",
+    "set": "Monsters & Minions",
+    "card-number": 5,
+    "side": "a"
+  },
+  "cl-ff-a-5": {
+    "id": "cl-ff-a-5",
+    "name": "Soothsayer",
+    "color": "Green",
+    "power": "Judicious",
+    "set": "Fiends & Familiars",
+    "card-number": 5,
+    "side": "a"
+  },
+  "cl-ff-a-6": {
+    "id": "cl-ff-a-6",
+    "name": "Tinkerer",
+    "color": "Pink",
+    "power": "Wily",
+    "set": "Fiends & Familiars",
+    "card-number": 6,
+    "side": "a"
+  },
+  "cl-mm-a-6": {
+    "id": "cl-mm-a-6",
+    "name": "Warlord",
+    "color": "Red",
+    "power": "Empowered",
+    "set": "Monsters & Minions",
+    "card-number": 6,
+    "side": "a"
+  },
+  "cl-bs-b-6": {
+    "id": "cl-bs-b-6",
+    "name": "Barbarian",
+    "color": "Red",
+    "power": "Powerful",
+    "set": "Base",
+    "card-number": 6,
+    "side": "b"
+  },
+  "cl-bs-b-3": {
+    "id": "cl-bs-b-3",
+    "name": "Bard",
+    "color": "Pink",
+    "power": "Charming",
+    "set": "Base",
+    "card-number": 3,
+    "side": "b"
+  },
+  "cl-ff-b-6": {
+    "id": "cl-ff-b-6",
+    "name": "Beastmaster",
+    "color": "Pink",
+    "power": "Controlling",
+    "set": "Fiends & Familiars",
+    "card-number": 6,
+    "side": "b"
+  },
+  "cl-ff-b-1": {
+    "id": "cl-ff-b-1",
+    "name": "Centurion",
+    "color": "Red",
+    "power": "Inspiring",
+    "set": "Fiends & Familiars",
+    "card-number": 1,
+    "side": "b"
+  },
+  "cl-bs-a-1": {
+    "id": "cl-bs-a-1",
+    "name": "Cleric",
+    "color": "White",
+    "power": "Charitable",
+    "set": "Base",
+    "card-number": 1,
+    "side": "a"
+  },
+  "cl-ff-b-2": {
+    "id": "cl-ff-b-2",
+    "name": "Conjurer",
+    "color": "Blue",
+    "power": "Beholden",
+    "set": "Fiends & Familiars",
+    "card-number": 2,
+    "side": "b"
+  },
+  "cl-bs-a-2": {
+    "id": "cl-bs-a-2",
+    "name": "Druid",
+    "color": "Green",
+    "power": "Attuned",
+    "set": "Base",
+    "card-number": 2,
+    "side": "a"
+  },
+  "cl-mm-b-4": {
+    "id": "cl-mm-b-4",
+    "name": "Enchanter",
+    "color": "Blue",
+    "power": "Opportunist",
+    "set": "Monsters & Minions",
+    "card-number": 4,
+    "side": "b"
+  },
+  "cl-ff-b-5": {
+    "id": "cl-ff-b-5",
+    "name": "Hunter",
+    "color": "Green",
+    "power": "Seasoned",
+    "set": "Fiends & Familiars",
+    "card-number": 5,
+    "side": "b"
+  },
+  "cl-mm-b-6": {
+    "id": "cl-mm-b-6",
+    "name": "Knight",
+    "color": "Red",
+    "power": "Ironclad",
+    "set": "Monsters & Minions",
+    "card-number": 6,
+    "side": "b"
+  },
+  "cl-bs-a-3": {
+    "id": "cl-bs-a-3",
+    "name": "Monk",
+    "color": "Pink",
+    "power": "Enlightened",
+    "set": "Base",
+    "card-number": 3,
+    "side": "a"
+  },
+  "cl-ff-b-4": {
+    "id": "cl-ff-b-4",
+    "name": "Outrider",
+    "color": "Black",
+    "power": "Notorious",
+    "set": "Fiends & Familiars",
+    "card-number": 4,
+    "side": "b"
+  },
+  "cl-bs-b-1": {
+    "id": "cl-bs-b-1",
+    "name": "Paladin",
+    "color": "White",
+    "power": "Vigilant",
+    "set": "Base",
+    "card-number": 1,
+    "side": "b"
+  },
+  "cl-mm-b-2": {
+    "id": "cl-mm-b-2",
+    "name": "Priest",
+    "color": "White",
+    "power": "Spiritual",
+    "set": "Monsters & Minions",
+    "card-number": 2,
+    "side": "b"
+  },
+  "cl-mm-b-5": {
+    "id": "cl-mm-b-5",
+    "name": "Psionic",
+    "color": "Pink",
+    "power": "Unknown",
+    "set": "Monsters & Minions",
+    "card-number": 5,
+    "side": "b"
+  },
+  "cl-bs-b-2": {
+    "id": "cl-bs-b-2",
+    "name": "Ranger",
+    "color": "Green",
+    "power": "Skilled",
+    "set": "Base",
+    "card-number": 2,
+    "side": "b"
+  },
+  "cl-bs-a-4": {
+    "id": "cl-bs-a-4",
+    "name": "Rouge",
+    "color": "Black",
+    "power": "Mischievous",
+    "set": "Base",
+    "card-number": 4,
+    "side": "a"
+  },
+  "cl-mm-b-1": {
+    "id": "cl-mm-b-1",
+    "name": "Scout",
+    "color": "Black",
+    "power": "Foresighted",
+    "set": "Monsters & Minions",
+    "card-number": 1,
+    "side": "b"
+  },
+  "cl-mm-b-3": {
+    "id": "cl-mm-b-3",
+    "name": "Shaman",
+    "color": "Green",
+    "power": "Divine",
+    "set": "Monsters & Minions",
+    "card-number": 3,
+    "side": "b"
+  },
+  "cl-bs-a-5": {
+    "id": "cl-bs-a-5",
+    "name": "Sorcerer",
+    "color": "Blue",
+    "power": "Mysterious",
+    "set": "Base",
+    "card-number": 5,
+    "side": "a"
+  },
+  "cl-ff-b-3": {
+    "id": "cl-ff-b-3",
+    "name": "Templar",
+    "color": "White",
+    "power": "Righteous",
+    "set": "Fiends & Familiars",
+    "card-number": 3,
+    "side": "b"
+  },
+  "cl-bs-b-4": {
+    "id": "cl-bs-b-4",
+    "name": "Thief",
+    "color": "Black",
+    "power": "Shrewd",
+    "set": "Base",
+    "card-number": 4,
+    "side": "b"
+  },
+  "cl-bs-a-6": {
+    "id": "cl-bs-a-6",
+    "name": "Warrior",
+    "color": "Red",
+    "power": "Prepared",
+    "set": "Base",
+    "card-number": 6,
+    "side": "a"
+  },
+  "cl-bs-b-5": {
+    "id": "cl-bs-b-5",
+    "name": "Wizard",
+    "color": "Blue",
+    "power": "Enigmatic",
+    "set": "Base",
+    "card-number": 5,
+    "side": "b"
+  }
+}

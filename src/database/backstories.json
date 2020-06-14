@@ -1,0 +1,248 @@
+{
+  "bs-mm-1": {
+    "id": "bs-mm-1",
+    "name": "Apprentice",
+    "set": "Monsters & Minions",
+    "card-number": 1
+  },
+  "bs-bs-1": {
+    "id": "bs-bs-1",
+    "name": "Aristocrat",
+    "set": "Base",
+    "card-number": 1
+  },
+  "bs-ff-1": {
+    "id": "bs-ff-1",
+    "name": "Artificer",
+    "set": "Fiends & Familiars",
+    "card-number": 1
+  },
+  "bs-ff-2": {
+    "id": "bs-ff-2",
+    "name": "Bookworm",
+    "set": "Fiends & Familiars",
+    "card-number": 2
+  },
+  "bs-bs-2": {
+    "id": "bs-bs-2",
+    "name": "Brawler",
+    "set": "Base",
+    "card-number": 2
+  },
+  "bs-ff-3": {
+    "id": "bs-ff-3",
+    "name": "Caretaker",
+    "set": "Fiends & Familiars",
+    "card-number": 3
+  },
+  "bs-pm-7": {
+    "id": "bs-pm-7",
+    "name": "Cartographer",
+    "set": "Promo",
+    "card-number": 7
+  },
+  "bs-mm-2": {
+    "id": "bs-mm-2",
+    "name": "Cast Off",
+    "set": "Monsters & Minions",
+    "card-number": 2
+  },
+  "bs-ff-4": {
+    "id": "bs-ff-4",
+    "name": "Celestial",
+    "set": "Fiends & Familiars",
+    "card-number": 4
+  },
+  "bs-bs-3": {
+    "id": "bs-bs-3",
+    "name": "Chosen One",
+    "set": "Base",
+    "card-number": 3
+  },
+  "bs-ff-5": {
+    "id": "bs-ff-5",
+    "name": "Chronologist",
+    "set": "Fiends & Familiars",
+    "card-number": 5
+  },
+  "bs-bs-4": {
+    "id": "bs-bs-4",
+    "name": "Craftsman",
+    "set": "Base",
+    "card-number": 4
+  },
+  "bs-ff-6": {
+    "id": "bs-ff-6",
+    "name": "Culpable",
+    "set": "Fiends & Familiars",
+    "card-number": 6
+  },
+  "bs-mm-5": {
+    "id": "bs-mm-5",
+    "name": "Damaged",
+    "set": "Monsters & Minions",
+    "card-number": 5
+  },
+  "bs-bs-5": {
+    "id": "bs-bs-5",
+    "name": "Devoted",
+    "set": "Base",
+    "card-number": 5
+  },
+  "bs-mm-6": {
+    "id": "bs-mm-6",
+    "name": "Doomed",
+    "set": "Monsters & Minions",
+    "card-number": 6
+  },
+  "bs-ff-7": {
+    "id": "bs-ff-7",
+    "name": "Dreamweaver",
+    "set": "Fiends & Familiars",
+    "card-number": 7
+  },
+  "bs-bs-6": {
+    "id": "bs-bs-6",
+    "name": "Exonerated",
+    "set": "Base",
+    "card-number": 6
+  },
+  "bs-mm-3": {
+    "id": "bs-mm-3",
+    "name": "Gate Keeper",
+    "set": "Monsters & Minions",
+    "card-number": 3
+  },
+  "bs-mm-7": {
+    "id": "bs-mm-7",
+    "name": "Gladiator",
+    "set": "Monsters & Minions",
+    "card-number": 7
+  },
+  "bs-ff-8": {
+    "id": "bs-ff-8",
+    "name": "Haunted",
+    "set": "Fiends & Familiars",
+    "card-number": 8
+  },
+  "bs-bs-7": {
+    "id": "bs-bs-7",
+    "name": "Hunter",
+    "set": "Base",
+    "card-number": 7
+  },
+  "bs-ff-9": {
+    "id": "bs-ff-9",
+    "name": "Investigator",
+    "set": "Fiends & Familiars",
+    "card-number": 9
+  },
+  "bs-mm-8": {
+    "id": "bs-mm-8",
+    "name": "Lost In Time",
+    "set": "Monsters & Minions",
+    "card-number": 8
+  },
+  "bs-bs-8": {
+    "id": "bs-bs-8",
+    "name": "Lost Soul",
+    "set": "Base",
+    "card-number": 8
+  },
+  "bs-bs-9": {
+    "id": "bs-bs-9",
+    "name": "Mentor",
+    "set": "Base",
+    "card-number": 9
+  },
+  "bs-mm-9": {
+    "id": "bs-mm-9",
+    "name": "Oracle",
+    "set": "Monsters & Minions",
+    "card-number": 9
+  },
+  "bs-mm-10": {
+    "id": "bs-mm-10",
+    "name": "Outcast",
+    "set": "Monsters & Minions",
+    "card-number": 10
+  },
+  "bs-bs-10": {
+    "id": "bs-bs-10",
+    "name": "Patrician",
+    "set": "Base",
+    "card-number": 10
+  },
+  "bs-bs-11": {
+    "id": "bs-bs-11",
+    "name": "Persecuted",
+    "set": "Base",
+    "card-number": 11
+  },
+  "bs-bs-12": {
+    "id": "bs-bs-12",
+    "name": "Resilient",
+    "set": "Base",
+    "card-number": 12
+  },
+  "bs-bs-13": {
+    "id": "bs-bs-13",
+    "name": "Rift Walker",
+    "set": "Base",
+    "card-number": 13
+  },
+  "bs-bs-14": {
+    "id": "bs-bs-14",
+    "name": "Savage",
+    "set": "Base",
+    "card-number": 14
+  },
+  "bs-bs-15": {
+    "id": "bs-bs-15",
+    "name": "Savant",
+    "set": "Base",
+    "card-number": 15
+  },
+  "bs-mm-4": {
+    "id": "bs-mm-4",
+    "name": "Separated",
+    "set": "Monsters & Minions",
+    "card-number": 4
+  },
+  "bs-ff-10": {
+    "id": "bs-ff-10",
+    "name": "Split",
+    "set": "Fiends & Familiars",
+    "card-number": 10
+  },
+  "bs-bs-16": {
+    "id": "bs-bs-16",
+    "name": "Street Urchin",
+    "set": "Base",
+    "card-number": 16
+  },
+  "bs-ff-11": {
+    "id": "bs-ff-11",
+    "name": "Tormented",
+    "set": "Fiends & Familiars",
+    "card-number": 11
+  },
+  "bs-mm-11": {
+    "id": "bs-mm-11",
+    "name": "Transported",
+    "set": "Monsters & Minions",
+    "card-number": 11
+  },
+  "bs-ff-12": {
+    "id": "bs-ff-12",
+    "name": "Unhinged",
+    "set": "Fiends & Familiars",
+    "card-number": 12
+  },
+  "bs-mm-12": {
+    "id": "bs-mm-12",
+    "name": "Wanderer",
+    "set": "Monsters & Minions",
+    "card-number": 12
+  }
+}
