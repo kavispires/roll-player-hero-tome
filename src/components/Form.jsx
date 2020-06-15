@@ -9,10 +9,12 @@ import Select from '@material-ui/core/Select';
 import { TYPES, GENDERS } from '../utils/constants';
 
 // Components
-import FormSelect from './FormSelect';
 import FormSelectSimple from './FormSelectSimple';
 import FormText from './FormText';
 import FormAutocomplete from './FormAutocomplete';
+import FormAutocompleteMulti from './FormAutocompleteMulti';
+import FormAttributes from './FormAttributes';
+import FormAlignment from './FormAlignment';
 
 export default function Form() {
   return (
@@ -23,6 +25,9 @@ export default function Form() {
       <FormAutocomplete type={TYPES.CLASS} classModifier="quarter" />
       <FormSelectSimple type={TYPES.GENDER} classModifier="quarter" data={GENDERS} />
       <FormAutocomplete type={TYPES.BACKSTORY} classModifier="quarter" />
+      <FormAttributes />
+      <FormAlignment />
+      {/* <FormAutocompleteMulti type={TYPES.MARKET_WEAPON} classModifier="half" /> */}
     </main>
   );
 }

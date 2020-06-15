@@ -1,0 +1,16 @@
+.form-item {
+  width: calc(100% - #{$unit1});
+  margin: 0 $unit1 $unit1 0 !important;
+
+  &--half {
+    width: calc(50% - #{$unit1});
+  }
+
+  &--quarter {
+    width: calc(25% - #{$unit1});
+  }
+
+  &--attributes {
+    margin-top: $unit1 !important;
+  }
+}

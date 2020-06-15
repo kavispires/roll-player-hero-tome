@@ -10,7 +10,7 @@ const initialState = {
   class: null,
   gender: GENDERS.UNKOWN,
   backstory: null,
-  attributesScores: {
+  attributes: {
     str: 0,
     dex: 0,
     con: 0,
@@ -18,8 +18,8 @@ const initialState = {
     wis: 0,
     cha: 0,
   },
-  alignemnt: null,
-  alignementPos: 4,
+  alignment: null,
+  alignmentPos: 4,
   weapons: [],
   armor: [],
   skills: [],

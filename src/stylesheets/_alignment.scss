@@ -1,0 +1,27 @@
+$box-size: 45px;
+
+.alignment-grid {
+  display: grid !important;
+  grid-template-columns: $box-size $box-size $box-size;
+  grid-template-rows: $box-size $box-size $box-size;
+}
+
+.alignment-box {
+  background: white;
+  margin: 4px;
+  border: 1px solid $color-medium;
+  cursor: pointer;
+
+  &--active {
+    border: 3px solid gold;
+    color: gold;
+    background: $color-medium;
+    font-weight: bold;
+  }
+}
+
+.alignment-graph-container {
+  padding: $unit1;
+  display: flex;
+  justify-content: center;
+}

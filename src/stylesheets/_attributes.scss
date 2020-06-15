@@ -1,0 +1,36 @@
+.attributes-grid {
+  display: grid !important;
+  width: calc(50% - #{$unit1});
+  text-transform: uppercase;
+  font-size: 80%;
+  text-align: center;
+  grid-template-columns: auto 20% 20px 20% 20px 20%;
+  margin-bottom: $unit1;
+  align-items: center;
+  // grid-template-rows:  ... |   ...;
+}
+
+.attribute-header {
+  font-size: 65%;
+}
+
+.attribute-label {
+  display: flex;
+  flex-direction: column;
+  background: $color-medium;
+  color: #fff;
+  margin-right: $unit1;
+
+  &__key {
+    font-weight: bolder;
+    font-size: 120%;
+  }
+
+  &__name {
+    font-size: 50%;
+  }
+}
+
+.attribute-race-total {
+  border: 3px solid $color-medium;
+}

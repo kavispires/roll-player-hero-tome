@@ -10,6 +10,15 @@ export const GENDERS = {
   UNKNOWN: 'UNKNOWN',
 };
 
+export const ATTRIBUTES = {
+  str: 'Strength',
+  dex: 'Dexterity',
+  con: 'Constitution',
+  int: 'Intelligence',
+  wis: 'Wisdom',
+  cha: 'Charisma',
+};
+
 export const TYPES = {
   ALIGNMENT: Symbol('ALIGNMENT'),
   BACKSTORY: Symbol('BACKSTORY'),
