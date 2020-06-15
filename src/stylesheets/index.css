@@ -1,0 +1,35 @@
+body {
+  font-family: 'Noto Serif', serif;
+  background: #fff;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  color: #131515; }
+
+.app-container {
+  border: 1px solid #2b2c28; }
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  background: #d9cab3; }
+  .header h1 {
+    flex-grow: 1;
+    margin: 0;
+    font-family: serif;
+    text-transform: uppercase;
+    font-size: 1.5rem; }
+
+main {
+  padding-bottom: 8px; }
+
+.form-item {
+  width: calc(100% - 8px);
+  margin: 0 8px 8px 0 !important; }
+  .form-item--half {
+    width: calc(50% - 8px); }
+  .form-item--quarter {
+    width: calc(25% - 8px); }

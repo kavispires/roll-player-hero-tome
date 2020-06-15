@@ -9,7 +9,7 @@
     "int": 0,
     "wis": 0,
     "cha": 0,
-    "board-number": 1
+    "boardnum": 1
   },
   "rc-bs-2": {
     "id": "rc-bs-2",
@@ -21,7 +21,7 @@
     "int": 0,
     "wis": 0,
     "cha": -2,
-    "board-number": 2
+    "boardnum": 2
   },
   "rc-bs-3": {
     "id": "rc-bs-3",
@@ -33,7 +33,7 @@
     "int": 0,
     "wis": 0,
     "cha": 0,
-    "board-number": 3
+    "boardnum": 3
   },
   "rc-bs-4": {
     "id": "rc-bs-4",
@@ -45,7 +45,7 @@
     "int": 0,
     "wis": 0,
     "cha": 2,
-    "board-number": 4
+    "boardnum": 4
   },
   "rc-bs-5": {
     "id": "rc-bs-5",
@@ -57,7 +57,7 @@
     "int": 0,
     "wis": 0,
     "cha": 0,
-    "board-number": 5
+    "boardnum": 5
   },
   "rc-bs-6": {
     "id": "rc-bs-6",
@@ -69,7 +69,7 @@
     "int": -2,
     "wis": 0,
     "cha": 0,
-    "board-number": 6
+    "boardnum": 6
   },
   "rc-ff-1": {
     "id": "rc-ff-1",
@@ -81,7 +81,7 @@
     "int": 0,
     "wis": 2,
     "cha": 0,
-    "board-number": 1
+    "boardnum": 1
   },
   "rc-ff-2": {
     "id": "rc-ff-2",
@@ -93,7 +93,7 @@
     "int": -1,
     "wis": -1,
     "cha": 0,
-    "board-number": 2
+    "boardnum": 2
   },
   "rc-ff-3": {
     "id": "rc-ff-3",
@@ -105,7 +105,7 @@
     "int": 0,
     "wis": 1,
     "cha": 0,
-    "board-number": 3
+    "boardnum": 3
   },
   "rc-ff-4": {
     "id": "rc-ff-4",
@@ -117,7 +117,7 @@
     "int": 0,
     "wis": 0,
     "cha": -2,
-    "board-number": 4
+    "boardnum": 4
   },
   "rc-mm-1": {
     "id": "rc-mm-1",
@@ -129,7 +129,7 @@
     "int": 0,
     "wis": -2,
     "cha": 1,
-    "board-number": 1
+    "boardnum": 1
   },
   "rc-mm-2": {
     "id": "rc-mm-2",
@@ -141,7 +141,7 @@
     "int": 0,
     "wis": -1,
     "cha": -1,
-    "board-number": 2
+    "boardnum": 2
   },
   "rc-mm-3": {
     "id": "rc-mm-3",
@@ -153,7 +153,7 @@
     "int": 2,
     "wis": 0,
     "cha": 0,
-    "board-number": 3
+    "boardnum": 3
   },
   "rc-mm-4": {
     "id": "rc-mm-4",
@@ -165,7 +165,7 @@
     "int": 0,
     "wis": 0,
     "cha": 0,
-    "board-number": 4
+    "boardnum": 4
   },
   "rc-mm-5": {
     "id": "rc-mm-5",
@@ -177,7 +177,7 @@
     "int": 1,
     "wis": 0,
     "cha": -2,
-    "board-number": 5
+    "boardnum": 5
   },
   "rc-pm-1": {
     "id": "rc-pm-1",
@@ -189,7 +189,7 @@
     "int": 0,
     "wis": 0,
     "cha": 0,
-    "board-number": 1
+    "boardnum": 1
   },
   "rc-pm-2": {
     "id": "rc-pm-2",
@@ -201,6 +201,6 @@
     "int": -2,
     "wis": 0,
     "cha": 0,
-    "board-number": 2
+    "boardnum": 2
   }
 }

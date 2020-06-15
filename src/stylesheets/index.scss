@@ -1,0 +1,53 @@
+$color-primary: #131515;
+$color-medium: #2b2c28;
+$color-negative: #d9cab3;
+
+$unit1: 8px;
+
+body {
+  font-family: 'Noto Serif', serif;
+  background: #fff;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  color: $color-primary;
+}
+
+.app-container {
+  border: 1px solid $color-medium;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+
+  h1 {
+    flex-grow: 1;
+    margin: 0;
+    font-family: serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+
+  background: $color-negative;
+}
+
+main {
+  padding-bottom: $unit1;
+}
+
+.form-item {
+  width: calc(100% - #{$unit1});
+  margin: 0 $unit1 $unit1 0 !important;
+
+  &--half {
+    width: calc(50% - #{$unit1});
+  }
+
+  &--quarter {
+    width: calc(25% - #{$unit1});
+  }
+}
