@@ -1,7 +1,7 @@
 {
   "mo-mm-1": {
     "id": "mo-mm-1",
-    "nane": "Chimera",
+    "name": "Chimera",
     "color": "Pink",
     "set": "Monsters & Minions",
     "adjective": "Tricky",
@@ -14,7 +14,7 @@
   },
   "mo-ff-1": {
     "id": "mo-ff-1",
-    "nane": "Cyclops",
+    "name": "Cyclops",
     "color": "Green",
     "set": "Fiends & Familiars",
     "adjective": "Bloodthirsty",
@@ -27,7 +27,7 @@
   },
   "mo-mm-3": {
     "id": "mo-mm-3",
-    "nane": "Demon",
+    "name": "Demon",
     "color": "Black",
     "set": "Monsters & Minions",
     "adjective": "Dimensional",
@@ -40,7 +40,7 @@
   },
   "mo-mm-5": {
     "id": "mo-mm-5",
-    "nane": "Dragon",
+    "name": "Dragon",
     "color": "Red",
     "set": "Monsters & Minions",
     "adjective": "Winged",
@@ -53,7 +53,7 @@
   },
   "mo-mm-7": {
     "id": "mo-mm-7",
-    "nane": "Giant Troll",
+    "name": "Giant Troll",
     "color": "Green",
     "set": "Monsters & Minions",
     "adjective": "Ferocious",
@@ -66,7 +66,7 @@
   },
   "mo-ff-3": {
     "id": "mo-ff-3",
-    "nane": "Gorgon",
+    "name": "Gorgon",
     "color": "White",
     "set": "Fiends & Familiars",
     "adjective": "Stone Gaze",
@@ -79,7 +79,7 @@
   },
   "mo-ff-5": {
     "id": "mo-ff-5",
-    "nane": "Gryphon",
+    "name": "Gryphon",
     "color": "Pink",
     "set": "Fiends & Familiars",
     "adjective": "Predatory",
@@ -92,7 +92,7 @@
   },
   "mo-ff-7": {
     "id": "mo-ff-7",
-    "nane": "Hydra",
+    "name": "Hydra",
     "color": "Red",
     "set": "Fiends & Familiars",
     "adjective": "Five-Headed",
@@ -105,7 +105,7 @@
   },
   "mo-mm-9": {
     "id": "mo-mm-9",
-    "nane": "Kraken",
+    "name": "Kraken",
     "color": "Blue",
     "set": "Monsters & Minions",
     "adjective": "Massive",
@@ -118,7 +118,7 @@
   },
   "mo-ff-9": {
     "id": "mo-ff-9",
-    "nane": "Leviathan",
+    "name": "Leviathan",
     "color": "Blue",
     "set": "Fiends & Familiars",
     "adjective": "Gigantic",
@@ -131,7 +131,7 @@
   },
   "mo-ff-11": {
     "id": "mo-ff-11",
-    "nane": "Megapede",
+    "name": "Megapede",
     "color": "Black",
     "set": "Fiends & Familiars",
     "adjective": "Fiendborn",
@@ -144,7 +144,7 @@
   },
   "mo-mm-11": {
     "id": "mo-mm-11",
-    "nane": "Vampire",
+    "name": "Vampire",
     "color": "White",
     "set": "Monsters & Minions",
     "adjective": "Undead",

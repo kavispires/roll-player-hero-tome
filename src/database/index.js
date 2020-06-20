@@ -7,23 +7,30 @@ import CLASSES from '../database/classes.json';
 import RACES from '../database/races.json';
 import MARKET from '../database/market.json';
 import MINIONS from '../database/minions.json';
+import MONSTER from '../database/monsters.json';
+import ADVENTURE from '../database/adventure.json';
 // Utils
 import { TYPES } from '../utils/constants';
 
 const typeaheadCache = {};
 const marketCahce = {};
+const adventureCache = {};
 
 const switcher = {
   [TYPES.ALIGNMENT]: ALIGNMENTS,
   [TYPES.BACKSTORY]: BACKSTORIES,
   [TYPES.CLASS]: CLASSES,
   [TYPES.RACE]: RACES,
-  [TYPES.MARKET_ARMOR]: getMarketData('Armor'),
-  [TYPES.MARKET_SCROLL]: getMarketData('Scroll'),
-  [TYPES.MARKET_SKILL]: getMarketData('Skill'),
-  [TYPES.MARKET_TRAIT]: getMarketData('Trait'),
-  [TYPES.MARKET_WEAPON]: getMarketData('Weapon'),
+  [TYPES.MARKET_ARMOR]: filterDataByKind('Armor', MARKET, marketCahce),
+  [TYPES.MARKET_SCROLL]: filterDataByKind('Scroll', MARKET, marketCahce),
+  [TYPES.MARKET_SKILL]: filterDataByKind('Skill', MARKET, marketCahce),
+  [TYPES.MARKET_TRAIT]: filterDataByKind('Trait', MARKET, marketCahce),
+  [TYPES.MARKET_WEAPON]: filterDataByKind('Weapon', MARKET, marketCahce),
   [TYPES.MINION]: MINIONS,
+  [TYPES.MONSTER]: MONSTER,
+  [TYPES.MONSTER_LOCATION]: filterDataByKind('location', ADVENTURE, adventureCache),
+  [TYPES.MONSTER_OBSTACLE]: filterDataByKind('obstacle', ADVENTURE, adventureCache),
+  [TYPES.MONSTER_ATTACK]: filterDataByKind('attack', ADVENTURE, adventureCache),
 };
 
 export function getTypeahead(type) {
@@ -43,20 +50,32 @@ export function getTypeahead(type) {
   return typeaheadCache[type];
 }
 
+export function getAdventureTypeahead(data, monsterName) {
+  return Object.values(data).reduce((acc, entry) => {
+    if (entry.monster === monsterName) {
+      acc.push({
+        value: entry.id,
+        text: entry.name,
+      });
+    }
+    return acc;
+  }, []);
+}
+
 export function getHashData(type) {
   return switcher[type];
 }
 
-function getMarketData(kind) {
-  if (marketCahce[kind] === undefined) {
-    Object.values(MARKET).forEach((card) => {
-      if (marketCahce[card.kind] === undefined) {
-        marketCahce[card.kind] = {};
+function filterDataByKind(kind, data, cache) {
+  if (cache[kind] === undefined) {
+    Object.values(data).forEach((card) => {
+      if (cache[card.kind] === undefined) {
+        cache[card.kind] = {};
       }
 
-      marketCahce[card.kind][card.id] = card;
+      cache[card.kind][card.id] = card;
     });
   }
 
-  return marketCahce[kind];
+  return cache[kind];
 }

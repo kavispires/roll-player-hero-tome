@@ -1,12 +1,8 @@
-import React from 'react';
-import TextField from '@material-ui/core/TextField';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
+import React, { useEffect, useState } from 'react';
 
-import { TYPES, GENDERS } from '../utils/constants';
+import { getHashData, getAdventureTypeahead } from '../database';
+import { TYPES, GENDERS, GLOBAL_STATE_ALIAS } from '../utils/constants';
+import useGlobalState from '../useGlobalState';
 
 // Components
 import FormSelectSimple from './FormSelectSimple';
@@ -17,6 +13,31 @@ import FormAttributes from './FormAttributes';
 import FormAlignment from './FormAlignment';
 
 export default function Form() {
+  const [monster] = useGlobalState(GLOBAL_STATE_ALIAS[TYPES.MONSTER]);
+  // LocalState
+  const [adventureData, setAdventureData] = useState(null);
+
+  function getMonsterAdventureData(type, monsterName) {
+    const dict = getHashData(type);
+    console.log({ monsterName });
+    return {
+      dict,
+      typeahead: getAdventureTypeahead(dict, monsterName),
+    };
+  }
+
+  useEffect(() => {
+    if (monster) {
+      const monsterName = getHashData(TYPES.MONSTER)[monster].name;
+
+      setAdventureData({
+        location: getMonsterAdventureData(TYPES.MONSTER_LOCATION, monsterName),
+        obstacle: getMonsterAdventureData(TYPES.MONSTER_OBSTACLE, monsterName),
+        attack: getMonsterAdventureData(TYPES.MONSTER_ATTACK, monsterName),
+      });
+    }
+  }, [monster]);
+
   return (
     <main className="form">
       <FormText type={TYPES.CHARACTER_NAME} classModifier="half" />
@@ -33,6 +54,26 @@ export default function Form() {
       <FormAutocompleteMulti type={TYPES.MARKET_TRAIT} classModifier="half" />
       <FormAutocompleteMulti type={TYPES.MARKET_SCROLL} classModifier="half" />
       <FormAutocompleteMulti type={TYPES.MINION} classModifier="half" />
+      <hr />
+      <FormAutocomplete type={TYPES.MONSTER} classModifier="quarter" />
+      <FormAutocomplete
+        type={TYPES.MONSTER_LOCATION}
+        classModifier="quarter"
+        isDisabled={!monster}
+        data={adventureData?.location}
+      />
+      <FormAutocomplete
+        type={TYPES.MONSTER_OBSTACLE}
+        classModifier="quarter"
+        isDisabled={!monster}
+        data={adventureData?.obstacle}
+      />
+      <FormAutocomplete
+        type={TYPES.MONSTER_ATTACK}
+        classModifier="quarter"
+        isDisabled={!monster}
+        data={adventureData?.attack}
+      />
     </main>
   );
 }

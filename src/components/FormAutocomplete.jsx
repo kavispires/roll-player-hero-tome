@@ -8,14 +8,27 @@ import { GLOBAL_STATE_ALIAS, FORM_LABELS } from '../utils/constants';
 
 import useGlobalState from '../useGlobalState';
 
-export default function FormAutocomplete({ type, classModifier = '' }) {
+export default function FormAutocomplete({
+  type,
+  classModifier = '',
+  data = null,
+  isDisabled = false,
+}) {
   // Global States
   const [entry, setEntry] = useGlobalState(GLOBAL_STATE_ALIAS[type]);
 
-  const entryDict = getHashData(type);
-  const entryTypeahead = getTypeahead(type);
+  let entryDict = {};
+  let entryTypeahead = [];
 
-  const handleInputChange = (event, newValue) => {
+  if (data) {
+    entryDict = data.dict;
+    entryTypeahead = data.typeahead;
+  } else {
+    entryDict = getHashData(type);
+    entryTypeahead = getTypeahead(type);
+  }
+
+  const handleInputChange = (event) => {
     // console.log(event);
     // console.log({ newValue });
     const index = event.target.getAttribute('data-option-index');
@@ -25,9 +38,7 @@ export default function FormAutocomplete({ type, classModifier = '' }) {
     }
   };
 
-  const handleChange = (event, selectedEntry) => {
-    console.log({ selectedEntry });
-    console.log(entryTypeahead[selectedEntry?.value]);
+  const handleChange = (_, selectedEntry) => {
     if (entryDict[selectedEntry?.value]) {
       setEntry(selectedEntry.value);
     } else {
@@ -47,6 +58,7 @@ export default function FormAutocomplete({ type, classModifier = '' }) {
         renderInput={(params) => <TextField {...params} label={label} />}
         onInputChange={handleInputChange}
         onChange={handleChange}
+        disabled={isDisabled}
         autoHighlight
       />
     </FormControl>
