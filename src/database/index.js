@@ -9,6 +9,8 @@ import MARKET from '../database/market.json';
 import MINIONS from '../database/minions.json';
 import MONSTER from '../database/monsters.json';
 import ADVENTURE from '../database/adventure.json';
+import FAMILIARS from '../database/familiars.json';
+import FIENDS from '../database/fiends.json';
 // Utils
 import { TYPES } from '../utils/constants';
 
@@ -31,6 +33,8 @@ const switcher = {
   [TYPES.MONSTER_LOCATION]: filterDataByKind('location', ADVENTURE, adventureCache),
   [TYPES.MONSTER_OBSTACLE]: filterDataByKind('obstacle', ADVENTURE, adventureCache),
   [TYPES.MONSTER_ATTACK]: filterDataByKind('attack', ADVENTURE, adventureCache),
+  [TYPES.FAMILIAR]: FAMILIARS,
+  [TYPES.FIENDS]: FIENDS,
 };
 
 export function getTypeahead(type) {

@@ -74,6 +74,10 @@ export default function Form() {
         isDisabled={!monster}
         data={adventureData?.attack}
       />
+      <hr />
+      <FormAutocomplete type={TYPES.FAMILIAR} classModifier="quarter" />
+      <FormText type={TYPES.FAMILIAR_POWER} inputType="number" classModifier="quarter" />
+      <FormAutocompleteMulti type={TYPES.FIENDS} classModifier="half" />
     </main>
   );
 }

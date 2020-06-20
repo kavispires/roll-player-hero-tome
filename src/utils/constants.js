@@ -24,6 +24,7 @@ export const TYPES = {
   BACKSTORY: Symbol('BACKSTORY'),
   CLASS: Symbol('CLASS'),
   FAMILIAR: Symbol('FAMILIAR'),
+  FAMILIAR_POWER: Symbol('FAMILIAR_POWER'),
   FIENDS: Symbol('FIENDS'),
   MARKET_ARMOR: Symbol('MARKET_ARMOR'),
   MARKET_WEAPON: Symbol('MARKET_WEAPON'),
@@ -58,6 +59,9 @@ export const GLOBAL_STATE_ALIAS = {
   [TYPES.MONSTER_LOCATION]: 'monsterLocation',
   [TYPES.MONSTER_OBSTACLE]: 'monsterObstacle',
   [TYPES.MONSTER_ATTACK]: 'monsterAttack',
+  [TYPES.FAMILIAR]: 'familiar',
+  [TYPES.FAMILIAR_POWER]: 'familiarPower',
+  [TYPES.FIENDS]: 'fiends',
 };
 
 export const FORM_LABELS = {
@@ -77,4 +81,7 @@ export const FORM_LABELS = {
   [TYPES.MONSTER_LOCATION]: 'Location',
   [TYPES.MONSTER_OBSTACLE]: 'Obstacle',
   [TYPES.MONSTER_ATTACK]: 'Attack',
+  [TYPES.FAMILIAR]: 'Familiar',
+  [TYPES.FAMILIAR_POWER]: 'Power',
+  [TYPES.FIENDS]: 'Fiends',
 };

@@ -6,7 +6,7 @@ import { GLOBAL_STATE_ALIAS, FORM_LABELS } from '../utils/constants';
 
 import useGlobalState from '../useGlobalState';
 
-export default function FormText({ type, classModifier = '' }) {
+export default function FormText({ type, inputType = 'text', classModifier = '' }) {
   // Global States
   const [entry, setEntry] = useGlobalState(GLOBAL_STATE_ALIAS[type]);
 
@@ -21,6 +21,7 @@ export default function FormText({ type, classModifier = '' }) {
         label={FORM_LABELS[type]}
         onChange={handleChange}
         defaultValue={entry}
+        type={inputType}
       />
     </FormControl>
   );

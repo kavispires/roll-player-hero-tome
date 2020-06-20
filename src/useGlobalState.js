@@ -31,6 +31,7 @@ const initialState = {
   finalScore: 0,
   date: 0,
   familiar: null,
+  familiarPower: 0,
   fiends: [],
   monster: null,
   monsterLocation: null,
