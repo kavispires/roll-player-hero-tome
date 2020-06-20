@@ -6,7 +6,7 @@ import useGlobalState from '../useGlobalState';
 
 // Components
 import FormSelectSimple from './FormSelectSimple';
-import FormText from './FormText';
+import FormInput from './FormInput';
 import FormAutocomplete from './FormAutocomplete';
 import FormAutocompleteMulti from './FormAutocompleteMulti';
 import FormAttributes from './FormAttributes';
@@ -40,8 +40,8 @@ export default function Form() {
 
   return (
     <main className="form">
-      <FormText type={TYPES.CHARACTER_NAME} classModifier="half" />
-      <FormText type={TYPES.PLAYER} classModifier="half" />
+      <FormInput type={TYPES.CHARACTER_NAME} classModifier="half" />
+      <FormInput type={TYPES.PLAYER} classModifier="half" />
       <FormAutocomplete type={TYPES.RACE} classModifier="quarter" />
       <FormAutocomplete type={TYPES.CLASS} classModifier="quarter" />
       <FormSelectSimple type={TYPES.GENDER} classModifier="quarter" data={GENDERS} />
@@ -76,8 +76,13 @@ export default function Form() {
       />
       <hr />
       <FormAutocomplete type={TYPES.FAMILIAR} classModifier="quarter" />
-      <FormText type={TYPES.FAMILIAR_POWER} inputType="number" classModifier="quarter" />
+      <FormInput type={TYPES.FAMILIAR_POWER} inputType="number" classModifier="quarter" />
       <FormAutocompleteMulti type={TYPES.FIENDS} classModifier="half" />
+      <hr />
+      <FormInput type={TYPES.XP} inputType="number" classModifier="quarter" />
+      <FormInput type={TYPES.GOLD} inputType="number" classModifier="quarter" />
+      <FormInput type={TYPES.SCORE} inputType="number" classModifier="quarter" />
+      <FormInput type={TYPES.DATE} inputType="date" classModifier="quarter" />
     </main>
   );
 }

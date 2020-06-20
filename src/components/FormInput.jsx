@@ -6,7 +6,7 @@ import { GLOBAL_STATE_ALIAS, FORM_LABELS } from '../utils/constants';
 
 import useGlobalState from '../useGlobalState';
 
-export default function FormText({ type, inputType = 'text', classModifier = '' }) {
+export default function FormInput({ type, inputType = 'text', classModifier = '' }) {
   // Global States
   const [entry, setEntry] = useGlobalState(GLOBAL_STATE_ALIAS[type]);
 

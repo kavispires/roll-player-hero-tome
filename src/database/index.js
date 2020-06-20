@@ -22,7 +22,8 @@ const switcher = {
   [TYPES.ALIGNMENT]: ALIGNMENTS,
   [TYPES.BACKSTORY]: BACKSTORIES,
   [TYPES.CLASS]: CLASSES,
-  [TYPES.RACE]: RACES,
+  [TYPES.FAMILIAR]: FAMILIARS,
+  [TYPES.FIENDS]: FIENDS,
   [TYPES.MARKET_ARMOR]: filterDataByKind('Armor', MARKET, marketCahce),
   [TYPES.MARKET_SCROLL]: filterDataByKind('Scroll', MARKET, marketCahce),
   [TYPES.MARKET_SKILL]: filterDataByKind('Skill', MARKET, marketCahce),
@@ -33,8 +34,7 @@ const switcher = {
   [TYPES.MONSTER_LOCATION]: filterDataByKind('location', ADVENTURE, adventureCache),
   [TYPES.MONSTER_OBSTACLE]: filterDataByKind('obstacle', ADVENTURE, adventureCache),
   [TYPES.MONSTER_ATTACK]: filterDataByKind('attack', ADVENTURE, adventureCache),
-  [TYPES.FAMILIAR]: FAMILIARS,
-  [TYPES.FIENDS]: FIENDS,
+  [TYPES.RACE]: RACES,
 };
 
 export function getTypeahead(type) {
