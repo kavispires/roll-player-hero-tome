@@ -21,6 +21,8 @@ export const ATTRIBUTES = {
 
 export const TYPES = {
   ALIGNMENT: Symbol('ALIGNMENT'),
+  ALIGNMENT_POSITION: Symbol('ALIGNMENT_POSITION'),
+  ATTRIBUTES: Symbol('ATTRIBUTES'),
   BACKSTORY: Symbol('BACKSTORY'),
   CHARACTER_NAME: Symbol('CHARACTER_NAME'),
   CLASS: Symbol('CLASS'),
@@ -47,6 +49,10 @@ export const TYPES = {
 };
 
 export const GLOBAL_STATE_ALIAS = {
+  [TYPES.ALIGNMENT]: 'alignment',
+  [TYPES.ALIGNMENT_POSITION]: 'alignmentPos',
+  [TYPES.ATTRIBUTES]: 'attributes',
+  [TYPES.XP]: 'xp',
   [TYPES.RACE]: 'race',
   [TYPES.CLASS]: 'class',
   [TYPES.CHARACTER_NAME]: 'characterName',

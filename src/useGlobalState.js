@@ -37,6 +37,11 @@ const initialState = {
   monsterLocation: null,
   monsterObstacle: null,
   monsterAttack: null,
+  characterObject: null,
+  characterObjectByReference: null,
+  isCharacterGenerated: false,
+  isCharacterComplete: false,
+  isCodeDialogActice: false,
 };
 
 const { useGlobalState } = createGlobalState(initialState);

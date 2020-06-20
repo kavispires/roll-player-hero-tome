@@ -17,6 +17,11 @@ main {
 .invisible {
   opacity: 0; }
 
+.dialog-alert {
+  color: red;
+  font-size: 75%;
+  font-style: italic; }
+
 .header {
   display: flex;
   align-items: center;

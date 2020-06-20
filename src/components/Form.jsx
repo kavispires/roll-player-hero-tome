@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import { getHashData, getAdventureTypeahead } from '../database';
+import { getHashData } from '../database';
+import { getMonsterAdventureData } from '../utils';
 import { TYPES, GENDERS, GLOBAL_STATE_ALIAS } from '../utils/constants';
 import useGlobalState from '../useGlobalState';
 
@@ -16,15 +17,6 @@ export default function Form() {
   const [monster] = useGlobalState(GLOBAL_STATE_ALIAS[TYPES.MONSTER]);
   // LocalState
   const [adventureData, setAdventureData] = useState(null);
-
-  function getMonsterAdventureData(type, monsterName) {
-    const dict = getHashData(type);
-    console.log({ monsterName });
-    return {
-      dict,
-      typeahead: getAdventureTypeahead(dict, monsterName),
-    };
-  }
 
   useEffect(() => {
     if (monster) {

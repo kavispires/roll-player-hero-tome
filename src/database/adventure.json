@@ -5,7 +5,7 @@
     "kind": "attack",
     "monster": "Vampire",
     "set": "Monsters & Minions",
-    "card-numberber": 44
+    "card-number": 44
   },
   "ad-mm-45": {
     "id": "ad-mm-45",
@@ -13,7 +13,7 @@
     "kind": "attack",
     "monster": "Vampire",
     "set": "Monsters & Minions",
-    "card-numberber": 45
+    "card-number": 45
   },
   "ad-mm-43": {
     "id": "ad-mm-43",
@@ -21,7 +21,7 @@
     "kind": "attack",
     "monster": "Vampire",
     "set": "Monsters & Minions",
-    "card-numberber": 43
+    "card-number": 43
   },
   "ad-mm-40": {
     "id": "ad-mm-40",
@@ -29,7 +29,7 @@
     "kind": "obstacle",
     "monster": "Vampire",
     "set": "Monsters & Minions",
-    "card-numberber": 40
+    "card-number": 40
   },
   "ad-mm-41": {
     "id": "ad-mm-41",
@@ -37,7 +37,7 @@
     "kind": "obstacle",
     "monster": "Vampire",
     "set": "Monsters & Minions",
-    "card-numberber": 41
+    "card-number": 41
   },
   "ad-mm-42": {
     "id": "ad-mm-42",
@@ -45,7 +45,7 @@
     "kind": "obstacle",
     "monster": "Vampire",
     "set": "Monsters & Minions",
-    "card-numberber": 42
+    "card-number": 42
   },
   "ad-mm-37": {
     "id": "ad-mm-37",
@@ -53,7 +53,7 @@
     "kind": "location",
     "monster": "Vampire",
     "set": "Monsters & Minions",
-    "card-numberber": 37
+    "card-number": 37
   },
   "ad-mm-38": {
     "id": "ad-mm-38",
@@ -61,7 +61,7 @@
     "kind": "location",
     "monster": "Vampire",
     "set": "Monsters & Minions",
-    "card-numberber": 38
+    "card-number": 38
   },
   "ad-mm-39": {
     "id": "ad-mm-39",
@@ -69,7 +69,7 @@
     "kind": "location",
     "monster": "Vampire",
     "set": "Monsters & Minions",
-    "card-numberber": 39
+    "card-number": 39
   },
   "ad-mm-46": {
     "id": "ad-mm-46",
@@ -77,7 +77,7 @@
     "kind": "location",
     "monster": "Chimera",
     "set": "Monsters & Minions",
-    "card-numberber": 46
+    "card-number": 46
   },
   "ad-mm-47": {
     "id": "ad-mm-47",
@@ -85,7 +85,7 @@
     "kind": "location",
     "monster": "Chimera",
     "set": "Monsters & Minions",
-    "card-numberber": 47
+    "card-number": 47
   },
   "ad-mm-48": {
     "id": "ad-mm-48",
@@ -93,7 +93,7 @@
     "kind": "location",
     "monster": "Chimera",
     "set": "Monsters & Minions",
-    "card-numberber": 48
+    "card-number": 48
   },
   "ad-mm-49": {
     "id": "ad-mm-49",
@@ -101,7 +101,7 @@
     "kind": "obstacle",
     "monster": "Chimera",
     "set": "Monsters & Minions",
-    "card-numberber": 49
+    "card-number": 49
   },
   "ad-mm-50": {
     "id": "ad-mm-50",
@@ -109,7 +109,7 @@
     "kind": "obstacle",
     "monster": "Chimera",
     "set": "Monsters & Minions",
-    "card-numberber": 50
+    "card-number": 50
   },
   "ad-mm-51": {
     "id": "ad-mm-51",
@@ -117,7 +117,7 @@
     "kind": "obstacle",
     "monster": "Chimera",
     "set": "Monsters & Minions",
-    "card-numberber": 51
+    "card-number": 51
   },
   "ad-mm-52": {
     "id": "ad-mm-52",
@@ -125,7 +125,7 @@
     "kind": "attack",
     "monster": "Chimera",
     "set": "Monsters & Minions",
-    "card-numberber": 52
+    "card-number": 52
   },
   "ad-mm-53": {
     "id": "ad-mm-53",
@@ -133,7 +133,7 @@
     "kind": "attack",
     "monster": "Chimera",
     "set": "Monsters & Minions",
-    "card-numberber": 53
+    "card-number": 53
   },
   "ad-mm-54": {
     "id": "ad-mm-54",
@@ -141,7 +141,7 @@
     "kind": "attack",
     "monster": "Chimera",
     "set": "Monsters & Minions",
-    "card-numberber": 54
+    "card-number": 54
   },
   "ad-mm-19": {
     "id": "ad-mm-19",
@@ -149,7 +149,7 @@
     "kind": "location",
     "monster": "Demon",
     "set": "Monsters & Minions",
-    "card-numberber": 19
+    "card-number": 19
   },
   "ad-mm-20": {
     "id": "ad-mm-20",
@@ -157,7 +157,7 @@
     "kind": "location",
     "monster": "Demon",
     "set": "Monsters & Minions",
-    "card-numberber": 20
+    "card-number": 20
   },
   "ad-mm-21": {
     "id": "ad-mm-21",
@@ -165,7 +165,7 @@
     "kind": "location",
     "monster": "Demon",
     "set": "Monsters & Minions",
-    "card-numberber": 21
+    "card-number": 21
   },
   "ad-mm-22": {
     "id": "ad-mm-22",
@@ -173,7 +173,7 @@
     "kind": "obstacle",
     "monster": "Demon",
     "set": "Monsters & Minions",
-    "card-numberber": 22
+    "card-number": 22
   },
   "ad-mm-23": {
     "id": "ad-mm-23",
@@ -181,7 +181,7 @@
     "kind": "obstacle",
     "monster": "Demon",
     "set": "Monsters & Minions",
-    "card-numberber": 23
+    "card-number": 23
   },
   "ad-mm-24": {
     "id": "ad-mm-24",
@@ -189,7 +189,7 @@
     "kind": "obstacle",
     "monster": "Demon",
     "set": "Monsters & Minions",
-    "card-numberber": 24
+    "card-number": 24
   },
   "ad-mm-25": {
     "id": "ad-mm-25",
@@ -197,7 +197,7 @@
     "kind": "attack",
     "monster": "Demon",
     "set": "Monsters & Minions",
-    "card-numberber": 25
+    "card-number": 25
   },
   "ad-mm-26": {
     "id": "ad-mm-26",
@@ -205,7 +205,7 @@
     "kind": "attack",
     "monster": "Demon",
     "set": "Monsters & Minions",
-    "card-numberber": 26
+    "card-number": 26
   },
   "ad-mm-27": {
     "id": "ad-mm-27",
@@ -213,7 +213,7 @@
     "kind": "attack",
     "monster": "Demon",
     "set": "Monsters & Minions",
-    "card-numberber": 27
+    "card-number": 27
   },
   "ad-mm-28": {
     "id": "ad-mm-28",
@@ -221,7 +221,7 @@
     "kind": "location",
     "monster": "Dragon",
     "set": "Monsters & Minions",
-    "card-numberber": 28
+    "card-number": 28
   },
   "ad-mm-29": {
     "id": "ad-mm-29",
@@ -229,7 +229,7 @@
     "kind": "location",
     "monster": "Dragon",
     "set": "Monsters & Minions",
-    "card-numberber": 29
+    "card-number": 29
   },
   "ad-mm-30": {
     "id": "ad-mm-30",
@@ -237,7 +237,7 @@
     "kind": "location",
     "monster": "Dragon",
     "set": "Monsters & Minions",
-    "card-numberber": 30
+    "card-number": 30
   },
   "ad-mm-31": {
     "id": "ad-mm-31",
@@ -245,7 +245,7 @@
     "kind": "obstacle",
     "monster": "Dragon",
     "set": "Monsters & Minions",
-    "card-numberber": 31
+    "card-number": 31
   },
   "ad-mm-32": {
     "id": "ad-mm-32",
@@ -253,7 +253,7 @@
     "kind": "obstacle",
     "monster": "Dragon",
     "set": "Monsters & Minions",
-    "card-numberber": 32
+    "card-number": 32
   },
   "ad-mm-33": {
     "id": "ad-mm-33",
@@ -261,7 +261,7 @@
     "kind": "obstacle",
     "monster": "Dragon",
     "set": "Monsters & Minions",
-    "card-numberber": 33
+    "card-number": 33
   },
   "ad-mm-34": {
     "id": "ad-mm-34",
@@ -269,7 +269,7 @@
     "kind": "attack",
     "monster": "Dragon",
     "set": "Monsters & Minions",
-    "card-numberber": 34
+    "card-number": 34
   },
   "ad-mm-35": {
     "id": "ad-mm-35",
@@ -277,7 +277,7 @@
     "kind": "attack",
     "monster": "Dragon",
     "set": "Monsters & Minions",
-    "card-numberber": 35
+    "card-number": 35
   },
   "ad-mm-36": {
     "id": "ad-mm-36",
@@ -285,7 +285,7 @@
     "kind": "attack",
     "monster": "Dragon",
     "set": "Monsters & Minions",
-    "card-numberber": 36
+    "card-number": 36
   },
   "ad-mm-10": {
     "id": "ad-mm-10",
@@ -293,7 +293,7 @@
     "kind": "location",
     "monster": "Giant Troll",
     "set": "Monsters & Minions",
-    "card-numberber": 10
+    "card-number": 10
   },
   "ad-mm-11": {
     "id": "ad-mm-11",
@@ -301,7 +301,7 @@
     "kind": "location",
     "monster": "Giant Troll",
     "set": "Monsters & Minions",
-    "card-numberber": 11
+    "card-number": 11
   },
   "ad-mm-12": {
     "id": "ad-mm-12",
@@ -309,7 +309,7 @@
     "kind": "location",
     "monster": "Giant Troll",
     "set": "Monsters & Minions",
-    "card-numberber": 12
+    "card-number": 12
   },
   "ad-mm-13": {
     "id": "ad-mm-13",
@@ -317,7 +317,7 @@
     "kind": "obstacle",
     "monster": "Giant Troll",
     "set": "Monsters & Minions",
-    "card-numberber": 13
+    "card-number": 13
   },
   "ad-mm-14": {
     "id": "ad-mm-14",
@@ -325,7 +325,7 @@
     "kind": "obstacle",
     "monster": "Giant Troll",
     "set": "Monsters & Minions",
-    "card-numberber": 14
+    "card-number": 14
   },
   "ad-mm-15": {
     "id": "ad-mm-15",
@@ -333,7 +333,7 @@
     "kind": "obstacle",
     "monster": "Giant Troll",
     "set": "Monsters & Minions",
-    "card-numberber": 15
+    "card-number": 15
   },
   "ad-mm-16": {
     "id": "ad-mm-16",
@@ -341,7 +341,7 @@
     "kind": "attack",
     "monster": "Giant Troll",
     "set": "Monsters & Minions",
-    "card-numberber": 16
+    "card-number": 16
   },
   "ad-mm-17": {
     "id": "ad-mm-17",
@@ -349,7 +349,7 @@
     "kind": "attack",
     "monster": "Giant Troll",
     "set": "Monsters & Minions",
-    "card-numberber": 17
+    "card-number": 17
   },
   "ad-mm-18": {
     "id": "ad-mm-18",
@@ -357,7 +357,7 @@
     "kind": "attack",
     "monster": "Giant Troll",
     "set": "Monsters & Minions",
-    "card-numberber": 18
+    "card-number": 18
   },
   "ad-mm-1": {
     "id": "ad-mm-1",
@@ -365,7 +365,7 @@
     "kind": "location",
     "monster": "Kraken",
     "set": "Monsters & Minions",
-    "card-numberber": 1
+    "card-number": 1
   },
   "ad-mm-2": {
     "id": "ad-mm-2",
@@ -373,7 +373,7 @@
     "kind": "location",
     "monster": "Kraken",
     "set": "Monsters & Minions",
-    "card-numberber": 2
+    "card-number": 2
   },
   "ad-mm-3": {
     "id": "ad-mm-3",
@@ -381,7 +381,7 @@
     "kind": "location",
     "monster": "Kraken",
     "set": "Monsters & Minions",
-    "card-numberber": 3
+    "card-number": 3
   },
   "ad-mm-4": {
     "id": "ad-mm-4",
@@ -389,7 +389,7 @@
     "kind": "obstacle",
     "monster": "Kraken",
     "set": "Monsters & Minions",
-    "card-numberber": 4
+    "card-number": 4
   },
   "ad-mm-5": {
     "id": "ad-mm-5",
@@ -397,7 +397,7 @@
     "kind": "obstacle",
     "monster": "Kraken",
     "set": "Monsters & Minions",
-    "card-numberber": 5
+    "card-number": 5
   },
   "ad-mm-6": {
     "id": "ad-mm-6",
@@ -405,7 +405,7 @@
     "kind": "obstacle",
     "monster": "Kraken",
     "set": "Monsters & Minions",
-    "card-numberber": 6
+    "card-number": 6
   },
   "ad-mm-7": {
     "id": "ad-mm-7",
@@ -413,7 +413,7 @@
     "kind": "attack",
     "monster": "Kraken",
     "set": "Monsters & Minions",
-    "card-numberber": 7
+    "card-number": 7
   },
   "ad-mm-8": {
     "id": "ad-mm-8",
@@ -421,7 +421,7 @@
     "kind": "attack",
     "monster": "Kraken",
     "set": "Monsters & Minions",
-    "card-numberber": 8
+    "card-number": 8
   },
   "ad-mm-9": {
     "id": "ad-mm-9",
@@ -429,7 +429,7 @@
     "kind": "attack",
     "monster": "Kraken",
     "set": "Monsters & Minions",
-    "card-numberber": 9
+    "card-number": 9
   },
   "ad-ff-1": {
     "id": "ad-ff-1",
@@ -437,7 +437,7 @@
     "kind": "location",
     "monster": "Cyclops",
     "set": "Fiends & Familiars",
-    "card-numberber": 1
+    "card-number": 1
   },
   "ad-ff-2": {
     "id": "ad-ff-2",
@@ -445,7 +445,7 @@
     "kind": "location",
     "monster": "Cyclops",
     "set": "Fiends & Familiars",
-    "card-numberber": 2
+    "card-number": 2
   },
   "ad-ff-3": {
     "id": "ad-ff-3",
@@ -453,7 +453,7 @@
     "kind": "location",
     "monster": "Cyclops",
     "set": "Fiends & Familiars",
-    "card-numberber": 3
+    "card-number": 3
   },
   "ad-ff-4": {
     "id": "ad-ff-4",
@@ -461,7 +461,7 @@
     "kind": "obstacle",
     "monster": "Cyclops",
     "set": "Fiends & Familiars",
-    "card-numberber": 4
+    "card-number": 4
   },
   "ad-ff-5": {
     "id": "ad-ff-5",
@@ -469,7 +469,7 @@
     "kind": "obstacle",
     "monster": "Cyclops",
     "set": "Fiends & Familiars",
-    "card-numberber": 5
+    "card-number": 5
   },
   "ad-ff-6": {
     "id": "ad-ff-6",
@@ -477,7 +477,7 @@
     "kind": "obstacle",
     "monster": "Cyclops",
     "set": "Fiends & Familiars",
-    "card-numberber": 6
+    "card-number": 6
   },
   "ad-ff-7": {
     "id": "ad-ff-7",
@@ -485,7 +485,7 @@
     "kind": "attack",
     "monster": "Cyclops",
     "set": "Fiends & Familiars",
-    "card-numberber": 7
+    "card-number": 7
   },
   "ad-ff-8": {
     "id": "ad-ff-8",
@@ -493,7 +493,7 @@
     "kind": "attack",
     "monster": "Cyclops",
     "set": "Fiends & Familiars",
-    "card-numberber": 8
+    "card-number": 8
   },
   "ad-ff-9": {
     "id": "ad-ff-9",
@@ -501,7 +501,7 @@
     "kind": "attack",
     "monster": "Cyclops",
     "set": "Fiends & Familiars",
-    "card-numberber": 9
+    "card-number": 9
   },
   "ad-ff-10": {
     "id": "ad-ff-10",
@@ -509,7 +509,7 @@
     "kind": "location",
     "monster": "Gorgon",
     "set": "Fiends & Familiars",
-    "card-numberber": 10
+    "card-number": 10
   },
   "ad-ff-11": {
     "id": "ad-ff-11",
@@ -517,7 +517,7 @@
     "kind": "location",
     "monster": "Gorgon",
     "set": "Fiends & Familiars",
-    "card-numberber": 11
+    "card-number": 11
   },
   "ad-ff-12": {
     "id": "ad-ff-12",
@@ -525,7 +525,7 @@
     "kind": "location",
     "monster": "Gorgon",
     "set": "Fiends & Familiars",
-    "card-numberber": 12
+    "card-number": 12
   },
   "ad-ff-13": {
     "id": "ad-ff-13",
@@ -533,7 +533,7 @@
     "kind": "obstacle",
     "monster": "Gorgon",
     "set": "Fiends & Familiars",
-    "card-numberber": 13
+    "card-number": 13
   },
   "ad-ff-14": {
     "id": "ad-ff-14",
@@ -541,7 +541,7 @@
     "kind": "obstacle",
     "monster": "Gorgon",
     "set": "Fiends & Familiars",
-    "card-numberber": 14
+    "card-number": 14
   },
   "ad-ff-15": {
     "id": "ad-ff-15",
@@ -549,7 +549,7 @@
     "kind": "obstacle",
     "monster": "Gorgon",
     "set": "Fiends & Familiars",
-    "card-numberber": 15
+    "card-number": 15
   },
   "ad-ff-16": {
     "id": "ad-ff-16",
@@ -557,7 +557,7 @@
     "kind": "attack",
     "monster": "Gorgon",
     "set": "Fiends & Familiars",
-    "card-numberber": 16
+    "card-number": 16
   },
   "ad-ff-17": {
     "id": "ad-ff-17",
@@ -565,7 +565,7 @@
     "kind": "attack",
     "monster": "Gorgon",
     "set": "Fiends & Familiars",
-    "card-numberber": 17
+    "card-number": 17
   },
   "ad-ff-18": {
     "id": "ad-ff-18",
@@ -573,7 +573,7 @@
     "kind": "attack",
     "monster": "Gorgon",
     "set": "Fiends & Familiars",
-    "card-numberber": 18
+    "card-number": 18
   },
   "ad-ff-19": {
     "id": "ad-ff-19",
@@ -581,7 +581,7 @@
     "kind": "location",
     "monster": "Gryphon",
     "set": "Fiends & Familiars",
-    "card-numberber": 19
+    "card-number": 19
   },
   "ad-ff-20": {
     "id": "ad-ff-20",
@@ -589,7 +589,7 @@
     "kind": "location",
     "monster": "Gryphon",
     "set": "Fiends & Familiars",
-    "card-numberber": 20
+    "card-number": 20
   },
   "ad-ff-21": {
     "id": "ad-ff-21",
@@ -597,7 +597,7 @@
     "kind": "location",
     "monster": "Gryphon",
     "set": "Fiends & Familiars",
-    "card-numberber": 21
+    "card-number": 21
   },
   "ad-ff-22": {
     "id": "ad-ff-22",
@@ -605,7 +605,7 @@
     "kind": "obstacle",
     "monster": "Gryphon",
     "set": "Fiends & Familiars",
-    "card-numberber": 22
+    "card-number": 22
   },
   "ad-ff-23": {
     "id": "ad-ff-23",
@@ -613,7 +613,7 @@
     "kind": "obstacle",
     "monster": "Gryphon",
     "set": "Fiends & Familiars",
-    "card-numberber": 23
+    "card-number": 23
   },
   "ad-ff-24": {
     "id": "ad-ff-24",
@@ -621,7 +621,7 @@
     "kind": "obstacle",
     "monster": "Gryphon",
     "set": "Fiends & Familiars",
-    "card-numberber": 24
+    "card-number": 24
   },
   "ad-ff-25": {
     "id": "ad-ff-25",
@@ -629,7 +629,7 @@
     "kind": "attack",
     "monster": "Gryphon",
     "set": "Fiends & Familiars",
-    "card-numberber": 25
+    "card-number": 25
   },
   "ad-ff-26": {
     "id": "ad-ff-26",
@@ -637,7 +637,7 @@
     "kind": "attack",
     "monster": "Gryphon",
     "set": "Fiends & Familiars",
-    "card-numberber": 26
+    "card-number": 26
   },
   "ad-ff-27": {
     "id": "ad-ff-27",
@@ -645,7 +645,7 @@
     "kind": "attack",
     "monster": "Gryphon",
     "set": "Fiends & Familiars",
-    "card-numberber": 27
+    "card-number": 27
   },
   "ad-ff-28": {
     "id": "ad-ff-28",
@@ -653,7 +653,7 @@
     "kind": "location",
     "monster": "Hydra",
     "set": "Fiends & Familiars",
-    "card-numberber": 28
+    "card-number": 28
   },
   "ad-ff-29": {
     "id": "ad-ff-29",
@@ -661,7 +661,7 @@
     "kind": "location",
     "monster": "Hydra",
     "set": "Fiends & Familiars",
-    "card-numberber": 29
+    "card-number": 29
   },
   "ad-ff-30": {
     "id": "ad-ff-30",
@@ -669,7 +669,7 @@
     "kind": "location",
     "monster": "Hydra",
     "set": "Fiends & Familiars",
-    "card-numberber": 30
+    "card-number": 30
   },
   "ad-ff-31": {
     "id": "ad-ff-31",
@@ -677,7 +677,7 @@
     "kind": "obstacle",
     "monster": "Hydra",
     "set": "Fiends & Familiars",
-    "card-numberber": 31
+    "card-number": 31
   },
   "ad-ff-32": {
     "id": "ad-ff-32",
@@ -685,7 +685,7 @@
     "kind": "obstacle",
     "monster": "Hydra",
     "set": "Fiends & Familiars",
-    "card-numberber": 32
+    "card-number": 32
   },
   "ad-ff-33": {
     "id": "ad-ff-33",
@@ -693,7 +693,7 @@
     "kind": "obstacle",
     "monster": "Hydra",
     "set": "Fiends & Familiars",
-    "card-numberber": 33
+    "card-number": 33
   },
   "ad-ff-34": {
     "id": "ad-ff-34",
@@ -701,7 +701,7 @@
     "kind": "attack",
     "monster": "Hydra",
     "set": "Fiends & Familiars",
-    "card-numberber": 34
+    "card-number": 34
   },
   "ad-ff-35": {
     "id": "ad-ff-35",
@@ -709,7 +709,7 @@
     "kind": "attack",
     "monster": "Hydra",
     "set": "Fiends & Familiars",
-    "card-numberber": 35
+    "card-number": 35
   },
   "ad-ff-36": {
     "id": "ad-ff-36",
@@ -717,7 +717,7 @@
     "kind": "attack",
     "monster": "Hydra",
     "set": "Fiends & Familiars",
-    "card-numberber": 36
+    "card-number": 36
   },
   "ad-ff-37": {
     "id": "ad-ff-37",
@@ -725,7 +725,7 @@
     "kind": "location",
     "monster": "Leviathan",
     "set": "Fiends & Familiars",
-    "card-numberber": 37
+    "card-number": 37
   },
   "ad-ff-38": {
     "id": "ad-ff-38",
@@ -733,7 +733,7 @@
     "kind": "location",
     "monster": "Leviathan",
     "set": "Fiends & Familiars",
-    "card-numberber": 38
+    "card-number": 38
   },
   "ad-ff-39": {
     "id": "ad-ff-39",
@@ -741,7 +741,7 @@
     "kind": "location",
     "monster": "Leviathan",
     "set": "Fiends & Familiars",
-    "card-numberber": 39
+    "card-number": 39
   },
   "ad-ff-40": {
     "id": "ad-ff-40",
@@ -749,7 +749,7 @@
     "kind": "obstacle",
     "monster": "Leviathan",
     "set": "Fiends & Familiars",
-    "card-numberber": 40
+    "card-number": 40
   },
   "ad-ff-41": {
     "id": "ad-ff-41",
@@ -757,7 +757,7 @@
     "kind": "obstacle",
     "monster": "Leviathan",
     "set": "Fiends & Familiars",
-    "card-numberber": 41
+    "card-number": 41
   },
   "ad-ff-42": {
     "id": "ad-ff-42",
@@ -765,7 +765,7 @@
     "kind": "obstacle",
     "monster": "Leviathan",
     "set": "Fiends & Familiars",
-    "card-numberber": 42
+    "card-number": 42
   },
   "ad-ff-43": {
     "id": "ad-ff-43",
@@ -773,7 +773,7 @@
     "kind": "attack",
     "monster": "Leviathan",
     "set": "Fiends & Familiars",
-    "card-numberber": 43
+    "card-number": 43
   },
   "ad-ff-44": {
     "id": "ad-ff-44",
@@ -781,7 +781,7 @@
     "kind": "attack",
     "monster": "Leviathan",
     "set": "Fiends & Familiars",
-    "card-numberber": 44
+    "card-number": 44
   },
   "ad-ff-45": {
     "id": "ad-ff-45",
@@ -789,7 +789,7 @@
     "kind": "attack",
     "monster": "Leviathan",
     "set": "Fiends & Familiars",
-    "card-numberber": 45
+    "card-number": 45
   },
   "ad-ff-46": {
     "id": "ad-ff-46",
@@ -797,7 +797,7 @@
     "kind": "location",
     "monster": "Megapede",
     "set": "Fiends & Familiars",
-    "card-numberber": 46
+    "card-number": 46
   },
   "ad-ff-47": {
     "id": "ad-ff-47",
@@ -805,7 +805,7 @@
     "kind": "location",
     "monster": "Megapede",
     "set": "Fiends & Familiars",
-    "card-numberber": 47
+    "card-number": 47
   },
   "ad-ff-48": {
     "id": "ad-ff-48",
@@ -813,7 +813,7 @@
     "kind": "location",
     "monster": "Megapede",
     "set": "Fiends & Familiars",
-    "card-numberber": 48
+    "card-number": 48
   },
   "ad-ff-49": {
     "id": "ad-ff-49",
@@ -821,7 +821,7 @@
     "kind": "obstacle",
     "monster": "Megapede",
     "set": "Fiends & Familiars",
-    "card-numberber": 49
+    "card-number": 49
   },
   "ad-ff-50": {
     "id": "ad-ff-50",
@@ -829,7 +829,7 @@
     "kind": "obstacle",
     "monster": "Megapede",
     "set": "Fiends & Familiars",
-    "card-numberber": 50
+    "card-number": 50
   },
   "ad-ff-51": {
     "id": "ad-ff-51",
@@ -837,7 +837,7 @@
     "kind": "obstacle",
     "monster": "Megapede",
     "set": "Fiends & Familiars",
-    "card-numberber": 51
+    "card-number": 51
   },
   "ad-ff-52": {
     "id": "ad-ff-52",
@@ -845,7 +845,7 @@
     "kind": "attack",
     "monster": "Megapede",
     "set": "Fiends & Familiars",
-    "card-numberber": 52
+    "card-number": 52
   },
   "ad-ff-53": {
     "id": "ad-ff-53",
@@ -853,7 +853,7 @@
     "kind": "attack",
     "monster": "Megapede",
     "set": "Fiends & Familiars",
-    "card-numberber": 53
+    "card-number": 53
   },
   "ad-ff-54": {
     "id": "ad-ff-54",
@@ -861,6 +861,6 @@
     "kind": "attack",
     "monster": "Megapede",
     "set": "Fiends & Familiars",
-    "card-numberber": 54
+    "card-number": 54
   }
 }

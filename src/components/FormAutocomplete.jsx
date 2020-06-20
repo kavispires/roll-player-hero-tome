@@ -29,8 +29,6 @@ export default function FormAutocomplete({
   }
 
   const handleInputChange = (event) => {
-    // console.log(event);
-    // console.log({ newValue });
     const index = event.target.getAttribute('data-option-index');
     if (entryTypeahead[index]) {
       const id = entryTypeahead[index].value;
