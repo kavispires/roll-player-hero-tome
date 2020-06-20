@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
 import { getTypeahead, getHashData } from '../database';
-import { GLOBAL_STATE_ALIAS, FORM_LABELS, TYPES } from '../utils/constants';
+import { TYPES } from '../utils/constants';
 
 import useGlobalState from '../useGlobalState';
 
@@ -20,7 +20,6 @@ export default function FormAlignment() {
     const index = event.target.getAttribute('data-option-index');
     if (alignmentTypeahead[index]) {
       const id = alignmentTypeahead[index].value;
-      console.log({ id });
       setAlignment(id);
     }
   };

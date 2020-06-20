@@ -33,11 +33,9 @@ const initialState = {
   familiar: null,
   fiends: [],
   monster: null,
-  adventure: {
-    location: null,
-    obstacle: null,
-    attack: null,
-  },
+  monsterLocation: null,
+  monsterObstacle: null,
+  monsterAttack: null,
 };
 
 const { useGlobalState } = createGlobalState(initialState);

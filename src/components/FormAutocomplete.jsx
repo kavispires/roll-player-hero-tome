@@ -15,11 +15,23 @@ export default function FormAutocomplete({ type, classModifier = '' }) {
   const entryDict = getHashData(type);
   const entryTypeahead = getTypeahead(type);
 
-  const handleChange = (event) => {
+  const handleInputChange = (event, newValue) => {
+    // console.log(event);
+    // console.log({ newValue });
     const index = event.target.getAttribute('data-option-index');
     if (entryTypeahead[index]) {
       const id = entryTypeahead[index].value;
       setEntry(id);
+    }
+  };
+
+  const handleChange = (event, selectedEntry) => {
+    console.log({ selectedEntry });
+    console.log(entryTypeahead[selectedEntry?.value]);
+    if (entryDict[selectedEntry?.value]) {
+      setEntry(selectedEntry.value);
+    } else {
+      setEntry(null);
     }
   };
 
@@ -33,7 +45,8 @@ export default function FormAutocomplete({ type, classModifier = '' }) {
         getOptionLabel={(option) => option.text}
         getOptionSelected={(option) => option.value === entryDict?.[entry]?.id}
         renderInput={(params) => <TextField {...params} label={label} />}
-        onInputChange={handleChange}
+        onInputChange={handleInputChange}
+        onChange={handleChange}
         autoHighlight
       />
     </FormControl>

@@ -27,7 +27,12 @@ export default function Form() {
       <FormAutocomplete type={TYPES.BACKSTORY} classModifier="quarter" />
       <FormAttributes />
       <FormAlignment />
-      {/* <FormAutocompleteMulti type={TYPES.MARKET_WEAPON} classModifier="half" /> */}
+      <FormAutocompleteMulti type={TYPES.MARKET_ARMOR} classModifier="half" />
+      <FormAutocompleteMulti type={TYPES.MARKET_WEAPON} classModifier="half" />
+      <FormAutocompleteMulti type={TYPES.MARKET_SKILL} classModifier="half" />
+      <FormAutocompleteMulti type={TYPES.MARKET_TRAIT} classModifier="half" />
+      <FormAutocompleteMulti type={TYPES.MARKET_SCROLL} classModifier="half" />
+      <FormAutocompleteMulti type={TYPES.MINION} classModifier="half" />
     </main>
   );
 }

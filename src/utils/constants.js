@@ -48,6 +48,16 @@ export const GLOBAL_STATE_ALIAS = {
   [TYPES.PLAYER]: 'player',
   [TYPES.GENDER]: 'gender',
   [TYPES.BACKSTORY]: 'backstory',
+  [TYPES.MARKET_ARMOR]: 'armor',
+  [TYPES.MARKET_WEAPON]: 'weapons',
+  [TYPES.MARKET_SKILL]: 'skills',
+  [TYPES.MARKET_SCROLL]: 'scrolls',
+  [TYPES.MARKET_TRAIT]: 'traits',
+  [TYPES.MINION]: 'trophies',
+  [TYPES.MONSTER]: 'monster',
+  [TYPES.MONSTER_LOCATION]: 'monsterLocation',
+  [TYPES.MONSTER_OBSTACLE]: 'monsterObstacle',
+  [TYPES.MONSTER_ATTACK]: 'monsterAttack',
 };
 
 export const FORM_LABELS = {
@@ -57,4 +67,14 @@ export const FORM_LABELS = {
   [TYPES.PLAYER]: 'Player',
   [TYPES.GENDER]: 'Gender',
   [TYPES.BACKSTORY]: 'Backstory',
+  [TYPES.MARKET_ARMOR]: 'Armor',
+  [TYPES.MARKET_WEAPON]: 'Weapons',
+  [TYPES.MARKET_SKILL]: 'Skills',
+  [TYPES.MARKET_SCROLL]: 'Scrolls',
+  [TYPES.MARKET_TRAIT]: 'Traits',
+  [TYPES.MINION]: 'Trophies (Minions)',
+  [TYPES.MONSTER]: 'Monster',
+  [TYPES.MONSTER_LOCATION]: 'Location',
+  [TYPES.MONSTER_OBSTACLE]: 'Obstacle',
+  [TYPES.MONSTER_ATTACK]: 'Attack',
 };

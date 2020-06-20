@@ -13,10 +13,8 @@ export default function FormAttributes() {
 
   const raceData = getHashData(TYPES.RACE)?.[race];
 
-  console.log(raceData);
-
   return (
-    <FormControl className={`form-item form-item--attributes`}>
+    <FormControl className={`form-item form-item--attributes form-item--half`}>
       <div className="attributes-grid attribute-header">
         <span className="attribute-header-label">Attributes</span>
         <span className="attribute-header--label">Attribute Score</span>
