@@ -29,7 +29,7 @@ const initialState = {
   xp: 0,
   gold: 0,
   score: 0,
-  date: null,
+  date: '2020-01-01',
   familiar: null,
   familiarPower: 0,
   fiends: [],

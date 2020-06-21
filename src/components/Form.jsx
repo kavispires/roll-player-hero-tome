@@ -6,7 +6,6 @@ import { TYPES, GENDERS, GLOBAL_STATE_ALIAS } from '../utils/constants';
 import useGlobalState from '../useGlobalState';
 
 // Components
-import FormSelectSimple from './FormSelectSimple';
 import FormInput from './FormInput';
 import FormAutocomplete from './FormAutocomplete';
 import FormAutocompleteMulti from './FormAutocompleteMulti';
@@ -36,7 +35,7 @@ export default function Form() {
       <FormInput type={TYPES.PLAYER} classModifier="half" />
       <FormAutocomplete type={TYPES.RACE} classModifier="quarter" />
       <FormAutocomplete type={TYPES.CLASS} classModifier="quarter" />
-      <FormSelectSimple type={TYPES.GENDER} classModifier="quarter" data={GENDERS} />
+      <FormAutocomplete type={TYPES.GENDER} classModifier="quarter" />
       <FormAutocomplete type={TYPES.BACKSTORY} classModifier="quarter" />
       <FormAttributes />
       <FormAlignment />

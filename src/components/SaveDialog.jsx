@@ -67,8 +67,6 @@ export default function SaveDialog() {
     }
   };
 
-  console.log({ characterId });
-
   return (
     <Dialog
       open={activeDialog === DIALOGS.SAVE}
@@ -79,9 +77,9 @@ export default function SaveDialog() {
     >
       <DialogTitle>Save Character</DialogTitle>
       <DialogContent>
-        <h3>Login</h3>
         {!isLoggedIn && (
           <FormControl className="save-login-form">
+            <h3>Login</h3>
             <TextField
               id="email"
               label="E-mail"

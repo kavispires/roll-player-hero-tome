@@ -1,16 +1,18 @@
 import { orderBy } from 'lodash-es';
 
 // Data
-import ALIGNMENTS from '../database/alignments.json';
-import BACKSTORIES from '../database/backstories.json';
-import CLASSES from '../database/classes.json';
-import RACES from '../database/races.json';
-import MARKET from '../database/market.json';
-import MINIONS from '../database/minions.json';
-import MONSTER from '../database/monsters.json';
-import ADVENTURE from '../database/adventure.json';
-import FAMILIARS from '../database/familiars.json';
-import FIENDS from '../database/fiends.json';
+import ADVENTURE from './adventure.json';
+import ALIGNMENTS from './alignments.json';
+import BACKSTORIES from './backstories.json';
+import CLASSES from './classes.json';
+import FAMILIARS from './familiars.json';
+import FIENDS from './fiends.json';
+import GENDERS from './genders.json';
+import MARKET from './market.json';
+import MINIONS from './minions.json';
+import MONSTER from './monsters.json';
+import RACES from './races.json';
+
 // Utils
 import { TYPES } from '../utils/constants';
 
@@ -24,6 +26,7 @@ const switcher = {
   [TYPES.CLASS]: CLASSES,
   [TYPES.FAMILIAR]: FAMILIARS,
   [TYPES.FIENDS]: FIENDS,
+  [TYPES.GENDER]: GENDERS,
   [TYPES.MARKET_ARMOR]: filterDataByKind('Armor', MARKET, marketCahce),
   [TYPES.MARKET_SCROLL]: filterDataByKind('Scroll', MARKET, marketCahce),
   [TYPES.MARKET_SKILL]: filterDataByKind('Skill', MARKET, marketCahce),

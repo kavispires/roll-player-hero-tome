@@ -1,0 +1,14 @@
+{
+  "male": {
+    "id": "male",
+    "name": "Male"
+  },
+  "female": {
+    "id": "female",
+    "name": "Female"
+  },
+  "unknown": {
+    "id": "unknown",
+    "name": "Unknown"
+  }
+}
