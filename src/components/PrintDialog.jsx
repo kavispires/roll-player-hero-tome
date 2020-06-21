@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -8,17 +8,32 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import PrintIcon from '@material-ui/icons/Print';
 
-import useGlobalState from '../useGlobalState';
+import useGlobalState, { getCompleteGlobalState } from '../useGlobalState';
 import { DIALOGS } from '../utils/constants';
 
-const Transition = React.forwardRef(function Transition(props, ref) {
+import { determineCharacterCompletion, getCharacterJsonApi } from '../utils';
+
+const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
 export default function PrintDialog() {
   const [activeDialog, setActiveDialog] = useGlobalState('activeDialog');
-  const [characterObject] = useGlobalState('characterObject');
-  const [isCharacterComplete] = useGlobalState('isCharacterComplete');
+  const [characterObject, setCharacterObject] = useGlobalState('characterObject');
+  const [, setIsCharacterComplete] = useGlobalState('isCharacterComplete');
+  const [, setIsCharacterGenerated] = useGlobalState('isCharacterGenerated');
+
+  useEffect(() => {
+    try {
+      const referenceObj = getCompleteGlobalState();
+      setIsCharacterComplete(determineCharacterCompletion(referenceObj));
+      setCharacterObject(getCharacterJsonApi(referenceObj));
+      setIsCharacterGenerated(true);
+    } catch (err) {
+      console.error(err);
+      setIsCharacterGenerated(false);
+    }
+  }, []);
 
   const handleCloseDialog = () => {
     setActiveDialog(null);
@@ -49,7 +64,7 @@ export default function PrintDialog() {
         <Button onClick={handlePrint} color="primary" disabled>
           <PrintIcon /> Print RPA
         </Button>
-        <Button onClick={handlePrint} color="primary" disabled={!isCharacterComplete}>
+        <Button onClick={handlePrint} color="primary" disabled>
           <PrintIcon /> Print RP
         </Button>
       </DialogActions>

@@ -59,6 +59,12 @@ main {
   .form-item--attributes {
     margin-top: 8px !important; }
 
+.MuiFormControl-root.save-login-form {
+  display: flex;
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid #2b2c28; }
+
 .attributes-grid {
   display: grid !important;
   text-transform: uppercase;

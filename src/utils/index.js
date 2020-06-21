@@ -1,6 +1,5 @@
 import { getHashData, getAdventureTypeahead } from '../database';
 import { TYPES } from './constants';
-import { getCompleteGlobalState, setGlobalState } from '../useGlobalState';
 
 export function getMonsterAdventureData(type, monsterName) {
   const dict = getHashData(type);
@@ -8,19 +7,6 @@ export function getMonsterAdventureData(type, monsterName) {
     dict,
     typeahead: getAdventureTypeahead(dict, monsterName),
   };
-}
-
-export function prepareObjects() {
-  try {
-    const referenceObj = getCompleteGlobalState();
-    setGlobalState('isCharacterComplete', determineCharacterCompletion(referenceObj));
-    setGlobalState('characterObject', getCharacterJsonApi(referenceObj));
-    setGlobalState('deserializedCharacter', deserializeCharacter(referenceObj));
-    setGlobalState('isCharacterGenerated', true);
-  } catch (err) {
-    console.error(err);
-    setGlobalState('isCharacterGenerated', false);
-  }
 }
 
 export function determineCharacterCompletion(objRef) {
