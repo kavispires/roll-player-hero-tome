@@ -38,11 +38,12 @@ const initialState = {
   monsterObstacle: null,
   monsterAttack: null,
   characterObject: null,
-  characterObjectByReference: null,
+  deserializedCharacter: null,
   isCharacterGenerated: false,
   isCharacterComplete: false,
   activeDialog: null,
   isSavingEnabled: false,
+  characterId: null,
 };
 
 const { useGlobalState } = createGlobalState(initialState);

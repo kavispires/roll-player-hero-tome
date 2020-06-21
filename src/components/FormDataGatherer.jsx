@@ -1,11 +1,7 @@
 import React, { useEffect } from 'react';
 
 import { GLOBAL_STATE_ALIAS, TYPES } from '../utils/constants';
-import {
-  getCharacterJsonApi,
-  getCharacterObjectByReference,
-  determineCharacterCompletion,
-} from '../utils';
+import { getCharacterJsonApi, deserializeCharacter, determineCharacterCompletion } from '../utils';
 
 import useGlobalState from '../useGlobalState';
 
@@ -36,10 +32,8 @@ export default function FormDataGatherer() {
   const [gold] = useGlobalState(GLOBAL_STATE_ALIAS[TYPES.GOLD]);
   const [score] = useGlobalState(GLOBAL_STATE_ALIAS[TYPES.SCORE]);
   const [date] = useGlobalState(GLOBAL_STATE_ALIAS[TYPES.DATE]);
-  const [characterObject, setCharacterObject] = useGlobalState('characterObject');
-  const [characterObjectByReference, setCharacterObjectByReference] = useGlobalState(
-    'characterObjectByReference'
-  );
+  const [, setCharacterObject] = useGlobalState('characterObject');
+  const [, setDeserializedCharacter] = useGlobalState('deserializedCharacter');
   const [, setIsGenerated] = useGlobalState('isCharacterGenerated');
   const [, setIsCharacterComplete] = useGlobalState('isCharacterComplete');
 
@@ -74,7 +68,7 @@ export default function FormDataGatherer() {
         date,
       };
       setIsCharacterComplete(determineCharacterCompletion(referenceObj));
-      setCharacterObjectByReference(getCharacterObjectByReference(referenceObj));
+      setDeserializedCharacter(deserializeCharacter(referenceObj));
       setCharacterObject(getCharacterJsonApi(referenceObj));
 
       setIsGenerated(true);
@@ -110,7 +104,7 @@ export default function FormDataGatherer() {
     score,
     date,
     setCharacterObject,
-    setCharacterObjectByReference,
+    setDeserializedCharacter,
     setIsGenerated,
     setIsCharacterComplete,
   ]);

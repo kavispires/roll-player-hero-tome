@@ -19,7 +19,7 @@ export default function Header() {
   const handleEditClick = () => {
     if (!isSavingEnabled) {
       setSaveClickCount((v) => ++v);
-      if (saveClickCount > 5) {
+      if (saveClickCount > 1) {
         setIsSavingEnabled(true);
       }
     }
@@ -64,14 +64,16 @@ export default function Header() {
       >
         <CodeIcon />
       </IconButton>
-      <IconButton
-        className="header-button"
-        aria-label="save"
-        disabled={!isGenerated}
-        onClick={handleOpenSaveDialog}
-      >
-        <SaveIcon />
-      </IconButton>
+      {isSavingEnabled && (
+        <IconButton
+          className="header-button"
+          aria-label="save"
+          disabled={!isGenerated}
+          onClick={handleOpenSaveDialog}
+        >
+          <SaveIcon />
+        </IconButton>
+      )}
     </header>
   );
 }

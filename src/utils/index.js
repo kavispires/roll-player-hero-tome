@@ -32,50 +32,44 @@ export function determineCharacterCompletion(objRef) {
   return true;
 }
 
-export function getCharacterObjectByReference(objRef) {
+export function deserializeCharacter(objRef) {
   return {
-    id: objRef.id,
-    type: 'roll-player-character-reference',
-    attributes: {
-      name: objRef.characterName,
-      race: objRef.raceId,
-      class: objRef.classId,
-      gender: objRef.gender,
-      backstory: objRef.backstoryId,
-      'attribute-scores': objRef.attributes,
-      alignment: {
-        id: objRef.alignmentId,
-        position: objRef.alignmentPosition,
-      },
-      items: {
-        armor: objRef.armorIds.sort(),
-        weapons: objRef.weaponsIds.sort(),
-        scrolls: objRef.scrollsIds.sort(),
-      },
-      skills: objRef.skillsIds.sort(),
-      traits: objRef.traitsIds.sort(),
-      battle: {
-        monster: objRef.monsterId,
-        location: objRef.monsterLocationId,
-        obstacle: objRef.monsterObstacleId,
-        attack: objRef.monsterAttackId,
-        minions: objRef.minionsIds.sort(),
-      },
-      familiar: {
-        id: objRef.familiarId,
-        power: objRef.familiarPower,
-      },
-      fiends: objRef.fiendsIds.sort(),
-      counts: {
-        experience: objRef.xp,
-        gold: objRef.gold,
-        score: objRef.score,
-      },
+    name: objRef.characterName,
+    race: objRef.raceId,
+    class: objRef.classId,
+    gender: objRef.gender,
+    backstory: objRef.backstoryId,
+    'attribute-scores': objRef.attributes,
+    alignment: {
+      id: objRef.alignmentId,
+      position: objRef.alignmentPosition,
     },
-    meta: {
-      'created-by': objRef.player,
-      'created-at': objRef.date ?? new Date(),
+    items: {
+      armor: objRef.armorIds.sort(),
+      weapons: objRef.weaponsIds.sort(),
+      scrolls: objRef.scrollsIds.sort(),
     },
+    skills: objRef.skillsIds.sort(),
+    traits: objRef.traitsIds.sort(),
+    battle: {
+      monster: objRef.monsterId,
+      location: objRef.monsterLocationId,
+      obstacle: objRef.monsterObstacleId,
+      attack: objRef.monsterAttackId,
+      minions: objRef.minionsIds.sort(),
+    },
+    familiar: {
+      id: objRef.familiarId,
+      power: objRef.familiarPower,
+    },
+    fiends: objRef.fiendsIds.sort(),
+    counts: {
+      experience: objRef.xp,
+      gold: objRef.gold,
+      score: objRef.score,
+    },
+    player: objRef.player,
+    'created-at': objRef.date ?? new Date(),
   };
 }
 
