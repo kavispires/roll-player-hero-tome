@@ -34,6 +34,7 @@ export function determineCharacterCompletion(objRef) {
 
 export function deserializeCharacter(objRef) {
   return {
+    id: objRef.characterId,
     name: objRef.characterName,
     race: objRef.raceId,
     class: objRef.classId,
@@ -75,7 +76,7 @@ export function deserializeCharacter(objRef) {
 
 export function getCharacterJsonApi(objRef) {
   return {
-    id: objRef.id,
+    id: objRef.characterId ?? null,
     type: 'roll-player-character',
     attributes: {
       name: objRef.characterName,

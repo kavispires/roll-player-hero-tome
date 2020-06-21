@@ -6,6 +6,7 @@ import { getCharacterJsonApi, deserializeCharacter, determineCharacterCompletion
 import useGlobalState from '../useGlobalState';
 
 export default function FormDataGatherer() {
+  const [characterId] = useGlobalState('characterId');
   const [characterName] = useGlobalState(GLOBAL_STATE_ALIAS[TYPES.CHARACTER_NAME]);
   const [player] = useGlobalState(GLOBAL_STATE_ALIAS[TYPES.PLAYER]);
   const [raceId] = useGlobalState(GLOBAL_STATE_ALIAS[TYPES.RACE]);
@@ -40,6 +41,7 @@ export default function FormDataGatherer() {
   useEffect(() => {
     try {
       const referenceObj = {
+        characterId,
         characterName,
         player,
         raceId,
@@ -77,6 +79,7 @@ export default function FormDataGatherer() {
       setIsGenerated(false);
     }
   }, [
+    characterId,
     characterName,
     player,
     raceId,
