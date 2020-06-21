@@ -1,12 +1,13 @@
 export const SCREENS = {
   FORM: Symbol('FORM'),
   PRINT: Symbol('PRINT'),
-  SAVE: Symbol('SAVE'),
+  REFRESH: Symbol('REFRESH'),
 };
 
 export const DIALOGS = {
   CODE: Symbol('CODE'),
   PRINT: Symbol('PRINT'),
+  IMPORT: Symbol('IMPORT'),
   SAVE: Symbol('SAVE'),
 };
 
@@ -15,6 +16,8 @@ export const GENDERS = {
   MALE: 'MALE',
   UNKNOWN: 'UNKNOWN',
 };
+
+export const REFRESH_TIMER = 800;
 
 export const ATTRIBUTES = {
   str: 'Strength',

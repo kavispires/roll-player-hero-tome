@@ -1,3 +1,12 @@
+.form {
+  &--refreshing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+  }
+}
+
 .form-item {
   width: calc(100% - #{$unit1});
   margin: 0 $unit1 $unit1 0 !important;

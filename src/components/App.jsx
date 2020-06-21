@@ -1,18 +1,32 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
 
-import Form from './Form';
 import Header from './Header';
+
+import Form from './Form';
+import Refreshing from './Refreshing';
+
 import FormDataGatherer from './FormDataGatherer';
+
 import CodeDialog from './CodeDialog';
 import PrintDialog from './PrintDialog';
 import SaveDialog from './SaveDialog';
 
+import { SCREENS } from '../utils/constants';
+import useGlobalState from '../useGlobalState';
+
+const activeComponent = {
+  [SCREENS.FORM]: <Form />,
+  [SCREENS.REFRESH]: <Refreshing />,
+};
+
 export default function App() {
+  const [screen] = useGlobalState('screen');
+
   return (
     <Container maxWidth="lg" className="app-container">
       <Header />
-      <Form />
+      {activeComponent[screen]}
       <FormDataGatherer />
       <CodeDialog />
       <PrintDialog />

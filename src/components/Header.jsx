@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import IconButton from '@material-ui/core/IconButton';
-import EditIcon from '@material-ui/icons/Edit';
 import PrintIcon from '@material-ui/icons/Print';
 import SaveIcon from '@material-ui/icons/Save';
 import CodeIcon from '@material-ui/icons/Code';
+import ListAltIcon from '@material-ui/icons/ListAlt';
+import RotateLeftIcon from '@material-ui/icons/RotateLeft';
 
-import useGlobalState from '../useGlobalState';
-import { DIALOGS } from '../utils/constants';
+import useGlobalState, { resetGlobalState } from '../useGlobalState';
+import { DIALOGS, SCREENS } from '../utils/constants';
 
 export default function Header() {
+  const [screen, setScreen] = useGlobalState('screen');
   const [, setActiveDialog] = useGlobalState('activeDialog');
   const [isGenerated] = useGlobalState('isCharacterGenerated');
   const [isComplete] = useGlobalState('isCharacterComplete');
@@ -33,25 +35,43 @@ export default function Header() {
     setActiveDialog(DIALOGS.CODE);
   };
 
+  const handleOpenImportDialog = () => {
+    setActiveDialog(DIALOGS.IMPORT);
+  };
+
   const handleOpenSaveDialog = () => {
     setActiveDialog(DIALOGS.SAVE);
   };
 
   return (
     <header className="header">
-      <IconButton
-        className="header-button"
-        aria-label="edit"
-        onClick={handleEditClick}
-        disabled={isSavingEnabled}
-      >
-        <EditIcon />
+      <IconButton className="header-button" aria-label="reset" onClick={resetGlobalState}>
+        <RotateLeftIcon />
       </IconButton>
-      <h1>Roll Player Character Sheet</h1>
+      <h1 onClick={handleEditClick}>Roll Player Character Sheet</h1>
+      {isSavingEnabled && (
+        <Fragment>
+          <IconButton
+            className="header-button"
+            aria-label="import"
+            onClick={handleOpenImportDialog}
+          >
+            <ListAltIcon />
+          </IconButton>
+          <IconButton
+            className="header-button"
+            aria-label="save"
+            disabled={!isGenerated}
+            onClick={handleOpenSaveDialog}
+          >
+            <SaveIcon />
+          </IconButton>
+        </Fragment>
+      )}
       <IconButton
         className="header-button"
         aria-label="print"
-        disabled={!isGenerated}
+        disabled={!isGenerated || !isComplete}
         onClick={handleOpenPrintDialog}
       >
         <PrintIcon />
@@ -64,16 +84,6 @@ export default function Header() {
       >
         <CodeIcon />
       </IconButton>
-      {isSavingEnabled && (
-        <IconButton
-          className="header-button"
-          aria-label="save"
-          disabled={!isGenerated}
-          onClick={handleOpenSaveDialog}
-        >
-          <SaveIcon />
-        </IconButton>
-      )}
     </header>
   );
 }

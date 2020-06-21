@@ -1,6 +1,6 @@
 import { createGlobalState } from 'react-hooks-global-state';
 
-import { SCREENS, GENDERS } from './utils/constants';
+import { SCREENS, REFRESH_TIMER } from './utils/constants';
 
 const initialState = {
   screen: SCREENS.FORM,
@@ -8,7 +8,7 @@ const initialState = {
   player: '',
   race: null,
   class: null,
-  gender: GENDERS.UNKOWN,
+  gender: null,
   backstory: null,
   attributes: {
     str: 0,
@@ -46,6 +46,15 @@ const initialState = {
   characterId: null,
 };
 
-const { useGlobalState } = createGlobalState(initialState);
+const { useGlobalState, setGlobalState, setState, getState } = createGlobalState(initialState);
+
+export function resetGlobalState() {
+  setGlobalState('screen', SCREENS.REFRESH);
+  setTimeout(() => {
+    setState({ ...initialState });
+  }, REFRESH_TIMER);
+}
+
+export const getCompleteGlobalState = getState;
 
 export default useGlobalState;

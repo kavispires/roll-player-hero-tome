@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { getHashData } from '../database';
 import { getMonsterAdventureData } from '../utils';
-import { TYPES, GENDERS, GLOBAL_STATE_ALIAS } from '../utils/constants';
+import { TYPES, GLOBAL_STATE_ALIAS } from '../utils/constants';
 import useGlobalState from '../useGlobalState';
 
 // Components

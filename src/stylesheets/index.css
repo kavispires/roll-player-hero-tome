@@ -37,6 +37,12 @@ main {
     .header h1 {
       font-size: 1rem; } }
 
+.form--refreshing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; }
+
 .form-item {
   width: calc(100% - 8px);
   margin: 0 8px 8px 0 !important; }
