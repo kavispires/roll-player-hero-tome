@@ -8,12 +8,9 @@ import RotateLeftIcon from '@material-ui/icons/RotateLeft';
 
 import useGlobalState, { resetGlobalState } from '../useGlobalState';
 import { DIALOGS } from '../utils/constants';
-import { prepareObjects } from '../utils';
 
 export default function Header() {
   const [, setActiveDialog] = useGlobalState('activeDialog');
-  const [isGenerated] = useGlobalState('isCharacterGenerated');
-  const [isComplete] = useGlobalState('isCharacterComplete');
   const [isSavingEnabled, setIsSavingEnabled] = useGlobalState('isSavingEnabled');
   // Local state
   const [saveClickCount, setSaveClickCount] = useState(0);
@@ -28,7 +25,6 @@ export default function Header() {
   };
 
   const handleOpenPrintDialog = () => {
-    prepareObjects();
     setActiveDialog(DIALOGS.PRINT);
   };
 
@@ -41,7 +37,6 @@ export default function Header() {
   };
 
   const handleOpenSaveDialog = () => {
-    prepareObjects();
     setActiveDialog(DIALOGS.SAVE);
   };
 

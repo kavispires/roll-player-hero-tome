@@ -17,11 +17,6 @@ main {
 .invisible {
   opacity: 0; }
 
-.dialog-alert {
-  color: red;
-  font-size: 75%;
-  font-style: italic; }
-
 .header {
   display: flex;
   align-items: center;
@@ -142,3 +137,26 @@ main {
   padding: 8px;
   display: flex;
   justify-content: center; }
+
+.dialog-alert {
+  color: red;
+  font-size: 75%;
+  font-style: italic; }
+
+.MuiFormControl-root.save-login-form {
+  display: flex;
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid #2b2c28; }
+
+.import-list {
+  margin: 0; }
+  .import-list__loading {
+    display: flex;
+    background: red; }
+  .import-list__character > button {
+    background: none;
+    border: none;
+    cursor: pointer; }
+    .import-list__character > button:hover {
+      background: lightgrey; }

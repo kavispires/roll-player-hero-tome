@@ -1,0 +1,34 @@
+.dialog-alert {
+  color: red;
+  font-size: 75%;
+  font-style: italic;
+}
+
+.MuiFormControl-root.save-login-form {
+  display: flex;
+  margin: $unit1;
+  padding: $unit1;
+  border: 1px solid $color-medium;
+}
+
+.import-list {
+  margin: 0;
+  max-height: 400px;
+  overflow-y: auto;
+
+  &__loading {
+    display: flex;
+    background: red;
+  }
+
+  &__character > button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: $uni1;
+
+    &:hover {
+      background: lightgrey;
+    }
+  }
+}

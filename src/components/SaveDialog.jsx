@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { forwardRef, useState, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -9,39 +9,53 @@ import SaveIcon from '@material-ui/icons/Save';
 import TextField from '@material-ui/core/TextField';
 import FormControl from '@material-ui/core/FormControl';
 
-import useGlobalState from '../useGlobalState';
-import { DIALOGS } from '../utils/constants';
-
 import { API_FUNCTIONS } from '../firebase';
+
+import useGlobalState, { getCompleteGlobalState } from '../useGlobalState';
+import { DIALOGS } from '../utils/constants';
+import { determineCharacterCompletion, deserializeCharacter } from '../utils';
 
 const API = {
   saveCharacter: API_FUNCTIONS.httpsCallable('postRollPlayerCharacter'),
   updateCharacter: API_FUNCTIONS.httpsCallable('putRollPlayerCharacter'),
 };
 
-const Transition = React.forwardRef(function Transition(props, ref) {
+const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
 export default function SaveDialog() {
   const [activeDialog, setActiveDialog] = useGlobalState('activeDialog');
   const [characterId, setCharacterId] = useGlobalState('characterId');
-  const [deserializedCharacter] = useGlobalState('deserializedCharacter');
-  const [isCharacterComplete] = useGlobalState('isCharacterComplete');
-
+  const [deserializedCharacter, setDeserializedCharacter] = useGlobalState('deserializedCharacter');
+  const [isCharacterComplete, setIsCharacterComplete] = useGlobalState('isCharacterComplete');
+  const [, setIsCharacterGenerated] = useGlobalState('isCharacterGenerated');
+  // Local States
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [pw, setPW] = useState(null);
   const [email, setEmail] = useState(null);
 
-  const handleCloseDialog = () => {
-    setActiveDialog(null);
-  };
+  useEffect(() => {
+    try {
+      const referenceObj = getCompleteGlobalState();
+      setIsCharacterComplete(determineCharacterCompletion(referenceObj));
+      setDeserializedCharacter(deserializeCharacter(referenceObj));
+      setIsCharacterGenerated(true);
+    } catch (err) {
+      console.error(err);
+      setIsCharacterGenerated(false);
+    }
+  }, []);
 
   useEffect(() => {
     if (pw && email) {
       setIsLoggedIn(true);
     }
   }, [pw, email, setIsLoggedIn]);
+
+  const handleCloseDialog = () => {
+    setActiveDialog(null);
+  };
 
   const handleSave = async () => {
     try {
@@ -99,10 +113,13 @@ export default function SaveDialog() {
         )}
       </DialogContent>
       <DialogActions>
+        {!isCharacterComplete && (
+          <span className="dialog-alert">This character sheet is incomplete</span>
+        )}
         <Button onClick={handleCloseDialog} color="secondary">
           Close
         </Button>
-        <Button onClick={handleSave} color="primary" disabled={!isLoggedIn}>
+        <Button onClick={handleSave} color="primary" disabled={!isLoggedIn || !isCharacterComplete}>
           <SaveIcon /> {characterId ? 'Update' : 'Save'}
         </Button>
       </DialogActions>

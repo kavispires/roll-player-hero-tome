@@ -7,6 +7,7 @@ import Form from './Form';
 import Refreshing from './Refreshing';
 
 import CodeDialog from './CodeDialog';
+import ImportDialog from './ImportDialog';
 import PrintDialog from './PrintDialog';
 import SaveDialog from './SaveDialog';
 
@@ -20,7 +21,7 @@ const activeComponent = {
 
 const activeDialogComponent = {
   [DIALOGS.CODE]: <CodeDialog />,
-  [DIALOGS.IMPORT]: <h1>Import</h1>,
+  [DIALOGS.IMPORT]: <ImportDialog />,
   [DIALOGS.PRINT]: <PrintDialog />,
   [DIALOGS.SAVE]: <SaveDialog />,
 };
