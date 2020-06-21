@@ -41,7 +41,8 @@ const initialState = {
   characterObjectByReference: null,
   isCharacterGenerated: false,
   isCharacterComplete: false,
-  isCodeDialogActice: false,
+  activeDialog: null,
+  isSavingEnabled: false,
 };
 
 const { useGlobalState } = createGlobalState(initialState);

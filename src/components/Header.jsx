@@ -1,30 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
 import IconButton from '@material-ui/core/IconButton';
 import EditIcon from '@material-ui/icons/Edit';
 import PrintIcon from '@material-ui/icons/Print';
 import SaveIcon from '@material-ui/icons/Save';
 import CodeIcon from '@material-ui/icons/Code';
 
-import CodeDialog from './CodeDialog';
-import FormDataGatherer from './FormDataGatherer';
-
 import useGlobalState from '../useGlobalState';
+import { DIALOGS } from '../utils/constants';
 
 export default function Header() {
+  const [, setActiveDialog] = useGlobalState('activeDialog');
   const [isGenerated] = useGlobalState('isCharacterGenerated');
-  const [, setIsCodeDialogActice] = useGlobalState('isCodeDialogActice');
+  const [isComplete] = useGlobalState('isCharacterComplete');
+  const [isSavingEnabled, setIsSavingEnabled] = useGlobalState('isSavingEnabled');
+  // Local state
+  const [saveClickCount, setSaveClickCount] = useState(0);
+
+  const handleEditClick = () => {
+    if (!isSavingEnabled) {
+      setSaveClickCount((v) => ++v);
+      if (saveClickCount > 5) {
+        setIsSavingEnabled(true);
+      }
+    }
+  };
+
+  const handleOpenPrintDialog = () => {
+    setActiveDialog(DIALOGS.PRINT);
+  };
 
   const handleOpenCodeDialog = () => {
-    setIsCodeDialogActice(true);
+    setActiveDialog(DIALOGS.CODE);
+  };
+
+  const handleOpenSaveDialog = () => {
+    setActiveDialog(DIALOGS.SAVE);
   };
 
   return (
     <header className="header">
-      <h1>Roll Player Character Sheet</h1>
-      <IconButton className="header-button" aria-label="edit">
+      <IconButton
+        className="header-button"
+        aria-label="edit"
+        onClick={handleEditClick}
+        disabled={isSavingEnabled}
+      >
         <EditIcon />
       </IconButton>
-      <IconButton className="header-button" aria-label="print" disabled>
+      <h1>Roll Player Character Sheet</h1>
+      <IconButton
+        className="header-button"
+        aria-label="print"
+        disabled={!isGenerated}
+        onClick={handleOpenPrintDialog}
+      >
         <PrintIcon />
       </IconButton>
       <IconButton
@@ -35,11 +64,14 @@ export default function Header() {
       >
         <CodeIcon />
       </IconButton>
-      <IconButton className="header-button" aria-label="save" disabled>
+      <IconButton
+        className="header-button"
+        aria-label="save"
+        disabled={!isGenerated}
+        onClick={handleOpenSaveDialog}
+      >
         <SaveIcon />
       </IconButton>
-      <FormDataGatherer />
-      <CodeDialog />
     </header>
   );
 }

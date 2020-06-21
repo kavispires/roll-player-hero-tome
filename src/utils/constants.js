@@ -4,6 +4,12 @@ export const SCREENS = {
   SAVE: Symbol('SAVE'),
 };
 
+export const DIALOGS = {
+  CODE: Symbol('CODE'),
+  PRINT: Symbol('PRINT'),
+  SAVE: Symbol('SAVE'),
+};
+
 export const GENDERS = {
   FEMALE: 'FEMALE',
   MALE: 'MALE',
