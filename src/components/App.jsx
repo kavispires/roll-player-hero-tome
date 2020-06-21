@@ -10,7 +10,7 @@ import CodeDialog from './CodeDialog';
 import PrintDialog from './PrintDialog';
 import SaveDialog from './SaveDialog';
 
-import { SCREENS } from '../utils/constants';
+import { DIALOGS, SCREENS } from '../utils/constants';
 import useGlobalState from '../useGlobalState';
 
 const activeComponent = {
@@ -18,16 +18,22 @@ const activeComponent = {
   [SCREENS.REFRESH]: <Refreshing />,
 };
 
+const activeDialogComponent = {
+  [DIALOGS.CODE]: <CodeDialog />,
+  [DIALOGS.IMPORT]: <h1>Import</h1>,
+  [DIALOGS.PRINT]: <PrintDialog />,
+  [DIALOGS.SAVE]: <SaveDialog />,
+};
+
 export default function App() {
   const [screen] = useGlobalState('screen');
+  const [activeDialog] = useGlobalState('activeDialog');
 
   return (
     <Container maxWidth="lg" className="app-container">
       <Header />
       {activeComponent[screen]}
-      <CodeDialog />
-      <PrintDialog />
-      <SaveDialog />
+      {activeDialogComponent[activeDialog]}
     </Container>
   );
 }

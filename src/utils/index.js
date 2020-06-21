@@ -96,11 +96,11 @@ export function getCharacterJsonApi(objRef) {
       name: objRef.characterName,
       race: getHashData(TYPES.RACE)[objRef.race]?.name ?? '',
       class: getHashData(TYPES.CLASS)[objRef.class]?.name ?? '',
-      gender: objRef.gender,
+      gender: getHashData(TYPES.GENDER)[objRef.gender]?.name ?? 'Unkown',
       backstory: getHashData(TYPES.BACKSTORY)[objRef.backstory]?.name ?? '',
       'attribute-rp-scores': getAttributeScores(objRef.attributes, objRef.race),
       'attribute-rpa-scores': getRPAAttributeScores(objRef.attributes, objRef.race),
-      alignment: getAlignmentScore(objRef.alignmentId, objRef.alignmentPosition),
+      alignment: getAlignmentScore(objRef.alignment, objRef.alignmentPos),
       items: {
         armor: objRef.armor.map((id) => getHashData(TYPES.MARKET_ARMOR)[id]?.name ?? '').sort(),
         weapons: objRef.weapons
@@ -138,6 +138,120 @@ export function getCharacterJsonApi(objRef) {
   };
 }
 
+export function getCharacterTextString(objRef) {
+  let result = '';
+
+  function getLine(length, separator = '-') {
+    return `${new Array(length).fill(separator).join('')}`;
+  }
+
+  function addLine(length = 15) {
+    result += getLine(length);
+  }
+
+  function addTitle(title) {
+    const titleLine = getLine(title.length, '=');
+    result += `\n${titleLine}\n${title.toUpperCase()}\n${titleLine}\n\n`;
+  }
+
+  function addSection(title) {
+    const sLine = getLine(title.length, '-');
+    result += `\n${sLine.toUpperCase()}\n${title.toUpperCase()}\n${sLine}\n\n`;
+  }
+
+  function addSubSection(title) {
+    const ssLine = getLine(title.length, '-');
+    result += `\n${title.toUpperCase()}\n${ssLine}\n\n`;
+  }
+
+  function addText(text) {
+    result += `${text}\n`;
+  }
+
+  function addListItem(item) {
+    result += `    - ${item}\n`;
+  }
+
+  function addList(list = []) {
+    console.log({ list });
+    if (list.length === 0) {
+      result += 'N/A\n';
+    } else {
+      for (let i = 0; i < list.length; i++) {
+        addListItem(list[i]);
+      }
+    }
+  }
+
+  function addLineBreak(num = 1) {
+    for (let i = 0; i < num; i++) {
+      result += '\n';
+    }
+  }
+
+  // BUILD
+  addTitle('Roll Player Hero Tome');
+  addText(`Created by ${objRef.player} on ${objRef.date}`);
+  addSection(`Character: ${objRef.characterName}`);
+  addText(`Race: ${getHashData(TYPES.RACE)[objRef.race]?.name}`);
+  addText(`Class: ${getHashData(TYPES.CLASS)[objRef.class]?.name}`);
+  addText(`Gender: ${getHashData(TYPES.GENDER)[objRef.gender]?.name}`);
+  addText(`Backstory: ${getHashData(TYPES.BACKSTORY)[objRef.backstory]?.name}`);
+  addSubSection('Attributes');
+  const attributesObj = getCombinedAttributeScores(objRef.attributes, objRef.race);
+  addText(`STR = ${attributesObj.str[1]} (${attributesObj.str[0]})`);
+  addText(`DEX = ${attributesObj.dex[1]} (${attributesObj.dex[0]})`);
+  addText(`CON = ${attributesObj.con[1]} (${attributesObj.con[0]})`);
+  addText(`INT = ${attributesObj.int[1]} (${attributesObj.int[0]})`);
+  addText(`WIS = ${attributesObj.wis[1]} (${attributesObj.wis[0]})`);
+  addText(`CHA = ${attributesObj.cha[1]} (${attributesObj.cha[0]})`);
+  if (attributesObj.addDice) {
+    addLine(
+      `\n// Add ${attributesObj.addDice} to any attribute score before playing Roll Player Adventures`
+    );
+  }
+  addSubSection('Alignment');
+  const alignmentObj = getAlignmentScore(objRef.alignment, objRef.alignmentPos);
+  addText(`${alignmentObj.name} (${alignmentObj.title})`);
+  addText(`Points: ${alignmentObj.score}`);
+  addSection('Stats');
+  addListItem(`Health: ${getHealth(objRef.score, objRef.fiends)}`);
+  addListItem(`Experience: ${objRef.xp}`);
+  addListItem(`Gold: ${objRef.gold}`);
+  addSection('Items/Abilities');
+  addSubSection('Armor');
+  addList(objRef.armor.map((id) => getHashData(TYPES.MARKET_ARMOR)[id]?.name ?? '').sort());
+  addSubSection('Weapons');
+  addList(objRef.weapons.map((id) => getHashData(TYPES.MARKET_WEAPON)[id]?.name ?? '').sort());
+  addSubSection('Scrolls');
+  addList(objRef.scrolls.map((id) => getHashData(TYPES.MARKET_SCROLL)[id]?.name ?? '').sort());
+  addSubSection('Skills');
+  addList(objRef.skills.map((id) => getHashData(TYPES.MARKET_SKILL)[id]?.name ?? '').sort());
+  addSubSection('Traits');
+  addList(objRef.traits.map((id) => getHashData(TYPES.MARKET_TRAIT)[id]?.name ?? '').sort());
+  addSection('Familiar');
+  addText(
+    `${getHashData(TYPES.FAMILIAR)[objRef.familiar]?.name ?? ''} (Power: ${objRef.familiarPower})`
+  );
+  addSection('Enemies');
+  addSubSection(`Monter: ${getHashData(TYPES.MONSTER)[objRef.monster]?.name ?? ''}`);
+  addListItem(
+    `Location: ${getHashData(TYPES.MONSTER_LOCATION)[objRef.monsterLocation]?.name ?? ''}`
+  );
+  addListItem(
+    `Obstacle: ${getHashData(TYPES.MONSTER_OBSTACLE)[objRef.monsterObstacle]?.name ?? ''}`
+  );
+  addListItem(`Attack: ${getHashData(TYPES.MONSTER_ATTACK)[objRef.monsterAttack]?.name ?? ''}`);
+  addSubSection('Minions');
+  addList(objRef.minions.map((id) => getHashData(TYPES.MINION)[id]?.name ?? '').sort());
+  addSubSection('Fiends');
+  addList(objRef.fiends.map((id) => getHashData(TYPES.FIENDS)[id]?.name ?? '').sort());
+  addLineBreak(2);
+  addSection('Final Score');
+  addText(`${objRef.score} reputation stars`);
+  return result;
+}
+
 function getAttributeScores(attributes, raceId) {
   const raceData = getHashData(TYPES.RACE)?.[raceId];
 
@@ -152,7 +266,7 @@ function getAttributeScores(attributes, raceId) {
 }
 
 function getRPAAttributeScores(attributes, raceId) {
-  const raceData = getHashData(TYPES.RACE)?.[raceId];
+  const rpAttributes = getAttributeScores(attributes, raceId);
 
   function getAttrValue(val) {
     if (val < 14) return 0;
@@ -162,12 +276,34 @@ function getRPAAttributeScores(attributes, raceId) {
   }
 
   return {
-    str: getAttrValue((attributes.str ?? 0) + (raceData?.str ?? 0)),
-    dex: getAttrValue((attributes.dex ?? 0) + (raceData?.dex ?? 0)),
-    con: getAttrValue((attributes.con ?? 0) + (raceData?.con ?? 0)),
-    int: getAttrValue((attributes.int ?? 0) + (raceData?.int ?? 0)),
-    wis: getAttrValue((attributes.wis ?? 0) + (raceData?.wis ?? 0)),
-    cha: getAttrValue((attributes.cha ?? 0) + (raceData?.cha ?? 0)),
+    str: getAttrValue(rpAttributes.str),
+    dex: getAttrValue(rpAttributes.dex),
+    con: getAttrValue(rpAttributes.con),
+    int: getAttrValue(rpAttributes.int),
+    wis: getAttrValue(rpAttributes.wis),
+    cha: getAttrValue(rpAttributes.cha),
+  };
+}
+
+function getCombinedAttributeScores(attributes, raceId) {
+  const rpAttributes = getAttributeScores(attributes, raceId);
+  const rpaAttributes = getRPAAttributeScores(attributes, raceId);
+
+  const addDice = Object.values(rpaAttributes).reduce((acc, entry) => {
+    acc -= entry;
+    if (acc < 0) acc = 0;
+    return acc;
+  }, 6);
+
+  console.log({ addDice });
+  return {
+    str: [rpAttributes.str, rpaAttributes.str],
+    dex: [rpAttributes.dex, rpaAttributes.dex],
+    con: [rpAttributes.con, rpaAttributes.con],
+    int: [rpAttributes.int, rpaAttributes.int],
+    wis: [rpAttributes.wis, rpaAttributes.wis],
+    cha: [rpAttributes.cha, rpaAttributes.cha],
+    addDice,
   };
 }
 
