@@ -26,7 +26,6 @@ export default function FormAlignment() {
 
   const handleChange = (_, selectedEntry) => {
     if (alignmentDict[selectedEntry?.value]) {
-      console.log(selectedEntry);
       setAlignment(selectedEntry.value);
     } else {
       setAlignment(null);

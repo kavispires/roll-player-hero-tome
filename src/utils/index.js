@@ -12,23 +12,23 @@ export function getMonsterAdventureData(type, monsterName) {
 export function determineCharacterCompletion(objRef) {
   // If text fields are empty
   if (!objRef.characterName || !objRef.player) return false;
-  console.log('PASSED LEVEL 1');
+
   // If mandatory fields are empty
   if (!objRef.raceId || !objRef.classId || !objRef.backstoryId || !objRef.alignmentId) return false;
-  console.log('PASSED LEVEL 2');
+
   // If attributes are less than 3
   if (Object.values(objRef.attributes).some((attr) => attr < 3)) return false;
-  console.log('PASSED LEVEL 3');
+
   // If monster, but no location, obstacle, or attack
   if (
     objRef.monsterId &&
-    (!objRef.monsterLocationId || objRef.monsterObstacleId || objRef.monsterAttackId)
+    (!objRef.monsterLocationId || !objRef.monsterObstacleId || !objRef.monsterAttackId)
   )
     return false;
-  console.log('PASSED LEVEL 4');
+
   // If has familiar, but power is less then 3
   if (objRef.familiarId && !objRef.familiarPower) return false;
-  console.log('PASSED LEVEL 5');
+
   return true;
 }
 
