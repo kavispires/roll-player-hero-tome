@@ -1,9 +1,56 @@
 $box-size: 45px;
+$boxes-container: 45px * 3;
+$label-h: 30px;
+$label-v: 15px;
 
 .alignment-grid {
-  display: grid !important;
-  grid-template-columns: $box-size $box-size $box-size;
-  grid-template-rows: $box-size $box-size $box-size;
+  margin: $unit1 auto 0;
+  padding: $unit1;
+  display: grid;
+  grid-template-columns: [col-start] $label-h [col-boxes] $boxes-container [col-boxes-end] $label-h [col-end];
+  grid-template-rows: [row-start] $label-v [row-boxes] $boxes-container [row-boxes-end] $label-v [row-end];
+  justify-items: center;
+
+  &__boxes {
+    grid-column: col-boxes / col-boxes-end;
+    grid-row: row-boxes / row-boxes-end;
+
+    display: grid !important;
+    grid-template-columns: $box-size $box-size $box-size;
+    grid-template-rows: $box-size $box-size $box-size;
+  }
+
+  &__good {
+    grid-column: col-boxes / col-boxes-end;
+    grid-row: row-start / row-boxes;
+    font-size: 70%;
+    text-transform: uppercase;
+  }
+
+  &__evil {
+    grid-column: col-boxes / col-boxes-end;
+    grid-row: row-boxes-end row-end;
+    font-size: 70%;
+    text-transform: uppercase;
+  }
+
+  &__lawful {
+    grid-row: row-boxes / row-boxes-end;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    font-size: 70%;
+    text-transform: uppercase;
+  }
+
+  &__chaotic {
+    grid-column: col-boxes-end / col-end;
+    grid-row: row-boxes / row-boxes-end;
+    writing-mode: vertical-rl;
+    text-align: center;
+    font-size: 70%;
+    text-transform: uppercase;
+  }
 }
 
 .alignment-box {
@@ -11,6 +58,8 @@ $box-size: 45px;
   margin: 4px;
   border: 1px solid $color-medium;
   cursor: pointer;
+  width: $box-size - 8px;
+  height: $box-size - 8px;
 
   &--active {
     border: 3px solid gold;

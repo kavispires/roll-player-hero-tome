@@ -81,15 +81,50 @@ main {
   border: 3px solid #2b2c28; }
 
 .alignment-grid {
-  display: grid !important;
-  grid-template-columns: 45px 45px 45px;
-  grid-template-rows: 45px 45px 45px; }
+  margin: 8px auto 0;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: [col-start] 30px [col-boxes] 135px [col-boxes-end] 30px [col-end];
+  grid-template-rows: [row-start] 15px [row-boxes] 135px [row-boxes-end] 15px [row-end];
+  justify-items: center; }
+  .alignment-grid__boxes {
+    grid-column: col-boxes / col-boxes-end;
+    grid-row: row-boxes / row-boxes-end;
+    display: grid !important;
+    grid-template-columns: 45px 45px 45px;
+    grid-template-rows: 45px 45px 45px; }
+  .alignment-grid__good {
+    grid-column: col-boxes / col-boxes-end;
+    grid-row: row-start / row-boxes;
+    font-size: 70%;
+    text-transform: uppercase; }
+  .alignment-grid__evil {
+    grid-column: col-boxes / col-boxes-end;
+    grid-row: row-boxes-end row-end;
+    font-size: 70%;
+    text-transform: uppercase; }
+  .alignment-grid__lawful {
+    grid-row: row-boxes / row-boxes-end;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    font-size: 70%;
+    text-transform: uppercase; }
+  .alignment-grid__chaotic {
+    grid-column: col-boxes-end / col-end;
+    grid-row: row-boxes / row-boxes-end;
+    writing-mode: vertical-rl;
+    text-align: center;
+    font-size: 70%;
+    text-transform: uppercase; }
 
 .alignment-box {
   background: white;
   margin: 4px;
   border: 1px solid #2b2c28;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 37px;
+  height: 37px; }
   .alignment-box--active {
     border: 3px solid gold;
     color: gold;

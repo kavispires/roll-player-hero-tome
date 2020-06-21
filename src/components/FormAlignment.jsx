@@ -16,11 +16,20 @@ export default function FormAlignment() {
   const alignmentDict = getHashData(TYPES.ALIGNMENT);
   const alignmentTypeahead = getTypeahead(TYPES.ALIGNMENT);
 
-  const handleChange = (event) => {
+  const handleInputChange = (event) => {
     const index = event.target.getAttribute('data-option-index');
     if (alignmentTypeahead[index]) {
       const id = alignmentTypeahead[index].value;
       setAlignment(id);
+    }
+  };
+
+  const handleChange = (_, selectedEntry) => {
+    if (alignmentDict[selectedEntry?.value]) {
+      console.log(selectedEntry);
+      setAlignment(selectedEntry.value);
+    } else {
+      setAlignment(null);
     }
   };
 
@@ -42,11 +51,16 @@ export default function FormAlignment() {
         getOptionLabel={(option) => option.text}
         getOptionSelected={(option) => option.value === alignmentDict?.[alignment]?.id}
         renderInput={(params) => <TextField {...params} label="Alignment" />}
-        onInputChange={handleChange}
+        onInputChange={handleInputChange}
+        onChange={handleChange}
         autoHighlight
       />
-      <div className="alignment-graph-container">
-        <div className="alignment-grid">
+      <div className="alignment-grid">
+        <div className="alignment-grid__lawful">Lawful</div>
+        <div className="alignment-grid__good">Good</div>
+        <div className="alignment-grid__chaotic">Chaotic</div>
+        <div className="alignment-grid__evil">Evil</div>
+        <div className="alignment-grid__boxes">
           {activeModifiers.map((val, index) => {
             const activeClass = alignmentPos === index ? 'alignment-box--active' : '';
             return (
