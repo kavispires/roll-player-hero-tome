@@ -87,7 +87,7 @@ export default function SaveDialog() {
               type="email"
             />
             <TextField
-              id="email"
+              id="password"
               label="Password"
               onChange={(e) => setPW(e.target.value)}
               type="password"

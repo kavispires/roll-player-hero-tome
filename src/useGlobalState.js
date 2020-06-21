@@ -25,7 +25,7 @@ const initialState = {
   skills: [],
   traits: [],
   scrolls: [],
-  trophies: [],
+  minions: [],
   xp: 0,
   gold: 0,
   score: 0,
@@ -46,7 +46,9 @@ const initialState = {
   characterId: null,
 };
 
-const { useGlobalState, setGlobalState, setState, getState } = createGlobalState(initialState);
+const { useGlobalState, setGlobalState: setGlobalStateCGS, setState, getState } = createGlobalState(
+  initialState
+);
 
 export function resetGlobalState() {
   setGlobalState('screen', SCREENS.REFRESH);
@@ -56,5 +58,7 @@ export function resetGlobalState() {
 }
 
 export const getCompleteGlobalState = getState;
+
+export const setGlobalState = setGlobalStateCGS;
 
 export default useGlobalState;

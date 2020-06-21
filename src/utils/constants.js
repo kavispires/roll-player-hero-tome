@@ -77,7 +77,7 @@ export const GLOBAL_STATE_ALIAS = {
   [TYPES.MARKET_SKILL]: 'skills',
   [TYPES.MARKET_SCROLL]: 'scrolls',
   [TYPES.MARKET_TRAIT]: 'traits',
-  [TYPES.MINION]: 'trophies',
+  [TYPES.MINION]: 'minions',
   [TYPES.MONSTER]: 'monster',
   [TYPES.MONSTER_LOCATION]: 'monsterLocation',
   [TYPES.MONSTER_OBSTACLE]: 'monsterObstacle',

@@ -7,10 +7,10 @@ import ListAltIcon from '@material-ui/icons/ListAlt';
 import RotateLeftIcon from '@material-ui/icons/RotateLeft';
 
 import useGlobalState, { resetGlobalState } from '../useGlobalState';
-import { DIALOGS, SCREENS } from '../utils/constants';
+import { DIALOGS } from '../utils/constants';
+import { prepareObjects } from '../utils';
 
 export default function Header() {
-  const [screen, setScreen] = useGlobalState('screen');
   const [, setActiveDialog] = useGlobalState('activeDialog');
   const [isGenerated] = useGlobalState('isCharacterGenerated');
   const [isComplete] = useGlobalState('isCharacterComplete');
@@ -28,10 +28,12 @@ export default function Header() {
   };
 
   const handleOpenPrintDialog = () => {
+    prepareObjects();
     setActiveDialog(DIALOGS.PRINT);
   };
 
   const handleOpenCodeDialog = () => {
+    prepareObjects();
     setActiveDialog(DIALOGS.CODE);
   };
 
@@ -40,6 +42,7 @@ export default function Header() {
   };
 
   const handleOpenSaveDialog = () => {
+    prepareObjects();
     setActiveDialog(DIALOGS.SAVE);
   };
 
@@ -58,30 +61,15 @@ export default function Header() {
           >
             <ListAltIcon />
           </IconButton>
-          <IconButton
-            className="header-button"
-            aria-label="save"
-            disabled={!isGenerated}
-            onClick={handleOpenSaveDialog}
-          >
+          <IconButton className="header-button" aria-label="save" onClick={handleOpenSaveDialog}>
             <SaveIcon />
           </IconButton>
         </Fragment>
       )}
-      <IconButton
-        className="header-button"
-        aria-label="print"
-        disabled={!isGenerated || !isComplete}
-        onClick={handleOpenPrintDialog}
-      >
+      <IconButton className="header-button" aria-label="print" onClick={handleOpenPrintDialog}>
         <PrintIcon />
       </IconButton>
-      <IconButton
-        className="header-button"
-        aria-label="code"
-        disabled={!isGenerated}
-        onClick={handleOpenCodeDialog}
-      >
+      <IconButton className="header-button" aria-label="code" onClick={handleOpenCodeDialog}>
         <CodeIcon />
       </IconButton>
     </header>

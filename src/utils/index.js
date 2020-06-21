@@ -1,5 +1,6 @@
 import { getHashData, getAdventureTypeahead } from '../database';
 import { TYPES } from './constants';
+import { getCompleteGlobalState, setGlobalState } from '../useGlobalState';
 
 export function getMonsterAdventureData(type, monsterName) {
   const dict = getHashData(type);
@@ -9,25 +10,38 @@ export function getMonsterAdventureData(type, monsterName) {
   };
 }
 
+export function prepareObjects() {
+  try {
+    const referenceObj = getCompleteGlobalState();
+    setGlobalState('isCharacterComplete', determineCharacterCompletion(referenceObj));
+    setGlobalState('characterObject', getCharacterJsonApi(referenceObj));
+    setGlobalState('deserializedCharacter', deserializeCharacter(referenceObj));
+    setGlobalState('isCharacterGenerated', true);
+  } catch (err) {
+    console.error(err);
+    setGlobalState('isCharacterGenerated', false);
+  }
+}
+
 export function determineCharacterCompletion(objRef) {
   // If text fields are empty
   if (!objRef.characterName || !objRef.player) return false;
 
   // If mandatory fields are empty
-  if (!objRef.raceId || !objRef.classId || !objRef.backstoryId || !objRef.alignmentId) return false;
+  if (!objRef.race || !objRef.class || !objRef.backstory || !objRef.alignment) return false;
 
   // If attributes are less than 3
   if (Object.values(objRef.attributes).some((attr) => attr < 3)) return false;
 
   // If monster, but no location, obstacle, or attack
   if (
-    objRef.monsterId &&
-    (!objRef.monsterLocationId || !objRef.monsterObstacleId || !objRef.monsterAttackId)
+    objRef.monster &&
+    (!objRef.monsterLocation || !objRef.monsterObstacle || !objRef.monsterAttack)
   )
     return false;
 
   // If has familiar, but power is less then 3
-  if (objRef.familiarId && !objRef.familiarPower) return false;
+  if (objRef.familiar && !objRef.familiarPower) return false;
 
   return true;
 }
@@ -36,34 +50,34 @@ export function deserializeCharacter(objRef) {
   return {
     id: objRef.characterId,
     name: objRef.characterName,
-    race: objRef.raceId,
-    class: objRef.classId,
+    race: objRef.race,
+    class: objRef.class,
     gender: objRef.gender,
-    backstory: objRef.backstoryId,
+    backstory: objRef.backstory,
     'attribute-scores': objRef.attributes,
     alignment: {
-      id: objRef.alignmentId,
-      position: objRef.alignmentPosition,
+      id: objRef.alignment,
+      position: objRef.alignmentPos,
     },
     items: {
-      armor: objRef.armorIds?.sort(),
-      weapons: objRef.weaponsIds?.sort(),
-      scrolls: objRef.scrollsIds?.sort(),
+      armor: objRef.armor?.sort(),
+      weapons: objRef.weapons?.sort(),
+      scrolls: objRef.scrolls?.sort(),
     },
-    skills: objRef.skillsIds?.sort(),
-    traits: objRef.traitsIds?.sort(),
+    skills: objRef.skills?.sort(),
+    traits: objRef.traits?.sort(),
     battle: {
-      monster: objRef.monsterId,
-      location: objRef.monsterLocationId,
-      obstacle: objRef.monsterObstacleId,
-      attack: objRef.monsterAttackId,
-      minions: objRef.minionsIds?.sort(),
+      monster: objRef.monster,
+      location: objRef.monsterLocation,
+      obstacle: objRef.monsterObstacle,
+      attack: objRef.monsterAttack,
+      minions: objRef.minions?.sort(),
     },
     familiar: {
-      id: objRef.familiarId,
+      id: objRef.familiar,
       power: objRef.familiarPower,
     },
-    fiends: objRef.fiendsIds?.sort(),
+    fiends: objRef.fiends?.sort(),
     counts: {
       experience: objRef.xp,
       gold: objRef.gold,
@@ -76,45 +90,45 @@ export function deserializeCharacter(objRef) {
 
 export function getCharacterJsonApi(objRef) {
   return {
-    id: objRef.characterId ?? null,
+    id: objRef.character ?? null,
     type: 'roll-player-character',
     attributes: {
       name: objRef.characterName,
-      race: getHashData(TYPES.RACE)[objRef.raceId]?.name ?? '',
-      class: getHashData(TYPES.CLASS)[objRef.classId]?.name ?? '',
+      race: getHashData(TYPES.RACE)[objRef.race]?.name ?? '',
+      class: getHashData(TYPES.CLASS)[objRef.class]?.name ?? '',
       gender: objRef.gender,
-      backstory: getHashData(TYPES.BACKSTORY)[objRef.backstoryId]?.name ?? '',
-      'attribute-rp-scores': getAttributeScores(objRef.attributes, objRef.raceId),
-      'attribute-rpa-scores': getRPAAttributeScores(objRef.attributes, objRef.raceId),
+      backstory: getHashData(TYPES.BACKSTORY)[objRef.backstory]?.name ?? '',
+      'attribute-rp-scores': getAttributeScores(objRef.attributes, objRef.race),
+      'attribute-rpa-scores': getRPAAttributeScores(objRef.attributes, objRef.race),
       alignment: getAlignmentScore(objRef.alignmentId, objRef.alignmentPosition),
       items: {
-        armor: objRef.armorIds.map((id) => getHashData(TYPES.MARKET_ARMOR)[id]?.name ?? '').sort(),
-        weapons: objRef.weaponsIds
+        armor: objRef.armor.map((id) => getHashData(TYPES.MARKET_ARMOR)[id]?.name ?? '').sort(),
+        weapons: objRef.weapons
           .map((id) => getHashData(TYPES.MARKET_WEAPON)[id]?.name ?? '')
           .sort(),
-        scrolls: objRef.scrollsIds
+        scrolls: objRef.scrolls
           .map((id) => getHashData(TYPES.MARKET_SCROLL)[id]?.name ?? '')
           .sort(),
       },
-      skills: objRef.skillsIds.map((id) => getHashData(TYPES.MARKET_SKILL)[id]?.name ?? '').sort(),
-      traits: objRef.traitsIds.map((id) => getHashData(TYPES.MARKET_TRAIT)[id]?.name ?? '').sort(),
+      skills: objRef.skills.map((id) => getHashData(TYPES.MARKET_SKILL)[id]?.name ?? '').sort(),
+      traits: objRef.traits.map((id) => getHashData(TYPES.MARKET_TRAIT)[id]?.name ?? '').sort(),
       battle: {
-        monster: getHashData(TYPES.MONSTER)[objRef.monsterId]?.name ?? '',
-        location: getHashData(TYPES.MONSTER_LOCATION)[objRef.monsterLocationId]?.name ?? '',
-        obstacle: getHashData(TYPES.MONSTER_OBSTACLE)[objRef.monsterObstacleId]?.name ?? '',
-        attack: getHashData(TYPES.MONSTER_ATTACK)[objRef.monsterAttackId]?.name ?? '',
-        minions: objRef.minionsIds.map((id) => getHashData(TYPES.MINION)[id]?.name ?? '').sort(),
+        monster: getHashData(TYPES.MONSTER)[objRef.monster]?.name ?? '',
+        location: getHashData(TYPES.MONSTER_LOCATION)[objRef.monsterLocation]?.name ?? '',
+        obstacle: getHashData(TYPES.MONSTER_OBSTACLE)[objRef.monsterObstacle]?.name ?? '',
+        attack: getHashData(TYPES.MONSTER_ATTACK)[objRef.monsterAttack]?.name ?? '',
+        minions: objRef.minions.map((id) => getHashData(TYPES.MINION)[id]?.name ?? '').sort(),
       },
       familiar: {
-        name: getHashData(TYPES.FAMILIAR)[objRef.familiarId]?.name ?? '',
+        name: getHashData(TYPES.FAMILIAR)[objRef.familiar]?.name ?? '',
         power: objRef.familiarPower,
       },
-      fiends: objRef.fiendsIds.map((id) => getHashData(TYPES.FIENDS)[id]?.name ?? '').sort(),
+      fiends: objRef.fiends.map((id) => getHashData(TYPES.FIENDS)[id]?.name ?? '').sort(),
       counts: {
         experience: objRef.xp,
         gold: objRef.gold,
         score: objRef.score,
-        health: getHealth(objRef.score, objRef.fiendsIds),
+        health: getHealth(objRef.score, objRef.fiends),
       },
     },
     meta: {
