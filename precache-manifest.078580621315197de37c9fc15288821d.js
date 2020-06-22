@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b0efd21eed3002ec3eab46e11775381f",
+    "revision": "20f3dcb511d3368188b2671fae21ef60",
     "url": "/roll-player-hero-tome/index.html"
   },
   {
-    "revision": "2eadfc3571bfb864f71b",
+    "revision": "f770bd17a4c576c8e243",
     "url": "/roll-player-hero-tome/static/css/main.070bc2d0.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/roll-player-hero-tome/static/js/2.1f7c5643.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2eadfc3571bfb864f71b",
-    "url": "/roll-player-hero-tome/static/js/main.c80ca5a8.chunk.js"
+    "revision": "f770bd17a4c576c8e243",
+    "url": "/roll-player-hero-tome/static/js/main.59c00c24.chunk.js"
   },
   {
     "revision": "056dba8b2eb53721a926",
