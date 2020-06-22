@@ -74,7 +74,7 @@ export default function ImportDialog() {
       <DialogTitle>Load Character</DialogTitle>
       <DialogContent>
         {isLoading ? (
-          <div className="import-list--loading">
+          <div className="import-list__loading">
             <CircularProgress />
           </div>
         ) : (

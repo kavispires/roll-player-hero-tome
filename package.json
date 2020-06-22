@@ -1,7 +1,7 @@
 {
-  "name": "roll-player-sheet",
-  "version": "0.1.0",
-  "homepage": "http://www.kavispires.com/roll-player-sheet/",
+  "name": "roll-player-hero-tome",
+  "version": "0.7.0",
+  "homepage": "http://www.kavispires.com/roll-player-hero-tome/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.10.2",

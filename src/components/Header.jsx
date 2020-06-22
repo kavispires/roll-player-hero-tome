@@ -45,7 +45,7 @@ export default function Header() {
       <IconButton className="header-button" aria-label="reset" onClick={resetGlobalState}>
         <RotateLeftIcon />
       </IconButton>
-      <h1 onClick={handleEditClick}>Roll Player Character Sheet</h1>
+      <h1 onClick={handleEditClick}>Roll Player: Hero Tome</h1>
       {isSavingEnabled && (
         <Fragment>
           <IconButton
