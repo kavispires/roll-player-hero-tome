@@ -27,7 +27,7 @@ export default function ImportDialog() {
   const [activeDialog, setActiveDialog] = useGlobalState('activeDialog');
   const [, setScreen] = useGlobalState('screen');
   // Local states
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
   const [characters, setCharacters] = useState([]);
 
