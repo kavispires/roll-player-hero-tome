@@ -1,24 +1,18 @@
 import React, { forwardRef, useEffect, useState } from 'react';
 import Button from '@material-ui/core/Button';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import Slide from '@material-ui/core/Slide';
 import OpenInBrowserIcon from '@material-ui/icons/OpenInBrowser';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import Slide from '@material-ui/core/Slide';
 
-import { API_FUNCTIONS } from '../firebase';
-
-import useGlobalState, {
-  setCompleteGlobalState,
-  getCompleteGlobalState,
-  initialState,
-} from '../useGlobalState';
-import { DIALOGS, TYPES, SCREENS, REFRESH_TIMER } from '../utils/constants';
-
-import { loadCharacterFromDatabase } from '../utils';
 import { getHashData } from '../database';
+import { API_FUNCTIONS } from '../firebase';
+import useGlobalState, { setCompleteGlobalState, initialState } from '../useGlobalState';
+import { loadCharacterFromDatabase } from '../utils';
+import { DIALOGS, TYPES, SCREENS, REFRESH_TIMER } from '../utils/constants';
 
 const API = {
   getCharacters: API_FUNCTIONS.httpsCallable('getRollPlayerCharacters'),
@@ -29,9 +23,10 @@ const Transition = forwardRef(function Transition(props, ref) {
 });
 
 export default function ImportDialog() {
+  // Global States
   const [activeDialog, setActiveDialog] = useGlobalState('activeDialog');
   const [, setScreen] = useGlobalState('screen');
-
+  // Local states
   const [isLoading, setIsLoading] = useState(false);
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
   const [characters, setCharacters] = useState([]);
