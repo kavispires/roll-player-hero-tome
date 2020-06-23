@@ -18,17 +18,25 @@
 
   &__loading {
     display: flex;
-    background: red;
   }
 
-  &__character > button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-bottom: $uni1;
+  &__character {
+    background: white;
+    margin-bottom: $unit1;
 
-    &:hover {
-      background: lightgrey;
+    & > button {
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background: lightgrey;
+      }
+    }
+
+    &--active {
+      border-left: 10px solid gold;
+      border-bottom: 1px solid gold;
     }
   }
 }

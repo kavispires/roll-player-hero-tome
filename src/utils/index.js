@@ -43,7 +43,7 @@ export function deserializeCharacter(objRef) {
     'attribute-scores': objRef.attributes,
     alignment: {
       id: objRef.alignment,
-      position: objRef.alignmentPos,
+      position: Number(objRef.alignmentPos),
     },
     items: {
       armor: objRef.armor?.sort(),
@@ -61,13 +61,13 @@ export function deserializeCharacter(objRef) {
     },
     familiar: {
       id: objRef.familiar,
-      power: objRef.familiarPower,
+      power: Number(objRef.familiarPower),
     },
     fiends: objRef.fiends?.sort(),
     counts: {
-      experience: objRef.xp,
-      gold: objRef.gold,
-      score: objRef.score,
+      experience: Number(objRef.xp),
+      gold: Number(objRef.gold),
+      score: Number(objRef.score),
     },
     player: objRef.player,
     'created-at': objRef.date ?? new Date(),
@@ -325,4 +325,49 @@ function getHealth(score, fiends) {
   if (score < 36) return 16 - fiendsCount;
   if (score < 41) return 17 - fiendsCount;
   return 18 - fiendsCount;
+}
+
+export function loadCharacterFromDatabase(characters, id, initialState) {
+  // Find character
+  const character = characters.filter((c) => c.id === id)[0];
+
+  const state = {
+    ...initialState,
+    alignment: character.alignment.id,
+    alignmentPos: character.alignment.position,
+    armor: character?.items.armor ?? [],
+    attributes: {
+      str: character['attribute-scores'].str ?? 0,
+      dex: character['attribute-scores'].dex ?? 0,
+      con: character['attribute-scores'].con ?? 0,
+      int: character['attribute-scores'].int ?? 0,
+      wis: character['attribute-scores'].wis ?? 0,
+      cha: character['attribute-scores'].cha ?? 0,
+    },
+    backstory: character.backstory,
+    characterId: character.id,
+    characterName: character.name,
+    class: character.class,
+    date: character['created-at'],
+    familiar: character.familiar.id,
+    familiarPower: Number(character.familiar.power ?? 0),
+    fiends: character?.fiends ?? [],
+    gender: character.gender,
+    gold: Number(character.counts.gold),
+    minions: character?.battle?.minions ?? [],
+    monster: character?.battle?.monster ?? null,
+    monsterAttack: character?.battle?.attack ?? null,
+    monsterLocation: character?.battle?.location ?? null,
+    monsterObstacle: character?.battle?.obstacle ?? null,
+    player: character?.player,
+    race: character.race,
+    score: Number(character.counts.score),
+    scrolls: character?.items.scrolls ?? [],
+    skills: character?.skills ?? [],
+    traits: character?.traits ?? [],
+    weapons: character?.items.weapons ?? [],
+    xp: 0,
+  };
+
+  return state;
 }

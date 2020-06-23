@@ -10,15 +10,18 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 import { API_FUNCTIONS } from '../firebase';
 
-import useGlobalState, { getCompleteGlobalState } from '../useGlobalState';
-import { DIALOGS, TYPES } from '../utils/constants';
+import useGlobalState, {
+  setCompleteGlobalState,
+  getCompleteGlobalState,
+  initialState,
+} from '../useGlobalState';
+import { DIALOGS, TYPES, SCREENS, REFRESH_TIMER } from '../utils/constants';
 
-import { determineCharacterCompletion, getCharacterJsonApi } from '../utils';
+import { loadCharacterFromDatabase } from '../utils';
 import { getHashData } from '../database';
 
 const API = {
   getCharacters: API_FUNCTIONS.httpsCallable('getRollPlayerCharacters'),
-  getCharacter: API_FUNCTIONS.httpsCallable('getRollPlayerCharacter'),
 };
 
 const Transition = forwardRef(function Transition(props, ref) {
@@ -27,12 +30,10 @@ const Transition = forwardRef(function Transition(props, ref) {
 
 export default function ImportDialog() {
   const [activeDialog, setActiveDialog] = useGlobalState('activeDialog');
-  const [characterObject, setCharacterObject] = useGlobalState('characterObject');
-  const [isCharacterComplete, setIsCharacterComplete] = useGlobalState('isCharacterComplete');
-  const [, setIsCharacterGenerated] = useGlobalState('isCharacterGenerated');
+  const [, setScreen] = useGlobalState('screen');
 
   const [isLoading, setIsLoading] = useState(false);
-  const [selectedCharacter, setSelectedCharacter] = useState(null);
+  const [selectedCharacterId, setSelectedCharacterId] = useState(null);
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -54,14 +55,20 @@ export default function ImportDialog() {
     setActiveDialog(null);
   };
 
-  const handlePrint = () => {
-    window.localStorage.setItem('roll-player-sheet', JSON.stringify(characterObject));
+  const handleLoadCharacter = () => {
     setActiveDialog(null);
+    setScreen(SCREENS.REFRESH);
+
+    setTimeout(() => {
+      setCompleteGlobalState(
+        loadCharacterFromDatabase(characters, selectedCharacterId, initialState)
+      );
+      setScreen(SCREENS.FORM);
+    }, REFRESH_TIMER);
   };
 
-  const handleSelectCharacter = (evt) => {
-    console.log(evt);
-    // setSelectedCharacter()
+  const handleSelectCharacter = (event) => {
+    setSelectedCharacterId(event.target.id);
   };
 
   return (
@@ -80,8 +87,10 @@ export default function ImportDialog() {
         ) : (
           <ul className="import-list">
             {characters.map((character) => {
+              const selectedClass =
+                character.id === selectedCharacterId ? 'import-list__character--active' : '';
               return (
-                <li key={character.id} className="import-list__character">
+                <li key={character.id} className={`import-list__character ${selectedClass}`}>
                   <button onClick={handleSelectCharacter} id={character.id}>
                     <b>{character.name}</b>, a{' '}
                     {getHashData(TYPES.RACE)[character.race].name ?? 'character'} created by{' '}
@@ -98,9 +107,9 @@ export default function ImportDialog() {
           Cancel
         </Button>
         <Button
-          onClick={handlePrint}
+          onClick={handleLoadCharacter}
           color="primary"
-          disabled={!isLoading || !Boolean(selectedCharacter)}
+          disabled={isLoading || !Boolean(selectedCharacterId)}
         >
           <OpenInBrowserIcon /> Load Character
         </Button>

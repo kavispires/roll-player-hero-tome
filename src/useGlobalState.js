@@ -2,7 +2,7 @@ import { createGlobalState } from 'react-hooks-global-state';
 
 import { SCREENS, REFRESH_TIMER } from './utils/constants';
 
-const initialState = {
+export const initialState = {
   screen: SCREENS.FORM,
   characterName: '',
   player: '',
@@ -60,5 +60,7 @@ export function resetGlobalState() {
 export const getCompleteGlobalState = getState;
 
 export const setGlobalState = setGlobalStateCGS;
+
+export const setCompleteGlobalState = setState;
 
 export default useGlobalState;

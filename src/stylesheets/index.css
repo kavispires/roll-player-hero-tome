@@ -54,12 +54,6 @@ main {
   .form-item--attributes {
     margin-top: 8px !important; }
 
-.MuiFormControl-root.save-login-form {
-  display: flex;
-  margin: 8px;
-  padding: 8px;
-  border: 1px solid #2b2c28; }
-
 .attributes-grid {
   display: grid !important;
   text-transform: uppercase;
@@ -156,13 +150,20 @@ main {
   border: 1px solid #2b2c28; }
 
 .import-list {
-  margin: 0; }
+  margin: 0;
+  max-height: 400px;
+  overflow-y: auto; }
   .import-list__loading {
-    display: flex;
-    background: red; }
-  .import-list__character > button {
-    background: none;
-    border: none;
-    cursor: pointer; }
-    .import-list__character > button:hover {
-      background: lightgrey; }
+    display: flex; }
+  .import-list__character {
+    background: white;
+    margin-bottom: 8px; }
+    .import-list__character > button {
+      background: none;
+      border: none;
+      cursor: pointer; }
+      .import-list__character > button:hover {
+        background: lightgrey; }
+    .import-list__character--active {
+      border-left: 10px solid gold;
+      border-bottom: 1px solid gold; }

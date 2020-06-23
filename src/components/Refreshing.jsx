@@ -6,7 +6,6 @@ import Box from '@material-ui/core/Box';
 import { REFRESH_TIMER } from '../utils/constants';
 
 function CircularProgressWithLabel({ value }) {
-  console.log({ value });
   return (
     <Box position="relative" display="inline-flex">
       <CircularProgress variant="static" value={value} />
@@ -29,11 +28,11 @@ function CircularProgressWithLabel({ value }) {
 }
 
 export default function Refreshing() {
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(1);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 10));
+      setProgress((prevProgress) => (prevProgress >= 100 ? 100 : prevProgress + 10));
     }, REFRESH_TIMER / 10);
     return () => {
       clearInterval(timer);
