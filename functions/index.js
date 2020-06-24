@@ -12,7 +12,9 @@ exports.getRollPlayerCharacters = functions.https.onCall((data, context) => {
     .then((snapshot) => {
       const response = snapshot.val();
 
-      return Object.entries(response).map(([key, entry]) => ({ ...entry, id: key }));
+      return Object.entries(response)
+        .map(([key, entry]) => ({ ...entry, id: key }))
+        .sort((a, b) => a.name > b.name);
     })
     .catch((err) => {
       throw new functions.https.HttpsError('internal', `Failed get characters: ${err}`);
