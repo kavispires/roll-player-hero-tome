@@ -164,7 +164,6 @@ export function getCharacterTextString(objRef) {
   }
 
   function addList(list = []) {
-    console.log({ list });
     if (list.length === 0) {
       result += 'N/A\n';
     } else {
@@ -286,7 +285,6 @@ function getCombinedAttributeScores(attributes, raceId) {
     return acc;
   }, 6);
 
-  console.log({ addDice });
   return {
     str: [rpAttributes.str, rpaAttributes.str],
     dex: [rpAttributes.dex, rpaAttributes.dex],

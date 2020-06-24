@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
 import { getTypeahead, getHashData } from '../database';
+import { getEntryById } from '../utils';
 import { TYPES } from '../utils/constants';
 
 import useGlobalState from '../useGlobalState';
@@ -17,7 +18,7 @@ export default function FormAlignment() {
   const alignmentTypeahead = getTypeahead(TYPES.ALIGNMENT);
 
   const handleInputChange = (event) => {
-    const index = event.target.getAttribute('data-option-index');
+    const index = event?.target.getAttribute('data-option-index');
     if (alignmentTypeahead[index]) {
       const id = alignmentTypeahead[index].value;
       setAlignment(id);
@@ -47,6 +48,7 @@ export default function FormAlignment() {
       <Autocomplete
         id="alignment"
         options={alignmentTypeahead}
+        defaultValue={getEntryById(alignmentTypeahead, alignment)}
         getOptionLabel={(option) => option.text}
         getOptionSelected={(option) => option.value === alignmentDict?.[alignment]?.id}
         renderInput={(params) => <TextField {...params} label="Alignment" />}
