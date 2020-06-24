@@ -4,18 +4,20 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
 import { getTypeahead } from '../database';
+import { getEntriesByIds } from '../utils';
 import { GLOBAL_STATE_ALIAS, FORM_LABELS } from '../utils/constants';
 
 import useGlobalState from '../useGlobalState';
 
 export default function FormAutocompleteMulti({ type, classModifier = '' }) {
   // Global States
-  const [, setEntry] = useGlobalState(GLOBAL_STATE_ALIAS[type]);
+  const [entry, setEntry] = useGlobalState(GLOBAL_STATE_ALIAS[type]);
 
   const entryTypeahead = getTypeahead(type);
 
-  const handleChange = (event, newInput) => {
+  const handleChange = (_, newInput) => {
     const ids = newInput.map((o) => o.value);
+    console.log(ids);
     setEntry(ids);
   };
 
@@ -27,6 +29,7 @@ export default function FormAutocompleteMulti({ type, classModifier = '' }) {
         multiple
         id={label}
         options={entryTypeahead}
+        defaultValue={getEntriesByIds(entryTypeahead, entry)}
         getOptionLabel={(option) => option.text}
         filterSelectedOptions
         renderInput={(params) => <TextField {...params} label={label} variant="outlined" />}

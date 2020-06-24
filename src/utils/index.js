@@ -388,3 +388,11 @@ export function getTodaysDate() {
 
   return `${year}-${month}-${day}`;
 }
+
+export function getEntryById(list, id) {
+  return list.filter((o) => o.value === id)[0];
+}
+
+export function getEntriesByIds(list, ids) {
+  return list.filter((o) => ids.includes(o.value));
+}

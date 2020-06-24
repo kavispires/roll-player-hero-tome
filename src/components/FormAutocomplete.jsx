@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
 import { getTypeahead, getHashData } from '../database';
+import { getEntryById } from '../utils';
 import { GLOBAL_STATE_ALIAS, FORM_LABELS } from '../utils/constants';
 
 import useGlobalState from '../useGlobalState';
@@ -29,7 +30,7 @@ export default function FormAutocomplete({
   }
 
   const handleInputChange = (event) => {
-    const index = event.target.getAttribute('data-option-index');
+    const index = event?.target.getAttribute('data-option-index');
     if (entryTypeahead[index]) {
       const id = entryTypeahead[index].value;
       setEntry(id);
@@ -37,6 +38,7 @@ export default function FormAutocomplete({
   };
 
   const handleChange = (_, selectedEntry) => {
+    console.log('HANDLING HCANGE?');
     if (entryDict[selectedEntry?.value]) {
       setEntry(selectedEntry.value);
     } else {
@@ -51,6 +53,7 @@ export default function FormAutocomplete({
       <Autocomplete
         id={label}
         options={entryTypeahead}
+        defaultValue={getEntryById(entryTypeahead, entry)}
         getOptionLabel={(option) => option.text}
         getOptionSelected={(option) => option.value === entryDict?.[entry]?.id}
         renderInput={(params) => <TextField {...params} label={label} />}
