@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/roll-player-hero-tome/precache-manifest.078580621315197de37c9fc15288821d.js"
+  "/roll-player-hero-tome/precache-manifest.48fc00cbbc4bfbcca9d895039bd0b168.js"
 );
 
 self.addEventListener('message', (event) => {
