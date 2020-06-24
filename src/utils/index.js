@@ -33,7 +33,7 @@ export function determineCharacterCompletion(objRef) {
 }
 
 export function deserializeCharacter(objRef) {
-  return {
+  const result = {
     id: objRef.characterId,
     name: objRef.characterName,
     race: objRef.race,
@@ -59,10 +59,6 @@ export function deserializeCharacter(objRef) {
       attack: objRef.monsterAttack,
       minions: objRef.minions?.sort(),
     },
-    familiar: {
-      id: objRef.familiar,
-      power: Number(objRef.familiarPower),
-    },
     fiends: objRef.fiends?.sort(),
     counts: {
       experience: Number(objRef.xp),
@@ -70,8 +66,17 @@ export function deserializeCharacter(objRef) {
       score: Number(objRef.score),
     },
     player: objRef.player,
-    'created-at': objRef.date ?? new Date(),
+    'created-at': objRef.date ?? getTodaysDate(),
   };
+
+  if (objRef.familiar) {
+    result.familiar = {
+      id: objRef.familiar,
+      power: Number(objRef.familiarPower),
+    };
+  }
+
+  return result;
 }
 
 export function getCharacterJsonApi(objRef) {
