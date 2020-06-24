@@ -371,3 +371,15 @@ export function loadCharacterFromDatabase(characters, id, initialState) {
 
   return state;
 }
+
+export function getTodaysDate() {
+  const now = new Date();
+  let day = now.getDate();
+  let month = now.getMonth() + 1;
+  const year = now.getFullYear();
+
+  if (month < 10) month = `0${month}`;
+  if (day < 10) day = `0${day}`;
+
+  return `${year}-${month}-${day}`;
+}

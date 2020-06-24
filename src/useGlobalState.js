@@ -1,6 +1,7 @@
 import { createGlobalState } from 'react-hooks-global-state';
 
 import { SCREENS, REFRESH_TIMER } from './utils/constants';
+import { getTodaysDate } from './utils';
 
 export const initialState = {
   screen: SCREENS.FORM,
@@ -29,7 +30,7 @@ export const initialState = {
   xp: 0,
   gold: 0,
   score: 0,
-  date: '2020-01-01',
+  date: getTodaysDate(),
   familiar: null,
   familiarPower: 0,
   fiends: [],
