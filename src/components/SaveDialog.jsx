@@ -45,6 +45,7 @@ export default function SaveDialog() {
       console.error(err);
       setIsCharacterGenerated(false);
     }
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {

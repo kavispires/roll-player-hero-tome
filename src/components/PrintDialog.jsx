@@ -33,6 +33,7 @@ export default function PrintDialog() {
       console.error(err);
       setIsCharacterGenerated(false);
     }
+    // eslint-disable-next-line
   }, []);
 
   const handleCloseDialog = () => {

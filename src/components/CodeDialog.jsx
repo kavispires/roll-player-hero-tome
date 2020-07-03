@@ -35,6 +35,7 @@ export default function CodeDialog() {
       console.error(err);
       setIsCharacterGenerated(false);
     }
+    // eslint-disable-next-line
   }, []);
 
   const handleCloseDialog = () => {
