@@ -38,7 +38,6 @@ export default function FormAutocomplete({
   };
 
   const handleChange = (_, selectedEntry) => {
-    console.log('HANDLING HCANGE?');
     if (entryDict[selectedEntry?.value]) {
       setEntry(selectedEntry.value);
     } else {

@@ -46,7 +46,8 @@ export default function Form() {
       <FormAutocompleteMulti type={TYPES.MARKET_SCROLL} classModifier="half" />
       <FormAutocompleteMulti type={TYPES.MINION} classModifier="half" />
       <hr />
-      <FormAutocomplete type={TYPES.MONSTER} classModifier="quarter" />
+      <FormAutocomplete type={TYPES.MONSTER} classModifier="half" />
+      <div className="empty-half" />
       <FormAutocomplete
         type={TYPES.MONSTER_LOCATION}
         classModifier="quarter"
@@ -65,6 +66,7 @@ export default function Form() {
         isDisabled={!monster}
         data={adventureData?.attack}
       />
+      <FormInput type={TYPES.MONSTER_SCORE} inputType="number" classModifier="quarter" />
       <hr />
       <FormAutocomplete type={TYPES.FAMILIAR} classModifier="quarter" />
       <FormInput type={TYPES.FAMILIAR_POWER} inputType="number" classModifier="quarter" />

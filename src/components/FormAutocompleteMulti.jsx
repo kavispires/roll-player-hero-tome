@@ -17,7 +17,6 @@ export default function FormAutocompleteMulti({ type, classModifier = '' }) {
 
   const handleChange = (_, newInput) => {
     const ids = newInput.map((o) => o.value);
-    console.log(ids);
     setEntry(ids);
   };
 

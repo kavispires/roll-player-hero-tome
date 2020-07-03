@@ -58,6 +58,7 @@ export function deserializeCharacter(objRef) {
       obstacle: objRef.monsterObstacle,
       attack: objRef.monsterAttack,
       minions: objRef.minions?.sort(),
+      score: objRef.monsterScore,
     },
     fiends: objRef.fiends?.sort(),
     counts: {
@@ -109,6 +110,7 @@ export function getCharacterJsonApi(objRef) {
         obstacle: getHashData(TYPES.MONSTER_OBSTACLE)[objRef.monsterObstacle]?.name ?? '',
         attack: getHashData(TYPES.MONSTER_ATTACK)[objRef.monsterAttack]?.name ?? '',
         minions: objRef.minions.map((id) => getHashData(TYPES.MINION)[id]?.name ?? '').sort(),
+        score: objRef.monsterScore ?? 0,
       },
       familiar: {
         name: getHashData(TYPES.FAMILIAR)[objRef.familiar]?.name ?? '',
@@ -232,6 +234,7 @@ export function getCharacterTextString(objRef) {
     `Obstacle: ${getHashData(TYPES.MONSTER_OBSTACLE)[objRef.monsterObstacle]?.name ?? ''}`
   );
   addListItem(`Attack: ${getHashData(TYPES.MONSTER_ATTACK)[objRef.monsterAttack]?.name ?? ''}`);
+  addListItem(`Monster Score: ${objRef.monsterScore || 'Unknown'}`);
   addSubSection('Minions');
   addList(objRef.minions.map((id) => getHashData(TYPES.MINION)[id]?.name ?? '').sort());
   addSubSection('Fiends');
@@ -362,6 +365,7 @@ export function loadCharacterFromDatabase(characters, id, initialState) {
     monsterAttack: character?.battle?.attack ?? null,
     monsterLocation: character?.battle?.location ?? null,
     monsterObstacle: character?.battle?.obstacle ?? null,
+    monsterScore: character?.battle?.score ?? 0,
     player: character?.player,
     race: character.race,
     score: Number(character.counts.score),
