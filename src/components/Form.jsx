@@ -68,8 +68,9 @@ export default function Form() {
       />
       <FormInput type={TYPES.MONSTER_SCORE} inputType="number" classModifier="quarter" />
       <hr />
-      <FormAutocomplete type={TYPES.FAMILIAR} classModifier="quarter" />
+      <FormAutocomplete type={TYPES.FAMILIAR} classModifier="half" />
       <FormInput type={TYPES.FAMILIAR_POWER} inputType="number" classModifier="quarter" />
+      <FormInput type={TYPES.FAMILIAR_NAME} classModifier="quarter" />
       <FormAutocompleteMulti type={TYPES.FIENDS} classModifier="half" />
       <hr />
       <FormInput type={TYPES.XP} inputType="number" classModifier="quarter" />

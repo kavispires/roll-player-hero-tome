@@ -1,35 +1,43 @@
 import { getHashData, getAdventureTypeahead } from '../database';
 import { TYPES } from './constants';
 
+/**
+ * Check if all required fields in a character object are filled
+ * @param {object} tome the object with the tome data
+ * @returns {boolean}
+ */
+export function determineCharacterCompletion(tome) {
+  // If text fields are empty
+  if (!tome.characterName || !tome.player) return false;
+
+  // If mandatory fields are empty
+  if (!tome.race || !tome.class || !tome.backstory || !tome.alignment) return false;
+
+  // If attributes are less than 3
+  if (Object.values(tome.attributes).some((attr) => attr < 3)) return false;
+
+  // If monster, but no location, obstacle, or attack
+  if (tome.monster && (!tome.monsterLocation || !tome.monsterObstacle || !tome.monsterAttack))
+    return false;
+
+  // If has familiar, but power is less then 3
+  if (tome.familiar && tome.familiarPower < 3) return false;
+
+  return true;
+}
+
+/**
+ * Gets the specific adventure data (location, obstable, attack) based on the given monster name
+ * @param {symbol} type the type symbol
+ * @param {string} monsterName the monster name
+ * @returns {object} the hash dictionary and typeahead for the adventure type
+ */
 export function getMonsterAdventureData(type, monsterName) {
   const dict = getHashData(type);
   return {
     dict,
     typeahead: getAdventureTypeahead(dict, monsterName),
   };
-}
-
-export function determineCharacterCompletion(objRef) {
-  // If text fields are empty
-  if (!objRef.characterName || !objRef.player) return false;
-
-  // If mandatory fields are empty
-  if (!objRef.race || !objRef.class || !objRef.backstory || !objRef.alignment) return false;
-
-  // If attributes are less than 3
-  if (Object.values(objRef.attributes).some((attr) => attr < 3)) return false;
-
-  // If monster, but no location, obstacle, or attack
-  if (
-    objRef.monster &&
-    (!objRef.monsterLocation || !objRef.monsterObstacle || !objRef.monsterAttack)
-  )
-    return false;
-
-  // If has familiar, but power is less then 3
-  if (objRef.familiar && !objRef.familiarPower) return false;
-
-  return true;
 }
 
 export function deserializeCharacter(objRef) {
@@ -73,6 +81,7 @@ export function deserializeCharacter(objRef) {
   if (objRef.familiar) {
     result.familiar = {
       id: objRef.familiar,
+      name: objRef.familiarName ?? 'Unnamed',
       power: Number(objRef.familiarPower),
     };
   }
@@ -113,7 +122,8 @@ export function getCharacterJsonApi(objRef) {
         score: objRef.monsterScore ?? 0,
       },
       familiar: {
-        name: getHashData(TYPES.FAMILIAR)[objRef.familiar]?.name ?? '',
+        species: getHashData(TYPES.FAMILIAR)[objRef.familiar]?.name ?? '',
+        name: objRef.familiarName,
         power: objRef.familiarPower,
       },
       fiends: objRef.fiends.map((id) => getHashData(TYPES.FIENDS)[id]?.name ?? '').sort(),
@@ -222,9 +232,19 @@ export function getCharacterTextString(objRef) {
   addSubSection('Traits');
   addList(objRef.traits.map((id) => getHashData(TYPES.MARKET_TRAIT)[id]?.name ?? '').sort());
   addSection('Familiar');
-  addText(
-    `${getHashData(TYPES.FAMILIAR)[objRef.familiar]?.name ?? ''} (Power: ${objRef.familiarPower})`
-  );
+  if (objRef.familiarName) {
+    addText(
+      `${objRef.familiarName}, the ${
+        getHashData(TYPES.FAMILIAR)[objRef.familiar]?.species ?? ''
+      } (Power: ${objRef.familiarPower})`
+    );
+  } else {
+    addText(
+      `${getHashData(TYPES.FAMILIAR)[objRef.familiar]?.species ?? ''} (Power: ${
+        objRef.familiarPower
+      })`
+    );
+  }
   addSection('Enemies');
   addSubSection(`Monter: ${getHashData(TYPES.MONSTER)[objRef.monster]?.name ?? ''}`);
   addListItem(
@@ -357,6 +377,7 @@ export function loadCharacterFromDatabase(characters, id, initialState) {
     date: character['created-at'],
     familiar: character.familiar.id,
     familiarPower: Number(character.familiar.power ?? 0),
+    familiarName: character.familiar.name,
     fiends: character?.fiends ?? [],
     gender: character.gender,
     gold: Number(character.counts.gold),
