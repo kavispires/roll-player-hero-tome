@@ -80,6 +80,54 @@ export function deserializeCharacter(tome) {
   return result;
 }
 
+export function getCharacterJsonApi(tome) {
+  return {
+    id: tome.character ?? null,
+    type: 'roll-player-character',
+    attributes: {
+      name: tome.characterName,
+      race: getHashData(TYPES.RACE)[tome.race]?.name ?? '',
+      class: getHashData(TYPES.CLASS)[tome.class]?.name ?? '',
+      gender: getHashData(TYPES.GENDER)[tome.gender]?.name ?? 'Unkown',
+      backstory: getHashData(TYPES.BACKSTORY)[tome.backstory]?.name ?? '',
+      'attribute-rp-scores': getAttributeScores(tome.attributes, tome.race),
+      'attribute-rpa-scores': getRPAAttributeScores(tome.attributes, tome.race),
+      alignment: getAlignmentScore(tome.alignment, tome.alignmentPos),
+      items: {
+        armor: tome.armor.map((id) => getHashData(TYPES.MARKET_ARMOR)[id]?.name ?? '').sort(),
+        weapons: tome.weapons.map((id) => getHashData(TYPES.MARKET_WEAPON)[id]?.name ?? '').sort(),
+        scrolls: tome.scrolls.map((id) => getHashData(TYPES.MARKET_SCROLL)[id]?.name ?? '').sort(),
+      },
+      skills: tome.skills.map((id) => getHashData(TYPES.MARKET_SKILL)[id]?.name ?? '').sort(),
+      traits: tome.traits.map((id) => getHashData(TYPES.MARKET_TRAIT)[id]?.name ?? '').sort(),
+      battle: {
+        monster: getHashData(TYPES.MONSTER)[tome.monster]?.name ?? '',
+        location: getHashData(TYPES.MONSTER_LOCATION)[tome.monsterLocation]?.name ?? '',
+        obstacle: getHashData(TYPES.MONSTER_OBSTACLE)[tome.monsterObstacle]?.name ?? '',
+        attack: getHashData(TYPES.MONSTER_ATTACK)[tome.monsterAttack]?.name ?? '',
+        minions: tome.minions.map((id) => getHashData(TYPES.MINION)[id]?.name ?? '').sort(),
+        score: tome.monsterScore ?? 0,
+      },
+      familiar: {
+        species: getHashData(TYPES.FAMILIAR)[tome.familiar]?.name ?? '',
+        name: tome.familiarName,
+        power: tome.familiarPower,
+      },
+      fiends: tome.fiends.map((id) => getHashData(TYPES.FIENDS)[id]?.name ?? '').sort(),
+      counts: {
+        experience: tome.xp,
+        gold: tome.gold,
+        score: tome.score,
+        health: getHealth(tome.score, tome.fiends),
+      },
+    },
+    meta: {
+      'created-by': tome.player,
+      'created-at': tome.date ?? new Date(),
+    },
+  };
+}
+
 /**
  * Gets the specific adventure data (location, obstable, attack) based on the given monster name
  * @param {symbol} type the type symbol
@@ -94,59 +142,7 @@ export function getMonsterAdventureData(type, monsterName) {
   };
 }
 
-export function getCharacterJsonApi(objRef) {
-  return {
-    id: objRef.character ?? null,
-    type: 'roll-player-character',
-    attributes: {
-      name: objRef.characterName,
-      race: getHashData(TYPES.RACE)[objRef.race]?.name ?? '',
-      class: getHashData(TYPES.CLASS)[objRef.class]?.name ?? '',
-      gender: getHashData(TYPES.GENDER)[objRef.gender]?.name ?? 'Unkown',
-      backstory: getHashData(TYPES.BACKSTORY)[objRef.backstory]?.name ?? '',
-      'attribute-rp-scores': getAttributeScores(objRef.attributes, objRef.race),
-      'attribute-rpa-scores': getRPAAttributeScores(objRef.attributes, objRef.race),
-      alignment: getAlignmentScore(objRef.alignment, objRef.alignmentPos),
-      items: {
-        armor: objRef.armor.map((id) => getHashData(TYPES.MARKET_ARMOR)[id]?.name ?? '').sort(),
-        weapons: objRef.weapons
-          .map((id) => getHashData(TYPES.MARKET_WEAPON)[id]?.name ?? '')
-          .sort(),
-        scrolls: objRef.scrolls
-          .map((id) => getHashData(TYPES.MARKET_SCROLL)[id]?.name ?? '')
-          .sort(),
-      },
-      skills: objRef.skills.map((id) => getHashData(TYPES.MARKET_SKILL)[id]?.name ?? '').sort(),
-      traits: objRef.traits.map((id) => getHashData(TYPES.MARKET_TRAIT)[id]?.name ?? '').sort(),
-      battle: {
-        monster: getHashData(TYPES.MONSTER)[objRef.monster]?.name ?? '',
-        location: getHashData(TYPES.MONSTER_LOCATION)[objRef.monsterLocation]?.name ?? '',
-        obstacle: getHashData(TYPES.MONSTER_OBSTACLE)[objRef.monsterObstacle]?.name ?? '',
-        attack: getHashData(TYPES.MONSTER_ATTACK)[objRef.monsterAttack]?.name ?? '',
-        minions: objRef.minions.map((id) => getHashData(TYPES.MINION)[id]?.name ?? '').sort(),
-        score: objRef.monsterScore ?? 0,
-      },
-      familiar: {
-        species: getHashData(TYPES.FAMILIAR)[objRef.familiar]?.name ?? '',
-        name: objRef.familiarName,
-        power: objRef.familiarPower,
-      },
-      fiends: objRef.fiends.map((id) => getHashData(TYPES.FIENDS)[id]?.name ?? '').sort(),
-      counts: {
-        experience: objRef.xp,
-        gold: objRef.gold,
-        score: objRef.score,
-        health: getHealth(objRef.score, objRef.fiends),
-      },
-    },
-    meta: {
-      'created-by': objRef.player,
-      'created-at': objRef.date ?? new Date(),
-    },
-  };
-}
-
-export function getCharacterTextString(objRef) {
+export function getCharacterTextString(tome) {
   let result = '';
 
   function getLine(length, separator = '-') {
@@ -198,14 +194,14 @@ export function getCharacterTextString(objRef) {
 
   // BUILD
   addTitle('Roll Player Hero Tome');
-  addText(`Created by ${objRef.player} on ${objRef.date}`);
-  addSection(`Character: ${objRef.characterName}`);
-  addText(`Race: ${getHashData(TYPES.RACE)[objRef.race]?.name}`);
-  addText(`Class: ${getHashData(TYPES.CLASS)[objRef.class]?.name}`);
-  addText(`Gender: ${getHashData(TYPES.GENDER)[objRef.gender]?.name}`);
-  addText(`Backstory: ${getHashData(TYPES.BACKSTORY)[objRef.backstory]?.name}`);
+  addText(`Created by ${tome.player} on ${tome.date}`);
+  addSection(`Character: ${tome.characterName}`);
+  addText(`Race: ${getHashData(TYPES.RACE)[tome.race]?.name}`);
+  addText(`Class: ${getHashData(TYPES.CLASS)[tome.class]?.name}`);
+  addText(`Gender: ${getHashData(TYPES.GENDER)[tome.gender]?.name}`);
+  addText(`Backstory: ${getHashData(TYPES.BACKSTORY)[tome.backstory]?.name}`);
   addSubSection('Attributes');
-  const attributesObj = getCombinedAttributeScores(objRef.attributes, objRef.race);
+  const attributesObj = getCombinedAttributeScores(tome.attributes, tome.race);
   addText(`STR = ${attributesObj.str[1]} (${attributesObj.str[0]})`);
   addText(`DEX = ${attributesObj.dex[1]} (${attributesObj.dex[0]})`);
   addText(`CON = ${attributesObj.con[1]} (${attributesObj.con[0]})`);
@@ -218,55 +214,49 @@ export function getCharacterTextString(objRef) {
     );
   }
   addSubSection('Alignment');
-  const alignmentObj = getAlignmentScore(objRef.alignment, objRef.alignmentPos);
+  const alignmentObj = getAlignmentScore(tome.alignment, tome.alignmentPos);
   addText(`${alignmentObj.name} (${alignmentObj.title})`);
   addText(`Points: ${alignmentObj.score}`);
   addSection('Stats');
-  addListItem(`Health: ${getHealth(objRef.score, objRef.fiends)}`);
-  addListItem(`Experience: ${objRef.xp}`);
-  addListItem(`Gold: ${objRef.gold}`);
+  addListItem(`Health: ${getHealth(tome.score, tome.fiends)}`);
+  addListItem(`Experience: ${tome.xp}`);
+  addListItem(`Gold: ${tome.gold}`);
   addSection('Items/Abilities');
   addSubSection('Armor');
-  addList(objRef.armor.map((id) => getHashData(TYPES.MARKET_ARMOR)[id]?.name ?? '').sort());
+  addList(tome.armor.map((id) => getHashData(TYPES.MARKET_ARMOR)[id]?.name ?? '').sort());
   addSubSection('Weapons');
-  addList(objRef.weapons.map((id) => getHashData(TYPES.MARKET_WEAPON)[id]?.name ?? '').sort());
+  addList(tome.weapons.map((id) => getHashData(TYPES.MARKET_WEAPON)[id]?.name ?? '').sort());
   addSubSection('Scrolls');
-  addList(objRef.scrolls.map((id) => getHashData(TYPES.MARKET_SCROLL)[id]?.name ?? '').sort());
+  addList(tome.scrolls.map((id) => getHashData(TYPES.MARKET_SCROLL)[id]?.name ?? '').sort());
   addSubSection('Skills');
-  addList(objRef.skills.map((id) => getHashData(TYPES.MARKET_SKILL)[id]?.name ?? '').sort());
+  addList(tome.skills.map((id) => getHashData(TYPES.MARKET_SKILL)[id]?.name ?? '').sort());
   addSubSection('Traits');
-  addList(objRef.traits.map((id) => getHashData(TYPES.MARKET_TRAIT)[id]?.name ?? '').sort());
+  addList(tome.traits.map((id) => getHashData(TYPES.MARKET_TRAIT)[id]?.name ?? '').sort());
   addSection('Familiar');
-  if (objRef.familiarName) {
+  if (tome.familiarName) {
     addText(
-      `${objRef.familiarName}, the ${
-        getHashData(TYPES.FAMILIAR)[objRef.familiar]?.species ?? ''
-      } (Power: ${objRef.familiarPower})`
+      `${tome.familiarName}, the ${
+        getHashData(TYPES.FAMILIAR)[tome.familiar]?.species ?? ''
+      } (Power: ${tome.familiarPower})`
     );
   } else {
     addText(
-      `${getHashData(TYPES.FAMILIAR)[objRef.familiar]?.species ?? ''} (Power: ${
-        objRef.familiarPower
-      })`
+      `${getHashData(TYPES.FAMILIAR)[tome.familiar]?.species ?? ''} (Power: ${tome.familiarPower})`
     );
   }
   addSection('Enemies');
-  addSubSection(`Monter: ${getHashData(TYPES.MONSTER)[objRef.monster]?.name ?? ''}`);
-  addListItem(
-    `Location: ${getHashData(TYPES.MONSTER_LOCATION)[objRef.monsterLocation]?.name ?? ''}`
-  );
-  addListItem(
-    `Obstacle: ${getHashData(TYPES.MONSTER_OBSTACLE)[objRef.monsterObstacle]?.name ?? ''}`
-  );
-  addListItem(`Attack: ${getHashData(TYPES.MONSTER_ATTACK)[objRef.monsterAttack]?.name ?? ''}`);
-  addListItem(`Monster Score: ${objRef.monsterScore || 'Unknown'}`);
+  addSubSection(`Monter: ${getHashData(TYPES.MONSTER)[tome.monster]?.name ?? ''}`);
+  addListItem(`Location: ${getHashData(TYPES.MONSTER_LOCATION)[tome.monsterLocation]?.name ?? ''}`);
+  addListItem(`Obstacle: ${getHashData(TYPES.MONSTER_OBSTACLE)[tome.monsterObstacle]?.name ?? ''}`);
+  addListItem(`Attack: ${getHashData(TYPES.MONSTER_ATTACK)[tome.monsterAttack]?.name ?? ''}`);
+  addListItem(`Monster Score: ${tome.monsterScore || 'Unknown'}`);
   addSubSection('Minions');
-  addList(objRef.minions.map((id) => getHashData(TYPES.MINION)[id]?.name ?? '').sort());
+  addList(tome.minions.map((id) => getHashData(TYPES.MINION)[id]?.name ?? '').sort());
   addSubSection('Fiends');
-  addList(objRef.fiends.map((id) => getHashData(TYPES.FIENDS)[id]?.name ?? '').sort());
+  addList(tome.fiends.map((id) => getHashData(TYPES.FIENDS)[id]?.name ?? '').sort());
   addLineBreak(2);
   addSection('Final Score');
-  addText(`${objRef.score} reputation stars`);
+  addText(`${tome.score} reputation stars`);
   return result;
 }
 
