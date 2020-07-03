@@ -4,7 +4,19 @@ import { SCREENS, REFRESH_TIMER } from './utils/constants';
 import { getTodaysDate } from './utils';
 
 export const initialState = {
+  // App Global
+  activeDialog: null,
   screen: SCREENS.FORM,
+
+  // App
+  characterObject: null,
+  deserializedCharacter: null,
+  isCharacterGenerated: false,
+  isCharacterComplete: false,
+  isSavingEnabled: false,
+
+  // Character Fields
+  characterId: null,
   characterName: '',
   player: '',
   race: null,
@@ -32,19 +44,15 @@ export const initialState = {
   score: 0,
   date: getTodaysDate(),
   familiar: null,
+  familiarName: null,
   familiarPower: 0,
   fiends: [],
+  fiendsBanished: [],
   monster: null,
   monsterLocation: null,
   monsterObstacle: null,
   monsterAttack: null,
-  characterObject: null,
-  deserializedCharacter: null,
-  isCharacterGenerated: false,
-  isCharacterComplete: false,
-  activeDialog: null,
-  isSavingEnabled: false,
-  characterId: null,
+  monsterScore: 0,
 };
 
 const { useGlobalState, setGlobalState: setGlobalStateCGS, setState, getState } = createGlobalState(
