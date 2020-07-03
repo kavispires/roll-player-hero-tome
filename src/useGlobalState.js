@@ -8,6 +8,7 @@ export const initialState = {
   activeDialog: null,
   screen: SCREENS.FORM,
   color: null,
+  toaster: null,
 
   // App
   characterObject: null,

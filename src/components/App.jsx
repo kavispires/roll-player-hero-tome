@@ -2,6 +2,7 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 
 import Header from './Header';
+import Toaster from './Toaster';
 
 import Form from './Form';
 import Refreshing from './Refreshing';
@@ -35,6 +36,7 @@ export default function App() {
       <Header />
       {activeComponent[screen]}
       {activeDialogComponent[activeDialog]}
+      <Toaster />
     </Container>
   );
 }
