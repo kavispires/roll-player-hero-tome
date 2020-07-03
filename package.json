@@ -75,5 +75,10 @@
     "lint-staged": "^10.2.10",
     "node-sass-chokidar": "^1.4.0",
     "prettier": "^2.0.5"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!lodash-es/*)"
+    ]
   }
 }
