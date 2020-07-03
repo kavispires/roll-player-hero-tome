@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/roll-player-hero-tome/static/css/main.c009697f.chunk.css",
-    "main.js": "/roll-player-hero-tome/static/js/main.6ea54005.chunk.js",
-    "main.js.map": "/roll-player-hero-tome/static/js/main.6ea54005.chunk.js.map",
+    "main.css": "/roll-player-hero-tome/static/css/main.257777c4.chunk.css",
+    "main.js": "/roll-player-hero-tome/static/js/main.bfb53b88.chunk.js",
+    "main.js.map": "/roll-player-hero-tome/static/js/main.bfb53b88.chunk.js.map",
     "runtime-main.js": "/roll-player-hero-tome/static/js/runtime-main.76a7e627.js",
     "runtime-main.js.map": "/roll-player-hero-tome/static/js/runtime-main.76a7e627.js.map",
-    "static/js/2.c5757f42.chunk.js": "/roll-player-hero-tome/static/js/2.c5757f42.chunk.js",
-    "static/js/2.c5757f42.chunk.js.map": "/roll-player-hero-tome/static/js/2.c5757f42.chunk.js.map",
+    "static/js/2.8656cf37.chunk.js": "/roll-player-hero-tome/static/js/2.8656cf37.chunk.js",
+    "static/js/2.8656cf37.chunk.js.map": "/roll-player-hero-tome/static/js/2.8656cf37.chunk.js.map",
     "index.html": "/roll-player-hero-tome/index.html",
-    "precache-manifest.48fc00cbbc4bfbcca9d895039bd0b168.js": "/roll-player-hero-tome/precache-manifest.48fc00cbbc4bfbcca9d895039bd0b168.js",
+    "precache-manifest.228d0b3a808e0dbd9e1ba206df6e196b.js": "/roll-player-hero-tome/precache-manifest.228d0b3a808e0dbd9e1ba206df6e196b.js",
     "service-worker.js": "/roll-player-hero-tome/service-worker.js",
-    "static/css/main.c009697f.chunk.css.map": "/roll-player-hero-tome/static/css/main.c009697f.chunk.css.map",
-    "static/js/2.c5757f42.chunk.js.LICENSE.txt": "/roll-player-hero-tome/static/js/2.c5757f42.chunk.js.LICENSE.txt"
+    "static/css/main.257777c4.chunk.css.map": "/roll-player-hero-tome/static/css/main.257777c4.chunk.css.map",
+    "static/js/2.8656cf37.chunk.js.LICENSE.txt": "/roll-player-hero-tome/static/js/2.8656cf37.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.76a7e627.js",
-    "static/js/2.c5757f42.chunk.js",
-    "static/css/main.c009697f.chunk.css",
-    "static/js/main.6ea54005.chunk.js"
+    "static/js/2.8656cf37.chunk.js",
+    "static/css/main.257777c4.chunk.css",
+    "static/js/main.bfb53b88.chunk.js"
   ]
 }
