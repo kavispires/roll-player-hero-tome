@@ -81,6 +81,7 @@ export default function Form() {
       <FormInput type={TYPES.FAMILIAR_POWER} inputType="number" classModifier="quarter" />
       <FormInput type={TYPES.FAMILIAR_NAME} classModifier="quarter" />
       <FormAutocompleteMulti type={TYPES.FIENDS} classModifier="half" />
+      <FormAutocompleteMulti type={TYPES.FIENDS_BANISHED} classModifier="half" />
       <hr />
       <FormInput type={TYPES.XP} inputType="number" classModifier="quarter" />
       <FormInput type={TYPES.GOLD} inputType="number" classModifier="quarter" />

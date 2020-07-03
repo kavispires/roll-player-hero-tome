@@ -62,7 +62,10 @@ export function deserializeCharacter(tome) {
       minions: tome.minions?.sort(),
       score: Number(tome.monsterScore),
     },
-    fiends: tome.fiends?.sort(),
+    fiends: {
+      active: tome.fiends?.sort(),
+      banished: tome.fiendsBanished?.sort(),
+    },
     counts: {
       experience: Number(tome.xp),
       gold: Number(tome.gold),
@@ -146,8 +149,10 @@ export function getCharacterJsonApi(tome) {
           .map((id) => getHashData(TYPES.FIENDS)[id]?.name ?? '')
           .sort()
           .filter(removeFalsy),
-        banished: [],
-        // banished: tome.fiendsBanished((id) =>  getHa)
+        banished: tome.fiendsBanished
+          .map((id) => getHashData(TYPES.FIENDS)[id]?.name ?? '')
+          .sort()
+          .filter(removeFalsy),
       },
       counts: {
         experience: Number(tome.xp),
@@ -391,7 +396,7 @@ export function loadCharacterFromDatabase(characters, id, initialState) {
     ...initialState,
     alignment: character.alignment.id,
     alignmentPos: character.alignment.position,
-    armor: character?.items.armor ?? [],
+    armor: character?.items?.armor ?? [],
     attributes: {
       str: character['attribute-scores'].str ?? 0,
       dex: character['attribute-scores'].dex ?? 0,
@@ -405,10 +410,9 @@ export function loadCharacterFromDatabase(characters, id, initialState) {
     characterName: character.name,
     class: character.class,
     date: character['created-at'],
-    familiar: character.familiar.id,
-    familiarPower: Number(character.familiar.power ?? 0),
-    familiarName: character.familiar.name,
-    fiends: character?.fiends ?? [],
+    familiar: character?.familiar?.id ?? null,
+    familiarPower: Number(character?.familiar?.power ?? 0),
+    familiarName: character?.familiar?.name ?? null,
     gender: character.gender,
     gold: Number(character.counts.gold),
     minions: character?.battle?.minions ?? [],
@@ -421,12 +425,21 @@ export function loadCharacterFromDatabase(characters, id, initialState) {
     player: character?.player,
     race: character.race,
     score: Number(character.counts.score),
-    scrolls: character?.items.scrolls ?? [],
+    scrolls: character?.items?.scrolls ?? [],
     skills: character?.skills ?? [],
     traits: character?.traits ?? [],
-    weapons: character?.items.weapons ?? [],
+    weapons: character?.items?.weapons ?? [],
     xp: 0,
   };
+
+  if (character.fiends) {
+    if (Array.isArray(character.fiends)) {
+      state.fiends = character?.fiends ?? [];
+    } else {
+      state.fiends = character?.fiends?.active ?? [];
+      state.fiendsBanished = character?.fiends?.banished ?? [];
+    }
+  }
 
   return state;
 }

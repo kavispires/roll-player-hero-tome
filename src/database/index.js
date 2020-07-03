@@ -26,6 +26,7 @@ const switcher = {
   [TYPES.CLASS]: CLASSES,
   [TYPES.FAMILIAR]: FAMILIARS,
   [TYPES.FIENDS]: FIENDS,
+  [TYPES.FIENDS_BANISHED]: FIENDS,
   [TYPES.GENDER]: GENDERS,
   [TYPES.MARKET_ARMOR]: filterDataByKind('Armor', MARKET, marketCahce),
   [TYPES.MARKET_SCROLL]: filterDataByKind('Scroll', MARKET, marketCahce),

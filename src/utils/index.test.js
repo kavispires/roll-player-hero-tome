@@ -136,7 +136,10 @@ describe('Utils', function () {
           minions: [],
           score: 0,
         },
-        fiends: [],
+        fiends: {
+          active: [],
+          banished: [],
+        },
         counts: { experience: 0, gold: 0, score: 0 },
         player: '',
         'created-at': '2020-01-01',
@@ -170,7 +173,10 @@ describe('Utils', function () {
           name: 'Unnamed',
           power: 2,
         },
-        fiends: ['1', '2'],
+        fiends: {
+          active: ['1', '2'],
+          banished: ['1', '2', '3'],
+        },
         counts: { experience: 1, gold: 1, score: 1 },
         player: 'Tester',
         'created-at': '2020-01-01',
@@ -202,7 +208,10 @@ describe('Utils', function () {
           minions: ['1', '2', '3', '4'],
           score: 1,
         },
-        fiends: ['1', '2'],
+        fiends: {
+          active: ['1', '2'],
+          banished: ['1', '2', '3'],
+        },
         counts: { experience: 1, gold: 1, score: 1 },
         player: 'Tester',
         'created-at': '2020-01-01',
@@ -333,7 +342,7 @@ describe('Utils', function () {
           },
           fiends: {
             active: ['Fiend of Arbitration', 'Fiend of Avarice'],
-            banished: [],
+            banished: ['Fiend of Blight', 'Fiend of Burden', 'Fiend of Chaos'],
           },
           counts: {
             experience: 3,
