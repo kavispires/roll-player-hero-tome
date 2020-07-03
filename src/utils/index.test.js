@@ -206,4 +206,144 @@ describe('Utils', function () {
       });
     });
   });
+
+  describe('getCharacterJsonApi', function () {
+    it('it parses a character to JsonApi format with default data correctly', function () {
+      expect(utils.getCharacterJsonApi(mocks.mockDefaultGlobalStateTome)).toStrictEqual({
+        id: null,
+        type: 'roll-player-character',
+        attributes: {
+          name: '',
+          race: '',
+          class: '',
+          gender: 'Unkown',
+          backstory: '',
+          'attribute-rp-scores': {
+            str: 0,
+            dex: 0,
+            con: 0,
+            int: 0,
+            wis: 0,
+            cha: 0,
+          },
+          'attribute-rpa-scores': {
+            str: 0,
+            dex: 0,
+            con: 0,
+            int: 0,
+            wis: 0,
+            cha: 0,
+          },
+          alignment: {
+            name: '',
+            title: 'Neutraul-Neutral',
+            score: undefined,
+          },
+          items: {
+            armor: [],
+            weapons: [],
+            scrolls: [],
+          },
+          skills: [],
+          traits: [],
+          battle: {
+            monster: '',
+            location: '',
+            obstacle: '',
+            attack: '',
+            minions: [],
+            score: 0,
+          },
+          familiar: {
+            species: '',
+            name: null,
+            power: 0,
+          },
+          fiends: {
+            active: [],
+            banished: [],
+          },
+          counts: {
+            experience: 0,
+            gold: 0,
+            score: 0,
+            health: 14,
+          },
+        },
+        meta: {
+          'created-by': '',
+          'created-at': '2020-01-01',
+        },
+      });
+    });
+
+    it('it parses a character to JsonApi format with complete data correctly', function () {
+      expect(utils.getCharacterJsonApi(mocks.mockCompleteGlobalStateTomeWithIds)).toStrictEqual({
+        id: null,
+        type: 'roll-player-character',
+        attributes: {
+          name: 'Test',
+          race: 'Dragonkin',
+          class: 'Assassin',
+          gender: 'Male',
+          backstory: 'Apprentice',
+          'attribute-rp-scores': {
+            str: 12,
+            dex: 10,
+            con: 14,
+            int: 16,
+            wis: 18,
+            cha: 20,
+          },
+          'attribute-rpa-scores': {
+            str: 0,
+            dex: 0,
+            con: 1,
+            int: 2,
+            wis: 3,
+            cha: 3,
+          },
+          alignment: {
+            name: 'Abstainer',
+            title: 'Lawful-Evil',
+            score: -2,
+          },
+          items: {
+            armor: ['Chain Fauld', 'Mystic Robes'],
+            weapons: ['Longsword', 'Scabbard'],
+            scrolls: ['Transmute'],
+          },
+          skills: ['Examine'],
+          traits: ['Foolish', 'Weak'],
+          battle: {
+            monster: 'Chimera',
+            location: 'Shadowy Cave',
+            obstacle: 'Energy Barrier',
+            attack: 'Cone of Cold',
+            minions: ['Bat Swarm', 'Cockatrice', 'Goblin', 'Kobold'],
+            score: 10,
+          },
+          familiar: {
+            species: 'Blood Badger',
+            name: 'Test',
+            power: 3,
+          },
+          fiends: {
+            active: ['Fiend of Arbitration', 'Fiend of Avarice'],
+            banished: [],
+          },
+          counts: {
+            experience: 3,
+            gold: 4,
+            score: 10,
+            health: 12,
+          },
+        },
+        meta: {
+          'created-by': 'Tester',
+          'created-at': '2020-01-01',
+        },
+      });
+    });
+  });
 });

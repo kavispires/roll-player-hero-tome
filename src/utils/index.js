@@ -1,6 +1,8 @@
 import { getHashData, getAdventureTypeahead } from '../database';
 import { TYPES } from './constants';
 
+const removeFalsy = (item) => item;
+
 /**
  * Check if all required fields in a character object are filled
  * @param {object} tome the object with the tome data
@@ -27,7 +29,7 @@ export function determineCharacterCompletion(tome) {
 }
 
 /**
- * Parses character to be database ready
+ * Parses a character tome object to be database ready before saving
  * @param {object} tome the object with the tome data
  * @returns {object}
  */
@@ -80,6 +82,11 @@ export function deserializeCharacter(tome) {
   return result;
 }
 
+/**
+ * Parses a character tome object to JsonApi format
+ * @param {object} tome the object with the tome data
+ * @return {object}
+ */
 export function getCharacterJsonApi(tome) {
   return {
     id: tome.character ?? null,
@@ -94,30 +101,55 @@ export function getCharacterJsonApi(tome) {
       'attribute-rpa-scores': getRPAAttributeScores(tome.attributes, tome.race),
       alignment: getAlignmentScore(tome.alignment, tome.alignmentPos),
       items: {
-        armor: tome.armor.map((id) => getHashData(TYPES.MARKET_ARMOR)[id]?.name ?? '').sort(),
-        weapons: tome.weapons.map((id) => getHashData(TYPES.MARKET_WEAPON)[id]?.name ?? '').sort(),
-        scrolls: tome.scrolls.map((id) => getHashData(TYPES.MARKET_SCROLL)[id]?.name ?? '').sort(),
+        armor: tome.armor
+          .map((id) => getHashData(TYPES.MARKET_ARMOR)[id]?.name ?? '')
+          .sort()
+          .filter(removeFalsy),
+        weapons: tome.weapons
+          .map((id) => getHashData(TYPES.MARKET_WEAPON)[id]?.name ?? '')
+          .sort()
+          .filter(removeFalsy),
+        scrolls: tome.scrolls
+          .map((id) => getHashData(TYPES.MARKET_SCROLL)[id]?.name ?? null)
+          .sort()
+          .filter(removeFalsy),
       },
-      skills: tome.skills.map((id) => getHashData(TYPES.MARKET_SKILL)[id]?.name ?? '').sort(),
-      traits: tome.traits.map((id) => getHashData(TYPES.MARKET_TRAIT)[id]?.name ?? '').sort(),
+      skills: tome.skills
+        .map((id) => getHashData(TYPES.MARKET_SKILL)[id]?.name ?? '')
+        .sort()
+        .filter(removeFalsy),
+      traits: tome.traits
+        .map((id) => getHashData(TYPES.MARKET_TRAIT)[id]?.name ?? '')
+        .sort()
+        .filter(removeFalsy),
       battle: {
         monster: getHashData(TYPES.MONSTER)[tome.monster]?.name ?? '',
         location: getHashData(TYPES.MONSTER_LOCATION)[tome.monsterLocation]?.name ?? '',
         obstacle: getHashData(TYPES.MONSTER_OBSTACLE)[tome.monsterObstacle]?.name ?? '',
         attack: getHashData(TYPES.MONSTER_ATTACK)[tome.monsterAttack]?.name ?? '',
-        minions: tome.minions.map((id) => getHashData(TYPES.MINION)[id]?.name ?? '').sort(),
-        score: tome.monsterScore ?? 0,
+        minions: tome.minions
+          .map((id) => getHashData(TYPES.MINION)[id]?.name ?? '')
+          .sort()
+          .filter(removeFalsy),
+        score: Number(tome.monsterScore) ?? 0,
       },
       familiar: {
         species: getHashData(TYPES.FAMILIAR)[tome.familiar]?.name ?? '',
         name: tome.familiarName,
-        power: tome.familiarPower,
+        power: Number(tome.familiarPower),
       },
-      fiends: tome.fiends.map((id) => getHashData(TYPES.FIENDS)[id]?.name ?? '').sort(),
+      fiends: {
+        active: tome.fiends
+          .map((id) => getHashData(TYPES.FIENDS)[id]?.name ?? '')
+          .sort()
+          .filter(removeFalsy),
+        banished: [],
+        // banished: tome.fiendsBanished((id) =>  getHa)
+      },
       counts: {
-        experience: tome.xp,
-        gold: tome.gold,
-        score: tome.score,
+        experience: Number(tome.xp),
+        gold: Number(tome.gold),
+        score: Number(tome.score),
         health: getHealth(tome.score, tome.fiends),
       },
     },
