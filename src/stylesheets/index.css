@@ -32,6 +32,30 @@ main {
     .header h1 {
       font-size: 1rem; } }
 
+.app-color--black {
+  background: #232c33;
+  color: #ffffff; }
+
+.app-color--blue {
+  background: #0353a4;
+  color: #ffffff; }
+
+.app-color--green {
+  background: #138a36;
+  color: #ffffff; }
+
+.app-color--purple {
+  background: #7c2494;
+  color: #ffffff; }
+
+.app-color--red {
+  background: #f21b3f;
+  color: #ffffff; }
+
+.app-color--white {
+  background: #dee7ec;
+  color: #232c33; }
+
 .form--refreshing {
   display: flex;
   justify-content: center;

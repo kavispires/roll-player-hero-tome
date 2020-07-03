@@ -19,3 +19,35 @@
 
   background: $color-negative;
 }
+
+.app-color {
+  &--black {
+    background: $color-black;
+    color: $color-black-negative;
+  }
+
+  &--blue {
+    background: $color-blue;
+    color: $color-blue-negative;
+  }
+
+  &--green {
+    background: $color-green;
+    color: $color-green-negative;
+  }
+
+  &--purple {
+    background: $color-purple;
+    color: $color-purple-negative;
+  }
+
+  &--red {
+    background: $color-red;
+    color: $color-red-negative;
+  }
+
+  &--white {
+    background: $color-white;
+    color: $color-white-negative;
+  }
+}

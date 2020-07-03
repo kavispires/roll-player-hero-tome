@@ -12,6 +12,7 @@ import { DIALOGS } from '../utils/constants';
 export default function Header() {
   const [, setActiveDialog] = useGlobalState('activeDialog');
   const [isSavingEnabled, setIsSavingEnabled] = useGlobalState('isSavingEnabled');
+  const [color] = useGlobalState('color');
   // Local state
   const [saveClickCount, setSaveClickCount] = useState(0);
 
@@ -40,10 +41,12 @@ export default function Header() {
     setActiveDialog(DIALOGS.SAVE);
   };
 
+  const iconColor = color === 'white' || !color ? '#232c33' : '#ffffff';
+
   return (
-    <header className="header">
+    <header className={`header app-color--${color}`}>
       <IconButton className="header-button" aria-label="reset" onClick={resetGlobalState}>
-        <RotateLeftIcon />
+        <RotateLeftIcon style={{ color: iconColor }} />
       </IconButton>
       <h1 onClick={handleEditClick}>Roll Player: Hero Tome</h1>
       {isSavingEnabled && (
@@ -53,18 +56,18 @@ export default function Header() {
             aria-label="import"
             onClick={handleOpenImportDialog}
           >
-            <ListAltIcon />
+            <ListAltIcon style={{ color: iconColor }} />
           </IconButton>
           <IconButton className="header-button" aria-label="save" onClick={handleOpenSaveDialog}>
-            <SaveIcon />
+            <SaveIcon style={{ color: iconColor }} />
           </IconButton>
         </Fragment>
       )}
       <IconButton className="header-button" aria-label="print" onClick={handleOpenPrintDialog}>
-        <PrintIcon />
+        <PrintIcon style={{ color: iconColor }} />
       </IconButton>
       <IconButton className="header-button" aria-label="code" onClick={handleOpenCodeDialog}>
-        <CodeIcon />
+        <CodeIcon style={{ color: iconColor }} />
       </IconButton>
     </header>
   );

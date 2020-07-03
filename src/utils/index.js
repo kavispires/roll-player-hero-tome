@@ -450,3 +450,7 @@ export function getEntryById(list, id) {
 export function getEntriesByIds(list, ids) {
   return list.filter((o) => ids.includes(o.value));
 }
+
+export function getClassColor(classId) {
+  return getHashData(TYPES.CLASS)[classId]?.color ?? null;
+}

@@ -1,12 +1,4 @@
-$color-primary: #131515;
-$color-medium: #2b2c28;
-$color-negative: #d9cab3;
-
-$unit1: 8px;
-
-$breakpoint-phone: 640px;
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1024px;
+@import './constants';
 
 body {
   font-family: 'Noto Serif', serif;

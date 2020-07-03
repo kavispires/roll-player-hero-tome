@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { getHashData } from '../database';
-import { getMonsterAdventureData } from '../utils';
+import { getMonsterAdventureData, getClassColor } from '../utils';
 import { TYPES, GLOBAL_STATE_ALIAS } from '../utils/constants';
 import useGlobalState from '../useGlobalState';
 
@@ -15,9 +15,12 @@ import FormCheckbox from './FormCheckbox';
 
 export default function Form() {
   const [monster] = useGlobalState(GLOBAL_STATE_ALIAS[TYPES.MONSTER]);
+  const [characterClass] = useGlobalState(GLOBAL_STATE_ALIAS[TYPES.CLASS]);
+  const [, setColor] = useGlobalState('color');
   // LocalState
   const [adventureData, setAdventureData] = useState(null);
 
+  // When a monster is selected, determine available adventure cards for it
   useEffect(() => {
     if (monster) {
       const monsterName = getHashData(TYPES.MONSTER)[monster].name;
@@ -29,6 +32,11 @@ export default function Form() {
       });
     }
   }, [monster]);
+
+  // When a class is selected, set the global color
+  useEffect(() => {
+    setColor(getClassColor(characterClass));
+  }, [characterClass, setColor]);
 
   return (
     <main className="form">
