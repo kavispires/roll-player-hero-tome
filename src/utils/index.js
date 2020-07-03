@@ -27,6 +27,60 @@ export function determineCharacterCompletion(tome) {
 }
 
 /**
+ * Parses character to be database ready
+ * @param {object} tome the object with the tome data
+ * @returns {object}
+ */
+export function deserializeCharacter(tome) {
+  const result = {
+    id: tome.characterId,
+    name: tome.characterName,
+    race: tome.race,
+    class: tome.class,
+    gender: tome.gender,
+    backstory: tome.backstory,
+    'attribute-scores': tome.attributes,
+    alignment: {
+      id: tome.alignment,
+      position: Number(tome.alignmentPos),
+    },
+    items: {
+      armor: tome.armor?.sort(),
+      weapons: tome.weapons?.sort(),
+      scrolls: tome.scrolls?.sort(),
+    },
+    skills: tome.skills?.sort(),
+    traits: tome.traits?.sort(),
+    battle: {
+      monster: tome.monster,
+      location: tome.monsterLocation,
+      obstacle: tome.monsterObstacle,
+      attack: tome.monsterAttack,
+      minions: tome.minions?.sort(),
+      score: Number(tome.monsterScore),
+    },
+    fiends: tome.fiends?.sort(),
+    counts: {
+      experience: Number(tome.xp),
+      gold: Number(tome.gold),
+      score: Number(tome.score),
+    },
+    player: tome.player,
+    'created-at': tome.date ?? getTodaysDate(),
+  };
+
+  if (tome.familiar) {
+    result.familiar = {
+      id: tome.familiar,
+      name: tome.familiarName ?? 'Unnamed',
+      power: Number(tome.familiarPower),
+    };
+  }
+
+  return result;
+}
+
+/**
  * Gets the specific adventure data (location, obstable, attack) based on the given monster name
  * @param {symbol} type the type symbol
  * @param {string} monsterName the monster name
@@ -38,55 +92,6 @@ export function getMonsterAdventureData(type, monsterName) {
     dict,
     typeahead: getAdventureTypeahead(dict, monsterName),
   };
-}
-
-export function deserializeCharacter(objRef) {
-  const result = {
-    id: objRef.characterId,
-    name: objRef.characterName,
-    race: objRef.race,
-    class: objRef.class,
-    gender: objRef.gender,
-    backstory: objRef.backstory,
-    'attribute-scores': objRef.attributes,
-    alignment: {
-      id: objRef.alignment,
-      position: Number(objRef.alignmentPos),
-    },
-    items: {
-      armor: objRef.armor?.sort(),
-      weapons: objRef.weapons?.sort(),
-      scrolls: objRef.scrolls?.sort(),
-    },
-    skills: objRef.skills?.sort(),
-    traits: objRef.traits?.sort(),
-    battle: {
-      monster: objRef.monster,
-      location: objRef.monsterLocation,
-      obstacle: objRef.monsterObstacle,
-      attack: objRef.monsterAttack,
-      minions: objRef.minions?.sort(),
-      score: objRef.monsterScore,
-    },
-    fiends: objRef.fiends?.sort(),
-    counts: {
-      experience: Number(objRef.xp),
-      gold: Number(objRef.gold),
-      score: Number(objRef.score),
-    },
-    player: objRef.player,
-    'created-at': objRef.date ?? getTodaysDate(),
-  };
-
-  if (objRef.familiar) {
-    result.familiar = {
-      id: objRef.familiar,
-      name: objRef.familiarName ?? 'Unnamed',
-      power: Number(objRef.familiarPower),
-    };
-  }
-
-  return result;
 }
 
 export function getCharacterJsonApi(objRef) {

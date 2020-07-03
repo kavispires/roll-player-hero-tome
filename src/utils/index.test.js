@@ -1,6 +1,9 @@
 import * as utils from './index';
+import * as mocks from './mock-data';
 
 // console.log(utils);
+
+const deepCopy = (any) => JSON.parse(JSON.stringify(any));
 
 describe('Utils', function () {
   describe('determineCharacterCompletion', function () {
@@ -107,6 +110,100 @@ describe('Utils', function () {
     it('returns false when a familiar is present with power lower than 3', function () {
       tempTome.familiarPower = 0;
       expect(utils.determineCharacterCompletion(tempTome)).toBeFalsy();
+    });
+  });
+
+  describe('deserializeCharacter', function () {
+    it('it deserializes a character with default data correctly', function () {
+      expect(utils.deserializeCharacter(mocks.mockDefaultGlobalStateTome)).toStrictEqual({
+        id: null,
+        name: '',
+        race: null,
+        class: null,
+        gender: null,
+        backstory: null,
+        'attribute-scores': { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 },
+        alignment: { id: null, position: 4 },
+        items: { armor: [], weapons: [], scrolls: [] },
+        skills: [],
+        traits: [],
+        battle: {
+          monster: null,
+          location: null,
+          obstacle: null,
+          attack: null,
+          minions: [],
+          score: 0,
+        },
+        fiends: [],
+        counts: { experience: 0, gold: 0, score: 0 },
+        player: '',
+        'created-at': '2020-01-01',
+      });
+    });
+
+    it('it deserializes a character with complete data correctly', function () {
+      expect(utils.deserializeCharacter(mocks.mockCompleteGlobalStateTome)).toStrictEqual({
+        id: 'abc123',
+        name: 'Test',
+        race: 'abc123',
+        class: 'abc123',
+        gender: 'male',
+        backstory: 'abc123',
+        'attribute-scores': { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 },
+        alignment: { id: 'abc123', position: 4 },
+        items: { armor: ['1', '2', '3'], weapons: ['1', '2', '3'], scrolls: ['1', '3'] },
+        skills: ['1'],
+        traits: [],
+        battle: {
+          monster: 'abc123',
+          location: 'abc123',
+          obstacle: 'abc123',
+          attack: 'abc123',
+          minions: ['1', '2', '3', '4'],
+          score: 1,
+        },
+        familiar: {
+          id: 'abc123',
+          name: 'Unnamed',
+          power: 2,
+        },
+        fiends: ['1', '2'],
+        counts: { experience: 1, gold: 1, score: 1 },
+        player: 'Tester',
+        'created-at': '2020-01-01',
+      });
+    });
+
+    it('it deserializes a character without a familiar correctly', function () {
+      const tomeWithoutFamilar = deepCopy(mocks.mockCompleteGlobalStateTome);
+      delete tomeWithoutFamilar.familiar;
+
+      expect(utils.deserializeCharacter(tomeWithoutFamilar)).toStrictEqual({
+        id: 'abc123',
+        name: 'Test',
+        race: 'abc123',
+        class: 'abc123',
+        gender: 'male',
+        backstory: 'abc123',
+        'attribute-scores': { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 },
+        alignment: { id: 'abc123', position: 4 },
+        items: { armor: ['1', '2', '3'], weapons: ['1', '2', '3'], scrolls: ['1', '3'] },
+        skills: ['1'],
+        traits: [],
+        battle: {
+          monster: 'abc123',
+          location: 'abc123',
+          obstacle: 'abc123',
+          attack: 'abc123',
+          minions: ['1', '2', '3', '4'],
+          score: 1,
+        },
+        fiends: ['1', '2'],
+        counts: { experience: 1, gold: 1, score: 1 },
+        player: 'Tester',
+        'created-at': '2020-01-01',
+      });
     });
   });
 });
