@@ -32,18 +32,19 @@ export default function ImportDialog() {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    try {
-      setIsLoading(true);
-      async function getCharacters() {
+    async function getCharacters() {
+      try {
+        setIsLoading(true);
         const response = await API.getCharacters();
         setCharacters(response.data);
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setIsLoading(false);
       }
-      getCharacters();
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setIsLoading(false);
     }
+
+    getCharacters();
   }, []);
 
   const handleCloseDialog = () => {
