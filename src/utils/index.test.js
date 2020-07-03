@@ -129,6 +129,7 @@ describe('Utils', function () {
         traits: [],
         battle: {
           monster: null,
+          alternativeLenticularVersion: null,
           location: null,
           obstacle: null,
           attack: null,
@@ -157,6 +158,7 @@ describe('Utils', function () {
         traits: [],
         battle: {
           monster: 'abc123',
+          alternativeLenticularVersion: true,
           location: 'abc123',
           obstacle: 'abc123',
           attack: 'abc123',
@@ -193,6 +195,7 @@ describe('Utils', function () {
         traits: [],
         battle: {
           monster: 'abc123',
+          alternativeLenticularVersion: true,
           location: 'abc123',
           obstacle: 'abc123',
           attack: 'abc123',
@@ -316,7 +319,7 @@ describe('Utils', function () {
           skills: ['Examine'],
           traits: ['Foolish', 'Weak'],
           battle: {
-            monster: 'Chimera',
+            monster: 'Chimera (Lenticular version)',
             location: 'Shadowy Cave',
             obstacle: 'Energy Barrier',
             attack: 'Cone of Cold',

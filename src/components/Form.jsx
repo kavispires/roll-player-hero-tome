@@ -11,6 +11,7 @@ import FormAutocomplete from './FormAutocomplete';
 import FormAutocompleteMulti from './FormAutocompleteMulti';
 import FormAttributes from './FormAttributes';
 import FormAlignment from './FormAlignment';
+import FormCheckbox from './FormCheckbox';
 
 export default function Form() {
   const [monster] = useGlobalState(GLOBAL_STATE_ALIAS[TYPES.MONSTER]);
@@ -47,7 +48,7 @@ export default function Form() {
       <FormAutocompleteMulti type={TYPES.MINION} classModifier="half" />
       <hr />
       <FormAutocomplete type={TYPES.MONSTER} classModifier="half" />
-      <div className="empty-half" />
+      <FormCheckbox type={TYPES.MONSTER_LENTICULAR} classModifier="half" />
       <FormAutocomplete
         type={TYPES.MONSTER_LOCATION}
         classModifier="quarter"

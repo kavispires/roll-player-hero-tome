@@ -55,6 +55,7 @@ export function deserializeCharacter(tome) {
     traits: tome.traits?.sort(),
     battle: {
       monster: tome.monster,
+      alternativeLenticularVersion: tome.isLenticularVersion || null,
       location: tome.monsterLocation,
       obstacle: tome.monsterObstacle,
       attack: tome.monsterAttack,
@@ -123,7 +124,9 @@ export function getCharacterJsonApi(tome) {
         .sort()
         .filter(removeFalsy),
       battle: {
-        monster: getHashData(TYPES.MONSTER)[tome.monster]?.name ?? '',
+        monster: `${getHashData(TYPES.MONSTER)[tome.monster]?.name ?? ''}${
+          tome.isLenticularVersion ? ' (Lenticular version)' : ''
+        }`,
         location: getHashData(TYPES.MONSTER_LOCATION)[tome.monsterLocation]?.name ?? '',
         obstacle: getHashData(TYPES.MONSTER_OBSTACLE)[tome.monsterObstacle]?.name ?? '',
         attack: getHashData(TYPES.MONSTER_ATTACK)[tome.monsterAttack]?.name ?? '',
@@ -414,6 +417,7 @@ export function loadCharacterFromDatabase(characters, id, initialState) {
     monsterLocation: character?.battle?.location ?? null,
     monsterObstacle: character?.battle?.obstacle ?? null,
     monsterScore: character?.battle?.score ?? 0,
+    isLenticularVersion: character?.battle?.alternativeLenticularVersion ?? false,
     player: character?.player,
     race: character.race,
     score: Number(character.counts.score),

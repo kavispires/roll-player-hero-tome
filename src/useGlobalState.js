@@ -53,6 +53,7 @@ export const initialState = {
   monsterObstacle: null,
   monsterAttack: null,
   monsterScore: 0,
+  isLenticularVersion: false,
 };
 
 const { useGlobalState, setGlobalState: setGlobalStateCGS, setState, getState } = createGlobalState(

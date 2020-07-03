@@ -41,6 +41,7 @@ export const mockDefaultGlobalStateTome = {
   monsterObstacle: null,
   monsterAttack: null,
   monsterScore: 0,
+  isLenticularVersion: false,
 };
 
 export const mockCompleteGlobalStateTome = {
@@ -86,6 +87,7 @@ export const mockCompleteGlobalStateTome = {
   monsterObstacle: 'abc123',
   monsterAttack: 'abc123',
   monsterScore: '1',
+  isLenticularVersion: true,
 };
 
 export const mockCompleteGlobalStateTomeWithIds = {
@@ -131,4 +133,5 @@ export const mockCompleteGlobalStateTomeWithIds = {
   monsterObstacle: 'ad-mm-51',
   monsterAttack: 'ad-mm-53',
   monsterScore: '10',
+  isLenticularVersion: true,
 };
