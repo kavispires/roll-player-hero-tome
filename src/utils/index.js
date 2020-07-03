@@ -218,7 +218,7 @@ export function getCharacterTextString(tome) {
 
   function addList(list = []) {
     if (list.length === 0) {
-      result += 'N/A\n';
+      addListItem('N/A');
     } else {
       for (let i = 0; i < list.length; i++) {
         addListItem(list[i]);
@@ -273,17 +273,22 @@ export function getCharacterTextString(tome) {
   addSubSection('Traits');
   addList(tome.traits.map((id) => getHashData(TYPES.MARKET_TRAIT)[id]?.name ?? '').sort());
   addSection('Familiar');
-  if (tome.familiarName) {
-    addText(
-      `${tome.familiarName}, the ${
-        getHashData(TYPES.FAMILIAR)[tome.familiar]?.species ?? ''
-      } (Power: ${tome.familiarPower})`
-    );
+  if (tome.familiar) {
+    if (tome.familiarName && tome.familiarName !== 'Unnamed') {
+      addText(
+        `${tome.familiarName}, the ${
+          getHashData(TYPES.FAMILIAR)[tome.familiar]?.name ?? ''
+        } (Power: ${tome.familiarPower})`
+      );
+    } else {
+      addText(
+        `${getHashData(TYPES.FAMILIAR)[tome.familiar]?.name ?? ''} (Power: ${tome.familiarPower})`
+      );
+    }
   } else {
-    addText(
-      `${getHashData(TYPES.FAMILIAR)[tome.familiar]?.species ?? ''} (Power: ${tome.familiarPower})`
-    );
+    addListItem('N/A');
   }
+
   addSection('Enemies');
   addSubSection(`Monter: ${getHashData(TYPES.MONSTER)[tome.monster]?.name ?? ''}`);
   addListItem(`Location: ${getHashData(TYPES.MONSTER_LOCATION)[tome.monsterLocation]?.name ?? ''}`);
@@ -292,8 +297,14 @@ export function getCharacterTextString(tome) {
   addListItem(`Monster Score: ${tome.monsterScore || 'Unknown'}`);
   addSubSection('Minions');
   addList(tome.minions.map((id) => getHashData(TYPES.MINION)[id]?.name ?? '').sort());
+
   addSubSection('Fiends');
-  addList(tome.fiends.map((id) => getHashData(TYPES.FIENDS)[id]?.name ?? '').sort());
+  const allFiends = [];
+  tome.fiends.forEach((id) => allFiends.push(getHashData(TYPES.FIENDS)[id]?.name ?? ''));
+  tome.fiendsBanished.forEach((id) =>
+    allFiends.push(`${getHashData(TYPES.FIENDS_BANISHED)[id]?.name ?? ''} (Banished)`)
+  );
+  addList(allFiends.sort());
   addLineBreak(2);
   addSection('Final Score');
   addText(`${tome.score} reputation stars`);

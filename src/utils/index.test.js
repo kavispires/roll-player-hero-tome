@@ -358,4 +358,55 @@ describe('Utils', function () {
       });
     });
   });
+
+  describe('getCharacterTextString', function () {
+    it('it parses a character to JsonApi format with complete data correctly', function () {
+      const result = utils
+        .getCharacterTextString(mocks.mockCompleteGlobalStateTomeWithIds)
+        .split('\n');
+
+      expect(result).toContain('ROLL PLAYER HERO TOME');
+      expect(result).toContain('Created by Tester on 2020-01-01');
+      expect(result).toContain('CHARACTER: TEST');
+      expect(result).toContain('Race: Dragonkin');
+      expect(result).toContain('Class: Assassin');
+      expect(result).toContain('Gender: Male');
+      expect(result).toContain('Backstory: Apprentice');
+      expect(result).toContain('STR = 0 (12)');
+      expect(result).toContain('DEX = 0 (10)');
+      expect(result).toContain('CON = 1 (14)');
+      expect(result).toContain('INT = 2 (16)');
+      expect(result).toContain('WIS = 3 (18)');
+      expect(result).toContain('CHA = 3 (20)');
+      expect(result).toContain('Abstainer (Lawful-Evil)');
+      expect(result).toContain('Points: -2');
+      expect(result).toContain('    - Health: 12');
+      expect(result).toContain('    - Experience: 3');
+      expect(result).toContain('    - Gold: 4');
+      expect(result).toContain('    - Chain Fauld');
+      expect(result).toContain('    - Mystic Robes');
+      expect(result).toContain('    - Longsword');
+      expect(result).toContain('    - Scabbard');
+      expect(result).toContain('    - Transmute');
+      expect(result).toContain('    - Examine');
+      expect(result).toContain('    - Foolish');
+      expect(result).toContain('    - Weak');
+      expect(result).toContain('Test, the Blood Badger (Power: 3)');
+      expect(result).toContain('MONTER: CHIMERA');
+      expect(result).toContain('    - Location: Shadowy Cave');
+      expect(result).toContain('    - Obstacle: Energy Barrier');
+      expect(result).toContain('    - Attack: Cone of Cold');
+      expect(result).toContain('    - Monster Score: 10');
+      expect(result).toContain('    - Bat Swarm');
+      expect(result).toContain('    - Cockatrice');
+      expect(result).toContain('    - Goblin');
+      expect(result).toContain('    - Kobold');
+      expect(result).toContain('    - Fiend of Arbitration');
+      expect(result).toContain('    - Fiend of Avarice');
+      expect(result).toContain('    - Fiend of Blight (Banished)');
+      expect(result).toContain('    - Fiend of Burden (Banished)');
+      expect(result).toContain('    - Fiend of Chaos (Banished)');
+      expect(result).toContain('10 reputation stars');
+    });
+  });
 });
