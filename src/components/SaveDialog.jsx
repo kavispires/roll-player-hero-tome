@@ -81,7 +81,7 @@ export default function SaveDialog() {
       } else {
         throw Error('Character is not complete');
       }
-      setToaster({ severity: 'success', message: 'Failed to save character' });
+      setToaster({ severity: 'success', message: 'Character save successfully' });
     } catch (err) {
       console.error(err);
       setToaster({ severity: 'error', message: `Failed to save character: ${err}` });
