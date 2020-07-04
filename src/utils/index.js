@@ -87,7 +87,7 @@ export function deserializeCharacter(tome) {
 }
 
 /**
- * Parses a character tome object to JsonApi format
+ * Parses a character tome object to JsonApi format used by Code Dialog
  * @param {object} tome the object with the tome data
  * @return {object}
  */
@@ -169,19 +169,10 @@ export function getCharacterJsonApi(tome) {
 }
 
 /**
- * Gets the specific adventure data (location, obstable, attack) based on the given monster name
- * @param {symbol} type the type symbol
- * @param {string} monsterName the monster name
- * @returns {object} the hash dictionary and typeahead for the adventure type
+ * Generates a multiline string with the character stats used by the Download txt feature
+ * @param {object} tome the object with the tome data
+ * @return {string}
  */
-export function getMonsterAdventureData(type, monsterName) {
-  const dict = getHashData(type);
-  return {
-    dict,
-    typeahead: getAdventureTypeahead(dict, monsterName),
-  };
-}
-
 export function getCharacterTextString(tome) {
   let result = '';
 
@@ -311,6 +302,20 @@ export function getCharacterTextString(tome) {
   return result;
 }
 
+/**
+ * Gets the specific adventure data (location, obstable, attack) based on the given monster name
+ * @param {symbol} type the type symbol
+ * @param {string} monsterName the monster name
+ * @returns {object} the hash dictionary and typeahead for the adventure type
+ */
+export function getMonsterAdventureData(type, monsterName) {
+  const dict = getHashData(type);
+  return {
+    dict,
+    typeahead: getAdventureTypeahead(dict, monsterName),
+  };
+}
+
 function getAttributeScores(attributes, raceId) {
   const raceData = getHashData(TYPES.RACE)?.[raceId];
 
@@ -399,6 +404,13 @@ function getHealth(score, fiends) {
   return 18 - fiendsCount;
 }
 
+/**
+ * Generate a useGlobalState object with a character data based on given id
+ * merging with the existing initial state
+ * @param {array} characters the list of characters from the database
+ * @param {string} id the id of the character to be searched in the list
+ * @param {object} initialState useGlobalState default object
+ */
 export function loadCharacterFromDatabase(characters, id, initialState) {
   // Find character
   const character = characters.filter((c) => c.id === id)[0];
@@ -455,6 +467,10 @@ export function loadCharacterFromDatabase(characters, id, initialState) {
   return state;
 }
 
+/**
+ * Gets today's date in the YYYY-MM-DD format
+ * @returns {string}
+ */
 export function getTodaysDate() {
   const now = new Date();
   let day = now.getDate();
@@ -467,14 +483,30 @@ export function getTodaysDate() {
   return `${year}-${month}-${day}`;
 }
 
+/**
+ * Returns the first elememnt that has a 'value' that matches given id
+ * @param {array} list
+ * @param {string} id
+ * @returns {object}
+ */
 export function getEntryById(list, id) {
   return list.filter((o) => o.value === id)[0];
 }
 
+/**
+ * Returns every element in given list that matches any id in the list of ids
+ * @param {array} list
+ * @param {array} ids
+ * @returns {array}
+ */
 export function getEntriesByIds(list, ids) {
   return list.filter((o) => ids.includes(o.value));
 }
 
+/**
+ * Gets the color value for given class
+ * @param {string} classId
+ */
 export function getClassColor(classId) {
   return getHashData(TYPES.CLASS)[classId]?.color ?? null;
 }
