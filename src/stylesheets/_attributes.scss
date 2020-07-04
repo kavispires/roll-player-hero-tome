@@ -20,6 +20,31 @@
   color: #fff;
   margin-right: $unit1;
 
+  .attributes-grid--black & {
+    background: $color-black;
+  }
+
+  .attributes-grid--blue & {
+    background: $color-blue;
+  }
+
+  .attributes-grid--green & {
+    background: $color-green;
+  }
+
+  .attributes-grid--purple & {
+    background: $color-purple;
+  }
+
+  .attributes-grid--red & {
+    background: $color-red;
+  }
+
+  .attributes-grid--white & {
+    background: $color-white;
+    color: $color-black;
+  }
+
   &__key {
     font-weight: bolder;
     font-size: 120%;
@@ -32,4 +57,30 @@
 
 .attribute-race-total {
   border: 3px solid $color-medium;
+  text-align: center;
+
+  .attributes-grid--black & {
+    border-color: $color-black;
+  }
+
+  .attributes-grid--blue & {
+    border-color: $color-blue;
+  }
+
+  .attributes-grid--green & {
+    border-color: $color-green;
+  }
+
+  .attributes-grid--purple & {
+    border-color: $color-purple;
+  }
+
+  .attributes-grid--red & {
+    border-color: $color-red;
+  }
+
+  .attributes-grid--white & {
+    border-color: $color-white;
+    color: $color-black;
+  }
 }

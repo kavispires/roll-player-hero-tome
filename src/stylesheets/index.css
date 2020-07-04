@@ -96,6 +96,19 @@ main {
   background: #2b2c28;
   color: #fff;
   margin-right: 8px; }
+  .attributes-grid--black .attribute-label {
+    background: #232c33; }
+  .attributes-grid--blue .attribute-label {
+    background: #0353a4; }
+  .attributes-grid--green .attribute-label {
+    background: #138a36; }
+  .attributes-grid--purple .attribute-label {
+    background: #7c2494; }
+  .attributes-grid--red .attribute-label {
+    background: #f21b3f; }
+  .attributes-grid--white .attribute-label {
+    background: #dee7ec;
+    color: #232c33; }
   .attribute-label__key {
     font-weight: bolder;
     font-size: 120%; }
@@ -103,7 +116,21 @@ main {
     font-size: 50%; }
 
 .attribute-race-total {
-  border: 3px solid #2b2c28; }
+  border: 3px solid #2b2c28;
+  text-align: center; }
+  .attributes-grid--black .attribute-race-total {
+    border-color: #232c33; }
+  .attributes-grid--blue .attribute-race-total {
+    border-color: #0353a4; }
+  .attributes-grid--green .attribute-race-total {
+    border-color: #138a36; }
+  .attributes-grid--purple .attribute-race-total {
+    border-color: #7c2494; }
+  .attributes-grid--red .attribute-race-total {
+    border-color: #f21b3f; }
+  .attributes-grid--white .attribute-race-total {
+    border-color: #dee7ec;
+    color: #232c33; }
 
 .alignment-grid {
   margin: 8px auto 0;

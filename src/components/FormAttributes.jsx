@@ -42,6 +42,7 @@ export default function FormAttributes() {
 function Attribute({ type, name, modifier, value, isDisabled }) {
   // Global States
   const [, setAttributes] = useGlobalState('attributes');
+  const [color] = useGlobalState('color');
 
   const handleChange = (event) => {
     setAttributes((s) => ({ ...s, [type]: +event.target.value }));
@@ -50,7 +51,7 @@ function Attribute({ type, name, modifier, value, isDisabled }) {
   const total = (value ?? 0) + (modifier ?? 0);
 
   return (
-    <div className="attributes-grid attribute">
+    <div className={`attributes-grid attributes-grid--${color}`}>
       <label className="attribute-label">
         <span className="attribute-label__key">{type}</span>
         <span className="attribute-label__name">{name}</span>
