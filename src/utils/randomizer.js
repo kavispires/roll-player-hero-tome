@@ -6,6 +6,7 @@ const sessionUsedChache = {};
 const sessionResetThreshold = {
   [TYPES.RACE]: getTypeahead(TYPES.RACE).length,
   [TYPES.CLASS]: getTypeahead(TYPES.CLASS).length,
+  [TYPES.ALIGNMENT]: getTypeahead(TYPES.ALIGNMENT).length,
   [TYPES.FAMILIAR]: getTypeahead(TYPES.FAMILIAR).length,
   [TYPES.FIENDS]: getTypeahead(TYPES.FIENDS).length,
   [TYPES.BACKSTORY]: getTypeahead(TYPES.BACKSTORY).length,
@@ -24,7 +25,7 @@ export function randomizeCharacter(initialState) {
   result.gender = getRandomValueFromList(['male', 'female']);
   // Deterime name
   const firstName = getRandomValueFromList(NAMES[result.gender]);
-  const lastName = getRandomValueFromList(FAMILY_NAMES);
+  const lastName = getLastName();
   result.characterName = `${firstName}${lastName ? ` ${lastName}` : ''}`;
   // Determine Race
   result.race = getRandomUniqueEntryFromList(TYPES.RACE).id;
@@ -78,13 +79,14 @@ function getRandomValueFromList(list) {
 }
 
 function getRandomUniqueEntryFromList(type) {
+  let tries = 0;
   // Create cache type entry, if it doesn't exist
   if (sessionUsedChache[type] === undefined) {
     sessionUsedChache[type] = {};
   }
 
   // If threshold was reached, reset cache
-  if (Object.keys(sessionUsedChache?.[type] ?? {}).length === sessionResetThreshold) {
+  if (Object.keys(sessionUsedChache?.[type] ?? {}).length === sessionResetThreshold[type]) {
     sessionUsedChache[type] = {};
   }
 
@@ -92,7 +94,8 @@ function getRandomUniqueEntryFromList(type) {
   let result;
   do {
     result = getRandomValueFromList(getTypeahead(type));
-  } while (sessionUsedChache?.[type]?.[result.value] !== undefined);
+    ++tries;
+  } while (sessionUsedChache?.[type]?.[result.value] !== undefined && tries < 15);
 
   // Update cache
   sessionUsedChache[type][result.value] = true;
@@ -154,20 +157,30 @@ function getAppropriateMonster(classId) {
   }
 
   // If threshold was reached, reset cache
-  if (Object.keys(sessionUsedChache?.[TYPES.MONSTER] ?? {}).length === sessionResetThreshold) {
+  if (
+    Object.keys(sessionUsedChache?.[TYPES.MONSTER] ?? {}).length ===
+    sessionResetThreshold[TYPES.MONSTER]
+  ) {
     sessionUsedChache[TYPES.MONSTER] = {};
   }
 
   // Get unique value
   let result;
   let allowed = false;
+  let tries = 0;
   do {
     allowed = true;
     result = getRandomValueFromList(getTypeahead(TYPES.MONSTER));
     if (result.color === getHashData(TYPES.CLASS)[classId]) {
       allowed = false;
     }
-  } while (sessionUsedChache?.[TYPES.MONSTER]?.[result.value] !== undefined && !allowed);
+
+    ++tries;
+  } while (
+    sessionUsedChache?.[TYPES.MONSTER]?.[result.value] !== undefined &&
+    !allowed &&
+    tries < 15
+  );
 
   // Update cache
   sessionUsedChache[TYPES.MONSTER][result.value] = true;
@@ -229,11 +242,137 @@ function getAttribute(baseGoal, modifier) {
   return base + deviation;
 }
 
+function getLastName() {
+  const prefix = getRandomValueFromList(FAMILY_NAMES.prefix);
+  const suffix = getRandomValueFromList(FAMILY_NAMES.suffix);
+  const separator = prefix === suffix ? '-' : '';
+  const familyName = `${prefix}${separator}${suffix}`;
+  return familyName.charAt(0).toUpperCase() + familyName.slice(1);
+}
+
 const NAMES = {
-  male: ['Arnold', 'Benji', 'Carlus', 'Dominique', 'Eldrin', 'Fin', 'Gustavos', 'Helius'],
-  female: ['Anna', 'Bella', 'Corrie', 'Dame', 'Ella', 'Fang', 'Gemma', 'Helena', 'Higrid'],
+  male: [
+    'Arnold',
+    'Benji',
+    'Carlus',
+    'Dominique',
+    'Eldrin',
+    'Fin',
+    'Gustavos',
+    'Helius',
+    'Igor',
+    'John',
+    'Karl',
+    'Lynus',
+    'Lazarus',
+    'Magnus',
+    'Nimbus',
+    'Otto',
+    'Odo',
+    'Papa',
+    'Rashi',
+    'Serpentine',
+    'Tweedey',
+    'Thomas',
+    'Uurl',
+    'Vance',
+    'Willy',
+    'Wellington',
+    'Xanadu',
+    'Yvanhoe',
+    'Zulu',
+  ],
+  female: [
+    'Anna',
+    'Bella',
+    'Corrie',
+    'Dame',
+    'Ella',
+    'Fang',
+    'Gemma',
+    'Gala',
+    'Helena',
+    'Higrid',
+    'Indi',
+    'June',
+    'Kiara',
+    'Lana',
+    'Mim',
+    'Nina',
+    'Olga',
+    'Pat',
+    'Reika',
+    'Rashina',
+    'Sansa',
+    'Titi',
+    'Ursula',
+    'Una',
+    'Vara',
+    'Wholpi',
+    'Xaxa',
+    'Xena',
+    'Yanna',
+    'Zoe',
+  ],
 };
 
-const FAMILY_NAMES = ['Tubirundacunde', 'Thunderbolt', 'Scarlion', 'Breavesoul', ''];
+const FAMILY_NAMES = {
+  prefix: [
+    'thunder',
+    'scar',
+    'star',
+    'brave',
+    'heart',
+    'oak',
+    'iron',
+    'golden',
+    'silver',
+    'oath',
+    'snow',
+    'dark',
+    '',
+  ],
+  suffix: [
+    'sun',
+    'moon',
+    'bolt',
+    'lion',
+    'wolf',
+    'light',
+    'soul',
+    'scare',
+    'dust',
+    'eye',
+    'shot',
+    'heart',
+    'keeper',
+    'white',
+    'lord',
+    '',
+  ],
+};
 
-const FAMILIAR_NAMES = ['Mike', 'Popo', 'Dean', 'Boo', 'Ham', 'Rammy', 'Pip', 'Baby', ''];
+const FAMILIAR_NAMES = [
+  'Buddy',
+  'Spark',
+  'Popo',
+  'Sam',
+  'Boo',
+  'Ham',
+  'Remmy',
+  'Pip',
+  'Baby',
+  'Devil',
+  'Jambo',
+  'Jimbo',
+  'Zeus',
+  'Marsa',
+  'Jupiter',
+  'Venus',
+  'Pluto',
+  'Galak',
+  'Athena',
+  'Moon',
+  'Alaska',
+  '',
+];
