@@ -13,6 +13,7 @@ export default function FormAlignment() {
   // Global States
   const [alignment, setAlignment] = useGlobalState('alignment');
   const [alignmentPos, setAlignmentPos] = useGlobalState('alignmentPos');
+  const [color] = useGlobalState('color');
 
   const alignmentDict = getHashData(TYPES.ALIGNMENT);
   const alignmentTypeahead = getTypeahead(TYPES.ALIGNMENT);
@@ -63,7 +64,8 @@ export default function FormAlignment() {
         <div className="alignment-grid__evil">Evil</div>
         <div className="alignment-grid__boxes">
           {activeModifiers.map((val, index) => {
-            const activeClass = alignmentPos === index ? 'alignment-box--active' : '';
+            const activeClass =
+              alignmentPos === index ? `alignment-box--active alignment-box--${color}` : '';
             return (
               <button
                 className={`alignment-box ${activeClass}`}

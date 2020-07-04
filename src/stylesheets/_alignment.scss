@@ -68,6 +68,30 @@ $label-v: 15px;
     font-weight: bold;
     border-radius: 4px;
   }
+
+  &--black {
+    background: $color-black;
+  }
+
+  &--blue {
+    background: $color-blue;
+  }
+
+  &--green {
+    background: $color-green;
+  }
+
+  &--red {
+    background: $color-red;
+  }
+
+  &--purple {
+    background: $color-purple;
+  }
+
+  &--white {
+    background: $color-white;
+  }
 }
 
 .alignment-graph-container {

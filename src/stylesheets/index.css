@@ -183,6 +183,18 @@ main {
     background: #2b2c28;
     font-weight: bold;
     border-radius: 4px; }
+  .alignment-box--black {
+    background: #232c33; }
+  .alignment-box--blue {
+    background: #0353a4; }
+  .alignment-box--green {
+    background: #138a36; }
+  .alignment-box--red {
+    background: #f21b3f; }
+  .alignment-box--purple {
+    background: #7c2494; }
+  .alignment-box--white {
+    background: #dee7ec; }
 
 .alignment-graph-container {
   padding: 8px;

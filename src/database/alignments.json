@@ -234,7 +234,7 @@
     "id": "al-bs-15",
     "name": "Sentinel",
     "set": "Base",
-    "values": "3,0,0,0-,0,-1,0,-1,-1",
+    "values": "3,0,0,0,0,-1,0,-1,-1",
     "card-number": 15
   },
   "al-mm-9": {
@@ -255,7 +255,7 @@
     "id": "al-ff-11",
     "name": "Swindler",
     "set": "Fiends & Familiars",
-    "values": "0,-30,-1,0,1,1,3,-1",
+    "values": "0,-3,0,-1,0,1,1,3,-1",
     "card-number": 11
   },
   "al-bs-17": {
