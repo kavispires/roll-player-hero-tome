@@ -4,62 +4,134 @@
     "name": "Blood Badger",
     "ability": "Tough",
     "set": "Fiends & Familiars",
-    "board-number": 1
+    "board-number": 1,
+    "power-min": 7,
+    "power-max": 8
   },
   "fm-ff-2": {
     "id": "fm-ff-2",
     "name": "Flame Imp",
     "ability": "Ruinous",
     "set": "Fiends & Familiars",
-    "board-number": 2
+    "board-number": 2,
+    "power-min": 8,
+    "power-max": 9
   },
   "fm-ff-3": {
     "id": "fm-ff-3",
     "name": "Horned Viper",
     "ability": "Manipulative",
     "set": "Fiends & Familiars",
-    "board-number": 3
+    "board-number": 3,
+    "power-min": 5,
+    "power-max": 6
   },
   "fm-ff-4": {
     "id": "fm-ff-4",
     "name": "Ice Bear",
     "ability": "Hearty",
     "set": "Fiends & Familiars",
-    "board-number": 4
+    "board-number": 4,
+    "power-min": 5,
+    "power-max": 7
   },
   "fm-ff-5": {
     "id": "fm-ff-5",
     "name": "Long-Tailed Weasel",
     "ability": "Sneaky",
     "set": "Fiends & Familiars",
-    "board-number": 5
+    "board-number": 5,
+    "power-min": 7,
+    "power-max": 8
   },
   "fm-ff-6": {
     "id": "fm-ff-6",
     "name": "Nalos Leopard",
     "ability": "Fierce",
     "set": "Fiends & Familiars",
-    "board-number": 6
+    "board-number": 6,
+    "power-min": 5,
+    "power-max": 6
   },
   "fm-ff-7": {
     "id": "fm-ff-7",
     "name": "Screech Owl",
     "ability": "Keen",
     "set": "Fiends & Familiars",
-    "board-number": 7
+    "board-number": 7,
+    "power-min": 6,
+    "power-max": 7
   },
   "fm-ff-8": {
     "id": "fm-ff-8",
     "name": "Shadow Drake",
     "ability": "Inventive",
     "set": "Fiends & Familiars",
-    "board-number": 8
+    "board-number": 8,
+    "power-min": 6,
+    "power-max": 7
   },
   "fm-ff-9": {
     "id": "fm-ff-9",
     "name": "Silver Warthog",
     "ability": "Brash",
     "set": "Fiends & Familiars",
-    "board-number": 9
+    "board-number": 9,
+    "power-min": 8,
+    "power-max": 9
+  },
+  "fm-ff-10": {
+    "id": "fm-ff-10",
+    "name": "Ancient Tortoise",
+    "ability": "Timeworn",
+    "set": "Fiends & Familiars",
+    "board-number": 10,
+    "power-min": 5,
+    "power-max": 7
+  },
+  "fm-ff-11": {
+    "id": "fm-ff-11",
+    "name": "Tempest Fox",
+    "ability": "Crafty",
+    "set": "Fiends & Familiars",
+    "board-number": 11,
+    "power-min": 5,
+    "power-max": 6
+  },
+  "fm-ff-12": {
+    "id": "fm-ff-12",
+    "name": "Jackalope",
+    "ability": "Serendipitous",
+    "set": "Fiends & Familiars",
+    "board-number": 12,
+    "power-min": 5,
+    "power-max": 7
+  },
+  "fm-ff-13": {
+    "id": "fm-ff-13",
+    "name": "Scorch Phoenix",
+    "ability": "Regenerative",
+    "set": "Fiends & Familiars",
+    "board-number": 13,
+    "power-min": 5,
+    "power-max": 7
+  },
+  "fm-ff-14": {
+    "id": "fm-ff-14",
+    "name": "Dragul Wolf",
+    "ability": "Resilient",
+    "set": "Fiends & Familiars",
+    "board-number": 14,
+    "power-min": 8,
+    "power-max": 9
+  },
+  "fm-ff-15": {
+    "id": "fm-ff-15",
+    "name": "Cursed Raven",
+    "ability": "Haunted",
+    "set": "Fiends & Familiars",
+    "board-number": 15,
+    "power-min": 7,
+    "power-max": 8
   }
 }

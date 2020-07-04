@@ -2,7 +2,7 @@
   "mo-mm-1": {
     "id": "mo-mm-1",
     "name": "Chimera",
-    "color": "Pink",
+    "color": "purple",
     "set": "Monsters & Minions",
     "adjective": "Tricky",
     "health1": 14,
@@ -15,7 +15,7 @@
   "mo-ff-1": {
     "id": "mo-ff-1",
     "name": "Cyclops",
-    "color": "Green",
+    "color": "green",
     "set": "Fiends & Familiars",
     "adjective": "Bloodthirsty",
     "health1": 13,
@@ -28,7 +28,7 @@
   "mo-mm-3": {
     "id": "mo-mm-3",
     "name": "Demon",
-    "color": "Black",
+    "color": "black",
     "set": "Monsters & Minions",
     "adjective": "Dimensional",
     "health1": 18,
@@ -41,7 +41,7 @@
   "mo-mm-5": {
     "id": "mo-mm-5",
     "name": "Dragon",
-    "color": "Red",
+    "color": "red",
     "set": "Monsters & Minions",
     "adjective": "Winged",
     "health1": 16,
@@ -54,7 +54,7 @@
   "mo-mm-7": {
     "id": "mo-mm-7",
     "name": "Giant Troll",
-    "color": "Green",
+    "color": "green",
     "set": "Monsters & Minions",
     "adjective": "Ferocious",
     "health1": 10,
@@ -67,7 +67,7 @@
   "mo-ff-3": {
     "id": "mo-ff-3",
     "name": "Gorgon",
-    "color": "White",
+    "color": "white",
     "set": "Fiends & Familiars",
     "adjective": "Stone Gaze",
     "health1": 14,
@@ -80,7 +80,7 @@
   "mo-ff-5": {
     "id": "mo-ff-5",
     "name": "Gryphon",
-    "color": "Pink",
+    "color": "purple",
     "set": "Fiends & Familiars",
     "adjective": "Predatory",
     "health1": 16,
@@ -93,7 +93,7 @@
   "mo-ff-7": {
     "id": "mo-ff-7",
     "name": "Hydra",
-    "color": "Red",
+    "color": "red",
     "set": "Fiends & Familiars",
     "adjective": "Five-Headed",
     "health1": 17,
@@ -106,7 +106,7 @@
   "mo-mm-9": {
     "id": "mo-mm-9",
     "name": "Kraken",
-    "color": "Blue",
+    "color": "blue",
     "set": "Monsters & Minions",
     "adjective": "Massive",
     "health1": 20,
@@ -119,7 +119,7 @@
   "mo-ff-9": {
     "id": "mo-ff-9",
     "name": "Leviathan",
-    "color": "Blue",
+    "color": "blue",
     "set": "Fiends & Familiars",
     "adjective": "Gigantic",
     "health1": 19,
@@ -132,7 +132,7 @@
   "mo-ff-11": {
     "id": "mo-ff-11",
     "name": "Megapede",
-    "color": "Black",
+    "color": "black",
     "set": "Fiends & Familiars",
     "adjective": "Fiendborn",
     "health1": 11,
@@ -145,7 +145,7 @@
   "mo-mm-11": {
     "id": "mo-mm-11",
     "name": "Vampire",
-    "color": "White",
+    "color": "white",
     "set": "Monsters & Minions",
     "adjective": "Undead",
     "health1": 12,
