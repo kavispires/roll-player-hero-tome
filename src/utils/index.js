@@ -1,6 +1,8 @@
 import { getHashData, getAdventureTypeahead } from '../database';
 import { TYPES } from './constants';
 
+export * from './randomizer';
+
 const removeFalsy = (item) => item;
 
 /**
